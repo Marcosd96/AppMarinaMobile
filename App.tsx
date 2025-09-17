@@ -9,7 +9,7 @@ import React from 'react';
 import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
 import { PaperProvider, MD3LightTheme, MD3DarkTheme } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AppContent from './src/AppContent';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const lightTheme = {
   ...MD3LightTheme,
@@ -39,7 +39,7 @@ function App() {
     <SafeAreaProvider>
       <PaperProvider theme={theme}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <AppContent />
+        <AppNavigator />
       </PaperProvider>
     </SafeAreaProvider>
   );

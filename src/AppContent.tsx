@@ -1,50 +1,44 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native';
-import {
-  Appbar,
-  Card,
-  Text,
-  Surface,
-  IconButton,
-} from 'react-native-paper';
+import { Appbar, Text, Surface, IconButton } from 'react-native-paper';
 
-export default function AppContent() {
+export default function AppContent({ navigation }: any) {
   const menuItems = [
     {
       id: 1,
       title: 'INTRODUCCIÓN HF',
       icon: 'antenna',
-      onPress: () => console.log('Introducción HF'),
+      onPress: () => navigation.navigate('IntroduccionHF'),
     },
     {
       id: 2,
       title: 'CONCEPTOS TÉCNICOS DE HARDWARE',
       icon: 'chip',
-      onPress: () => console.log('Conceptos Técnicos'),
+      onPress: () => navigation.navigate('ConceptosTecnicos'),
     },
     {
       id: 3,
       title: 'OPERATIVIDAD DEL EQUIPO',
       icon: 'cog',
-      onPress: () => console.log('Operatividad'),
+      onPress: () => navigation.navigate('Operatividad'),
     },
     {
       id: 4,
       title: 'USO E INSTALACIÓN DE POSTMAN',
       icon: 'download',
-      onPress: () => console.log('Instalación Postman'),
+      onPress: () => navigation.navigate('Postman'),
     },
     {
       id: 5,
       title: 'USO DEL FILLGUN',
       icon: 'radio',
-      onPress: () => console.log('Uso del Fillgun'),
+      onPress: () => navigation.navigate('Fillgun'),
     },
     {
       id: 6,
       title: 'FALLAS',
       icon: 'wrench',
-      onPress: () => console.log('Fallas'),
+      onPress: () => navigation.navigate('Fallas'),
     },
   ];
 
@@ -54,16 +48,19 @@ export default function AppContent() {
         <Appbar.Content title="HF ROHDE & SCHWARZ" />
       </Appbar.Header>
 
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.content}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.content}
+      >
         <View style={styles.grid}>
-          {menuItems.map((item) => (
+          {menuItems.map(item => (
             <TouchableOpacity
               key={item.id}
               style={styles.cardContainer}
               onPress={item.onPress}
               activeOpacity={0.7}
             >
-              <Card style={styles.menuCard} elevation={2}>
+              <Surface style={styles.menuCard} elevation={2}>
                 <View style={styles.cardIconContainer}>
                   <IconButton
                     icon={getIcon(item.icon)}
@@ -72,12 +69,12 @@ export default function AppContent() {
                     style={styles.iconButton}
                   />
                 </View>
-                <Card.Content style={styles.cardContent}>
+                <View style={styles.cardContent}>
                   <Text variant="labelMedium" style={styles.cardTitle}>
                     {item.title}
                   </Text>
-                </Card.Content>
-              </Card>
+                </View>
+              </Surface>
             </TouchableOpacity>
           ))}
         </View>
@@ -89,12 +86,12 @@ export default function AppContent() {
 // Función para obtener iconos de Material Design
 function getIcon(iconName: string) {
   const icons: { [key: string]: string } = {
-    antenna: 'wifi', // Antena/signal
+    antenna: 'antenna', // Antena/signal
     chip: 'chip', // Chip/hardware
     cog: 'cog', // Configuración
-    download: 'download', // Descarga
+    download: 'robot-industrial', // Descarga
     radio: 'radio', // Radio
-    wrench: 'wrench', // Herramientas/mantenimiento
+    wrench: 'hammer-wrench', // Herramientas/mantenimiento
   };
   return icons[iconName] || 'help';
 }
@@ -108,31 +105,35 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
+    flex: 1,
     padding: 20,
-    paddingBottom: 40,
+    paddingBottom: 20,
+    justifyContent: 'center',
   },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    gap: 16,
+    alignItems: 'center',
   },
   cardContainer: {
-    width: '30%',
-    minWidth: 100,
-    aspectRatio: 1,
+    width: '48%',
+    marginBottom: 16,
+    height: 140,
   },
   menuCard: {
     flex: 1,
-    borderRadius: 16,
+    borderRadius: 12,
     overflow: 'hidden',
+    backgroundColor: 'white',
   },
   cardIconContainer: {
-    flex: 1,
+    height: 80,
     backgroundColor: '#1976d2',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 20,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
   },
   cardIcon: {
     fontSize: 32,
@@ -140,18 +141,20 @@ const styles = StyleSheet.create({
   },
   cardContent: {
     backgroundColor: 'white',
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: 60,
+    height: 60,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
   },
   cardTitle: {
     textAlign: 'center',
     fontWeight: '600',
     color: '#333',
-    fontSize: 11,
-    lineHeight: 14,
+    fontSize: 10,
+    lineHeight: 12,
   },
   iconButton: {
     margin: 0,
