@@ -5,7 +5,7 @@ import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
 export default function FillgunScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Appbar.Header>
+      <Appbar.Header style={styles.header}>
         <Appbar.BackAction onPress={() => navigation.goBack()} />
         <Appbar.Content title="Uso del Fillgun" />
       </Appbar.Header>
@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f8f9fa',
+  },
+  header: {
+    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,

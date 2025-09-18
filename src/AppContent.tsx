@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { Appbar, Text, Surface } from 'react-native-paper';
 import Icon1Component from './components/1';
 import Icon2Component from './components/2';
@@ -7,6 +7,9 @@ import Icon3Component from './components/3';
 import Icon4Component from './components/4';
 import Icon5Component from './components/5';
 import Icon6Component from './components/6';
+
+// Background image
+const backgroundImage = require('../fondo.jpg');
 
 // SVG Components
 const Icon1 = ({ size = 40, color = "white" }) => (
@@ -74,46 +77,56 @@ export default function AppContent({ navigation }: any) {
   ];
 
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned">
-        <Appbar.Content title="HF ROHDE & SCHWARZ" />
-      </Appbar.Header>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage} resizeMode="cover">
+      <View style={styles.container}>
+        <Appbar.Header mode="center-aligned" style={styles.header}>
+          <Appbar.Content title="HF ROHDE & SCHWARZ" />
+        </Appbar.Header>
 
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.content}
-      >
-        <View style={styles.grid}>
-          {menuItems.map(item => (
-            <TouchableOpacity
-              key={item.id}
-              style={styles.cardContainer}
-              onPress={item.onPress}
-              activeOpacity={0.7}
-            >
-              <Surface style={styles.menuCard} elevation={2}>
-                <View style={styles.cardIconContainer}>
-                  <item.icon size={40} color="white" />
-                </View>
-                <View style={styles.cardContent}>
-                  <Text variant="labelMedium" style={styles.cardTitle}>
-                    {item.title}
-                  </Text>
-                </View>
-              </Surface>
-            </TouchableOpacity>
-          ))}
-        </View>
-      </ScrollView>
-    </View>
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={styles.content}
+        >
+          <View style={styles.grid}>
+            {menuItems.map(item => (
+              <TouchableOpacity
+                key={item.id}
+                style={styles.cardContainer}
+                onPress={item.onPress}
+                activeOpacity={0.7}
+              >
+                <Surface style={styles.menuCard} elevation={2}>
+                  <View style={styles.cardIconContainer}>
+                    <item.icon size={40} color="white" />
+                  </View>
+                  <View style={styles.cardContent}>
+                    <Text variant="labelMedium" style={styles.cardTitle}>
+                      {item.title}
+                    </Text>
+                  </View>
+                </Surface>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </ScrollView>
+      </View>
+    </ImageBackground>
   );
 }
 
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: 'rgba(248, 249, 250, 0.9)',
+  },
+  header: {
+    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,
@@ -139,7 +152,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 12,
     overflow: 'hidden',
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
   },
   cardIconContainer: {
     height: 80,
