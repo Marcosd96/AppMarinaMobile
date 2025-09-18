@@ -83,16 +83,16 @@ export default function AppContent({ navigation }: any) {
   ];
 
   return (
-    <ImageBackground
-      source={backgroundImage}
-      style={styles.backgroundImage}
-      resizeMode="stretch"
-    >
-      <View style={styles.container}>
-        <Appbar.Header mode="center-aligned" style={styles.header}>
-          <Appbar.Content title="HF ROHDE & SCHWARZ" />
-        </Appbar.Header>
-
+    <View style={styles.container}>
+      <Appbar.Header mode="center-aligned" style={styles.header}>
+        <Appbar.Content title="HF ROHDE & SCHWARZ" />
+      </Appbar.Header>
+      <ImageBackground
+        source={backgroundImage}
+        style={styles.backgroundImage}
+        resizeMode="stretch"
+        imageStyle={{ opacity: 0.4 }}
+      >
         <ScrollView
           style={styles.scrollView}
           contentContainerStyle={styles.content}
@@ -119,8 +119,8 @@ export default function AppContent({ navigation }: any) {
             ))}
           </View>
         </ScrollView>
-      </View>
-    </ImageBackground>
+      </ImageBackground>
+    </View>
   );
 }
 
@@ -132,10 +132,10 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(248, 249, 250, 0.5)',
+    backgroundColor: 'rgba(0, 124, 248, 0.5)',
   },
   header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.7)',
+    backgroundColor: 'rgba(25, 118, 210)',
   },
   scrollView: {
     flex: 1,
