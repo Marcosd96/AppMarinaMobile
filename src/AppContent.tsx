@@ -1,5 +1,11 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, TouchableOpacity, ImageBackground } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import { Appbar, Text, Surface } from 'react-native-paper';
 import Icon1Component from './components/1';
 import Icon2Component from './components/2';
@@ -77,7 +83,11 @@ export default function AppContent({ navigation }: any) {
   ];
 
   return (
-    <ImageBackground source={backgroundImage} style={styles.backgroundImage} resizeMode="cover">
+    <ImageBackground
+      source={backgroundImage}
+      style={styles.backgroundImage}
+      resizeMode="stretch"
+    >
       <View style={styles.container}>
         <Appbar.Header mode="center-aligned" style={styles.header}>
           <Appbar.Content title="HF ROHDE & SCHWARZ" />
@@ -114,7 +124,6 @@ export default function AppContent({ navigation }: any) {
   );
 }
 
-
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
@@ -123,10 +132,10 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(248, 249, 250, 0.9)',
+    backgroundColor: 'rgba(248, 249, 250, 0.5)',
   },
   header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
+    backgroundColor: 'rgba(25, 118, 210, 0.7)',
   },
   scrollView: {
     flex: 1,
@@ -152,7 +161,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 12,
     overflow: 'hidden',
-    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
   },
   cardIconContainer: {
     height: 80,
