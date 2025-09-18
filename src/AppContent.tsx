@@ -12,28 +12,28 @@ import Icon6Component from './components/6';
 const backgroundImage = require('../fondo.jpg');
 
 // SVG Components
-const Icon1 = ({ size = 40, color = "white" }) => (
-  <Icon1Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon1 = () => (
+  <Icon1Component width={40} height={40} backgroundColor="#1976d2" />
 );
 
-const Icon2 = ({ size = 40, color = "white" }) => (
-  <Icon2Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon2 = () => (
+  <Icon2Component width={50} height={50} backgroundColor="#1976d2" />
 );
 
-const Icon3 = ({ size = 40, color = "white" }) => (
-  <Icon3Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon3 = () => (
+  <Icon3Component width={50} height={50} backgroundColor="#1976d2" />
 );
 
-const Icon4 = ({ size = 40, color = "white" }) => (
-  <Icon4Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon4 = () => (
+  <Icon4Component width={50} height={50} backgroundColor="#1976d2" />
 );
 
-const Icon5 = ({ size = 40, color = "white" }) => (
-  <Icon5Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon5 = () => (
+  <Icon5Component width={50} height={50} backgroundColor="#1976d2" />
 );
 
-const Icon6 = ({ size = 40, color = "white" }) => (
-  <Icon6Component width={size} height={size} backgroundColor="#1976d2" />
+const Icon6 = () => (
+  <Icon6Component width={50} height={50} backgroundColor="#1976d2" />
 );
 
 export default function AppContent({ navigation }: any) {
