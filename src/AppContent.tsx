@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 import { Appbar, Text, Surface } from 'react-native-paper';
 import Icon1Component from './components/1';
 import Icon2Component from './components/2';
@@ -43,6 +44,9 @@ const Icon6 = () => (
 );
 
 export default function AppContent({ navigation }: any) {
+  const { width } = useWindowDimensions();
+  const isSmallPhone = width < 400;
+
   const menuItems = [
     {
       id: 1,
@@ -95,22 +99,45 @@ export default function AppContent({ navigation }: any) {
       >
         <ScrollView
           style={styles.scrollView}
-          contentContainerStyle={styles.content}
+          contentContainerStyle={[
+            styles.content,
+            { padding: isSmallPhone ? 12 : 20 },
+          ]}
         >
-          <View style={styles.grid}>
+          <View
+            style={[
+              styles.grid,
+              { justifyContent: isSmallPhone ? 'flex-start' : 'space-between' },
+            ]}
+          >
             {menuItems.map(item => (
               <TouchableOpacity
                 key={item.id}
-                style={styles.cardContainer}
+                style={[
+                  styles.cardContainer,
+                  {
+                    width: isSmallPhone ? '100%' : '48%',
+                    height: isSmallPhone ? 120 : 140,
+                  },
+                ]}
                 onPress={item.onPress}
                 activeOpacity={0.7}
               >
                 <Surface style={styles.menuCard} elevation={2}>
                   <View style={styles.cardIconContainer}>
-                    <item.icon size={40} color="white" />
+                    <item.icon />
                   </View>
                   <View style={styles.cardContent}>
-                    <Text variant="labelMedium" style={styles.cardTitle}>
+                    <Text
+                      variant="labelMedium"
+                      style={[
+                        styles.cardTitle,
+                        {
+                          fontSize: isSmallPhone ? 12 : 10,
+                          lineHeight: isSmallPhone ? 14 : 12,
+                        },
+                      ]}
+                    >
                       {item.title}
                     </Text>
                   </View>

@@ -5,8 +5,8 @@ import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
 export default function FillgunScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Appbar.Header style={styles.header}>
-        <Appbar.BackAction onPress={() => navigation.goBack()} />
+      <Appbar.Header mode="center-aligned" style={styles.header}>
+        <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Uso del Fillgun" />
       </Appbar.Header>
 

@@ -5,8 +5,8 @@ import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
 export default function ConceptosTecnicosScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Appbar.Header style={styles.header}>
-        <Appbar.BackAction onPress={() => navigation.goBack()} />
+      <Appbar.Header mode="center-aligned" style={styles.header}>
+        <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Conceptos Técnicos" />
       </Appbar.Header>
 
@@ -14,42 +14,102 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
         style={styles.scrollView}
         contentContainerStyle={styles.content}
       >
+        {/* Especificaciones: tabla + lista codificadas */}
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
             <Text variant="headlineSmall" style={styles.title}>
-              Hardware de Comunicaciones HF
+              Operación del Equipo - Especificaciones
             </Text>
-            <Text variant="bodyMedium" style={styles.paragraph}>
-              El hardware de comunicaciones HF incluye componentes
-              especializados diseñados para operar en el rango de alta
-              frecuencia con máxima eficiencia.
-            </Text>
+            <View style={styles.specsContainer}>
+              {/* Columna izquierda: Tabla */}
+              <View style={styles.table}>
+                <View style={[styles.row, styles.headerRow]}>
+                  <Text style={[styles.cellHeader, styles.cellSpan]}>
+                    Rango de Frecuencia
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={[styles.cellLabel]}>TX</Text>
+                  <Text style={styles.cellValue}>1.5 MHz – 30 MHz</Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={[styles.cellLabel]}>RX</Text>
+                  <Text style={styles.cellValue}>10 kHz – 30 MHz</Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>Precisión de frecuencia</Text>
+                  <Text style={styles.cellValue}>1×10⁻⁹ (OCXO)</Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>Potencia de Salida</Text>
+                  <Text style={styles.cellValue}>
+                    3 Modelos (150 W / 500 W / 1000 W)
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>Clases de emisión</Text>
+                  <Text style={styles.cellValue}>
+                    A1A, +/‑J3E, +/‑J2D, H3E, A3E, F3E, F1B, B8E, B7D
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>
+                    Automatic Link Establishment (ALE)
+                  </Text>
+                  <Text style={styles.cellValue}>
+                    (ALE2G) STD1045/1046/1049; (ALE3G) STANAG‑4538
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>Seguridad</Text>
+                  <Text style={styles.cellValue}>
+                    Voz y Datos cifrados (SVD para ALE3G); Voz cifrada (SECOM‑H)
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>VoIP</Text>
+                  <Text style={styles.cellValue}>
+                    A partir de versión de SW 7.0
+                  </Text>
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.cellLabel}>Nº de “Preset pages”</Text>
+                  <Text style={styles.cellValue}>100</Text>
+                </View>
+                <View style={[styles.row, styles.lastRow]}>
+                  <Text style={styles.cellLabel}>Nº de canales</Text>
+                  <Text style={styles.cellValue}>400</Text>
+                </View>
+              </View>
+            </View>
           </Card.Content>
         </Surface>
-
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
-              Componentes Principales
-            </Text>
-            <Text variant="bodyMedium" style={styles.paragraph}>
-              • Transceptores HF{'\n'}• Amplificadores de potencia{'\n'}•
-              Antenas direccionales{'\n'}• Sistemas de filtrado{'\n'}•
-              Interfaces de control
-            </Text>
-          </Card.Content>
-        </Surface>
-
-        <Surface style={styles.card} elevation={2}>
-          <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
-              Especificaciones Técnicas
-            </Text>
-            <Text variant="bodyMedium" style={styles.paragraph}>
-              • Potencia de salida: 100W - 1kW{'\n'}• Rango de frecuencia:
-              1.5-30 MHz{'\n'}• Sensibilidad: -110 dBm{'\n'}• Selectividad: 2.4
-              kHz{'\n'}• Estabilidad: ±1 ppm
-            </Text>
+            {/* Columna derecha: Lista */}
+            <View style={styles.bullets}>
+              <Text style={styles.bullet}>
+                Clases de potencia de y receptor independiente.
+              </Text>
+              <Text style={styles.bullet}>
+                Capacidad de datos y voz segura integrada.
+              </Text>
+              <Text style={styles.bullet}>
+                Excelente colocación gracias a las especificaciones del receptor
+                y transmisor.
+              </Text>
+              <Text style={styles.bullet}>
+                Control de nivel selectivo para potencia de transmisión óptima
+                (opción SW).
+              </Text>
+              <Text style={styles.bullet}>
+                Sistema de radio definido por software.
+              </Text>
+              <Text style={styles.bullet}>Operación local o remota.</Text>
+              <Text style={styles.bullet}>
+                Fuentes de alimentación para varias redes eléctricas estándar.
+              </Text>
+            </View>
           </Card.Content>
         </Surface>
       </ScrollView>
@@ -87,5 +147,62 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
+  },
+  specsContainer: {
+    marginTop: 8,
+    flexDirection: 'row',
+  },
+  table: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#d0d5dd',
+    borderRadius: 8,
+    overflow: 'hidden',
+    backgroundColor: 'white',
+  },
+  row: {
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: '#eef2f6',
+  },
+  headerRow: {
+    backgroundColor: '#f5faff',
+  },
+  lastRow: {
+    borderBottomWidth: 0,
+  },
+  cellLabel: {
+    width: 140,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRightWidth: 1,
+    borderRightColor: '#eef2f6',
+    fontWeight: '600',
+    color: '#344054',
+  },
+  cellValue: {
+    flex: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    color: '#475467',
+  },
+  cellHeader: {
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    fontWeight: '700',
+    color: '#0b4aa2',
+  },
+  cellSpan: {
+    textAlign: 'left',
+  },
+  bullets: {
+    flex: 1,
+    paddingLeft: 16,
+    justifyContent: 'flex-start',
+  },
+  bullet: {
+    marginBottom: 8,
+    color: '#475467',
   },
 });
