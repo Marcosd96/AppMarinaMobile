@@ -32,6 +32,18 @@ export default function EncendidoScreen({ navigation }: any) {
   const [infoText, setInfoText] = useState<string>('');
   const infoOpacity = useSharedValue(0);
   const infoTranslateY = useSharedValue(8);
+  const [showLogo, setShowLogo] = useState(false);
+  const logoOpacity = useSharedValue(0);
+  const logoScale = useSharedValue(0.95);
+  // Coordenadas y tamaño del logo (modificables por ti)
+  const LOGO = {
+    // Coordenadas relativas a la imagen (0..1)
+    x: 0.174,
+    y: 0.190,
+    // Tamaño en px del logo renderizado
+    width: 65.4,
+    height: 55,
+  };
   // Coordenadas normalizadas del hotspot ON/OFF dentro de la imagen (0..1)
   // Ajusta estos valores si necesitas precisión milimétrica
   const HOTSPOT = { x: 0.853, y: 0.773 };
@@ -60,6 +72,9 @@ export default function EncendidoScreen({ navigation }: any) {
       setInfoText('');
       infoOpacity.value = 0;
       infoTranslateY.value = 8;
+      setShowLogo(false);
+      logoOpacity.value = 0;
+      logoScale.value = 0.95;
       return;
     }
     if (!layoutWidth || !layoutHeight) return;
@@ -113,13 +128,14 @@ export default function EncendidoScreen({ navigation }: any) {
       duration: 600,
       easing: Easing.out(Easing.cubic),
     });
-    // Mostrar texto informativo debajo tras el zoom out
+    // Mostrar texto/imagen debajo tras el zoom out
     setTimeout(() => {
       setInfoText(
         'El Sistema de Comunicación R&S M3SR Series4100 HF, garantiza una comunicación permanente a nivel operacional y táctico a través del recurso combinado entre hardware y software para comunicaciones avanzadas vía radiofrecuencia.',
       );
       setShowInfo(true);
-    }, 650);
+      setShowLogo(true);
+    }, 700);
   };
 
   // Animación de aparición del Surface de información
@@ -138,6 +154,24 @@ export default function EncendidoScreen({ navigation }: any) {
   const infoAnimatedStyle = useAnimatedStyle(() => ({
     opacity: infoOpacity.value,
     transform: [{ translateY: infoTranslateY.value }],
+  }));
+
+  // Animación del logo (fade + scale) cuando se muestra
+  useEffect(() => {
+    if (showLogo) {
+      logoOpacity.value = 0;
+      logoScale.value = 0.95;
+      logoOpacity.value = withTiming(1, { duration: 300, easing: Easing.out(Easing.cubic) });
+      logoScale.value = withTiming(1, { duration: 300, easing: Easing.out(Easing.cubic) });
+    } else {
+      logoOpacity.value = 0;
+      logoScale.value = 0.95;
+    }
+  }, [showLogo, logoOpacity, logoScale]);
+
+  const logoAnimatedStyle = useAnimatedStyle(() => ({
+    opacity: logoOpacity.value,
+    transform: [{ scale: logoScale.value }],
   }));
 
   // Simple hover-like pulse to indicar el botón ON/OFF (cuando el hint está visible)
@@ -234,7 +268,54 @@ export default function EncendidoScreen({ navigation }: any) {
               <Pressable style={styles.hoverTouch} onPress={handleZoomOut} />
             </Animated.View>
           )}
+
+          {/* logo moved outside of animated container to avoid being affected by transforms */}
         </Animated.View>
+
+        {showLogo && (
+          <Animated.View
+            style={[
+              {
+                position: 'absolute',
+                zIndex: 20,
+                pointerEvents: 'none',
+                ...(holderWidth && holderHeight
+                  ? (() => {
+                      const holderRatio = holderWidth / holderHeight;
+                      let dispW = holderWidth;
+                      let dispH = holderHeight;
+                      let offsetX = 0;
+                      let offsetY = 0;
+                      if (holderRatio > imageRatio) {
+                        dispH = holderHeight;
+                        dispW = dispH * imageRatio;
+                        offsetX = (holderWidth - dispW) / 2;
+                      } else {
+                        dispW = holderWidth;
+                        dispH = dispW / imageRatio;
+                        offsetY = (holderHeight - dispH) / 2;
+                      }
+                      const nx = Math.max(0, Math.min(1, LOGO.x));
+                      const ny = Math.max(0, Math.min(1, LOGO.y));
+                      return {
+                        left: offsetX + dispW * nx,
+                        top: offsetY + dispH * ny,
+                        width: LOGO.width,
+                        height: LOGO.height,
+                      };
+                    })()
+                  : { left: 12, top: 12, width: LOGO.width, height: LOGO.height }),
+              },
+              logoAnimatedStyle,
+            ]}
+          >
+            <Image
+              source={require('../../Images/logo_encendido.png')}
+              style={{ width: '100%', height: '100%' }}
+              resizeMode="contain"
+            />
+          </Animated.View>
+        )}
 
         {showHint && (
           <View style={styles.hintContainer} pointerEvents="box-none">
