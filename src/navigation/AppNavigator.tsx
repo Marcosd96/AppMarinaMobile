@@ -15,6 +15,7 @@ import EncendidoScreen from '../screens/EncendidoScreen';
 import PostmanScreen from '../screens/PostmanScreen';
 import FillgunScreen from '../screens/FillgunScreen';
 import FallasScreen from '../screens/FallasScreen';
+import VistasScreen from '../screens/VistasScreen';
 
 const Drawer = createDrawerNavigator();
 const OperatividadStack = createStackNavigator();
@@ -33,49 +34,91 @@ function OperatividadStackNavigator() {
 
 function CustomDrawerContent(props: any) {
   const { navigation } = props;
-  const [operatividadOpen, setOperatividadOpen] = React.useState(false);
+  // Estado escalable por secciones
+  const [sectionsOpen, setSectionsOpen] = React.useState<
+    Record<string, boolean>
+  >({
+    Conceptos: false,
+    Operatividad: false,
+  });
+
+  const toggleSection = (name: string) =>
+    setSectionsOpen(prev => ({ ...prev, [name]: !prev[name] }));
+
+  const closeAllSections = () =>
+    setSectionsOpen(
+      prev =>
+        Object.fromEntries(Object.keys(prev).map(k => [k, false])) as Record<
+          string,
+          boolean
+        >,
+    );
+
+  const navigateAndClose = (route: string, params?: any) => {
+    closeAllSections();
+    navigation.navigate(route, params);
+    navigation.closeDrawer();
+  };
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItem label="Home" onPress={() => { navigation.navigate('Home'); setOperatividadOpen(false); navigation.closeDrawer(); }} />
+      <DrawerItem label="Home" onPress={() => navigateAndClose('Home')} />
       <DrawerItem
         label="Introducción HF"
-        onPress={() => { navigation.navigate('IntroduccionHF'); setOperatividadOpen(false); navigation.closeDrawer(); }}
+        onPress={() => navigateAndClose('IntroduccionHF')}
       />
+
+      {/* Conceptos Técnicos */}
       <DrawerItem
-        label="Conceptos Técnicos"
-        onPress={() => { navigation.navigate('ConceptosTecnicos'); setOperatividadOpen(false); navigation.closeDrawer(); }}
+        label={`Conceptos Técnicos ${sectionsOpen.Conceptos ? '▾' : '▸'}`}
+        onPress={() => toggleSection('Conceptos')}
       />
+      {sectionsOpen.Conceptos ? (
+        <>
+          <DrawerItem
+            label="Menú Principal"
+            style={{ marginLeft: 16 }}
+            onPress={() =>
+              navigateAndClose('ConceptosTecnicos', {
+                screen: 'ConceptosTecnicosHome',
+              })
+            }
+          />
+          <DrawerItem
+            label="Vistas"
+            style={{ marginLeft: 16 }}
+            onPress={() => navigateAndClose('Vistas')}
+          />
+        </>
+      ) : null}
+
+      {/* Operatividad */}
       <DrawerItem
-        label={`Operatividad ${operatividadOpen ? '▾' : '▸'}`}
-        onPress={() => setOperatividadOpen(prev => !prev)}
+        label={`Operatividad ${sectionsOpen.Operatividad ? '▾' : '▸'}`}
+        onPress={() => toggleSection('Operatividad')}
       />
-      {operatividadOpen ? (
+      {sectionsOpen.Operatividad ? (
         <>
           <DrawerItem
             label="Menu Principal"
             style={{ marginLeft: 16 }}
-            onPress={() => { navigation.navigate('Operatividad', { screen: 'OperatividadHome' }); setOperatividadOpen(false); navigation.closeDrawer(); }}
+            onPress={() =>
+              navigateAndClose('Operatividad', { screen: 'OperatividadHome' })
+            }
           />
 
           <DrawerItem
             label="Encendido"
             style={{ marginLeft: 16 }}
-            onPress={() => { navigation.navigate('Operatividad', { screen: 'Encendido' }); setOperatividadOpen(false); navigation.closeDrawer(); }}
+            onPress={() =>
+              navigateAndClose('Operatividad', { screen: 'Encendido' })
+            }
           />
         </>
       ) : null}
-      <DrawerItem
-        label="Postman"
-        onPress={() => { navigation.navigate('Postman'); setOperatividadOpen(false); navigation.closeDrawer(); }}
-      />
-      <DrawerItem
-        label="Fillgun"
-        onPress={() => { navigation.navigate('Fillgun'); setOperatividadOpen(false); navigation.closeDrawer(); }}
-      />
-      <DrawerItem
-        label="Fallas"
-        onPress={() => { navigation.navigate('Fallas'); setOperatividadOpen(false); navigation.closeDrawer(); }}
-      />
+
+      <DrawerItem label="Postman" onPress={() => navigateAndClose('Postman')} />
+      <DrawerItem label="Fillgun" onPress={() => navigateAndClose('Fillgun')} />
+      <DrawerItem label="Fallas" onPress={() => navigateAndClose('Fallas')} />
     </DrawerContentScrollView>
   );
 }
@@ -111,6 +154,7 @@ export default function AppNavigator() {
           options={{ title: 'Fillgun' }}
         />
         <Drawer.Screen name="Fallas" component={FallasScreen} />
+        <Drawer.Screen name="Vistas" component={VistasScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

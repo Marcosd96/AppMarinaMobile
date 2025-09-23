@@ -1,6 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useIsFocused } from '@react-navigation/native';
-import { Image, Pressable, StyleSheet, View, useWindowDimensions, ScrollView } from 'react-native';
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  View,
+  useWindowDimensions,
+  ScrollView,
+} from 'react-native';
 import { Appbar, Text, Surface } from 'react-native-paper';
 import Animated, {
   useAnimatedStyle,
@@ -39,7 +46,7 @@ export default function EncendidoScreen({ navigation }: any) {
   const LOGO = {
     // Coordenadas relativas a la imagen (0..1)
     x: 0.174,
-    y: 0.190,
+    y: 0.19,
     // Tamaño en px del logo renderizado
     width: 65.4,
     height: 55,
@@ -143,8 +150,14 @@ export default function EncendidoScreen({ navigation }: any) {
     if (showInfo) {
       infoOpacity.value = 0;
       infoTranslateY.value = 12;
-      infoOpacity.value = withTiming(1, { duration: 350, easing: Easing.out(Easing.cubic) });
-      infoTranslateY.value = withTiming(0, { duration: 350, easing: Easing.out(Easing.cubic) });
+      infoOpacity.value = withTiming(1, {
+        duration: 350,
+        easing: Easing.out(Easing.cubic),
+      });
+      infoTranslateY.value = withTiming(0, {
+        duration: 350,
+        easing: Easing.out(Easing.cubic),
+      });
     } else {
       infoOpacity.value = 0;
       infoTranslateY.value = 8;
@@ -161,8 +174,14 @@ export default function EncendidoScreen({ navigation }: any) {
     if (showLogo) {
       logoOpacity.value = 0;
       logoScale.value = 0.95;
-      logoOpacity.value = withTiming(1, { duration: 300, easing: Easing.out(Easing.cubic) });
-      logoScale.value = withTiming(1, { duration: 300, easing: Easing.out(Easing.cubic) });
+      logoOpacity.value = withTiming(1, {
+        duration: 300,
+        easing: Easing.out(Easing.cubic),
+      });
+      logoScale.value = withTiming(1, {
+        duration: 300,
+        easing: Easing.out(Easing.cubic),
+      });
     } else {
       logoOpacity.value = 0;
       logoScale.value = 0.95;
@@ -212,25 +231,76 @@ export default function EncendidoScreen({ navigation }: any) {
         <Appbar.Content title="Encendido" />
       </Appbar.Header>
 
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 16 }}>
-      <View style={[styles.stage, { height: imageAreaHeight }]}>
-        <Animated.View
-          style={[styles.imageHolder, animatedImageStyle]}
-          onLayout={onHolderLayout}
-        >
-          <Image
-            source={require('../../Images/encendidosinfondo.png')}
-            style={styles.image}
-            resizeMode="contain"
-          />
-          {showHint && (
-            // Marcador pulsante posicionado por coordenadas relativas a la imagen
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingBottom: 16 }}
+      >
+        <View style={[styles.stage, { height: imageAreaHeight }]}>
+          <Animated.View
+            style={[styles.imageHolder, animatedImageStyle]}
+            onLayout={onHolderLayout}
+          >
+            <Image
+              source={require('../../Images/encendidosinfondo.png')}
+              style={styles.image}
+              resizeMode="contain"
+            />
+            {showHint && (
+              // Marcador pulsante posicionado por coordenadas relativas a la imagen
+              <Animated.View
+                style={[
+                  styles.hoverCircleBase,
+                  pulseStyle,
+                  {
+                    // Calcular caja real de la imagen (resizeMode contain)
+                    ...(holderWidth && holderHeight
+                      ? (() => {
+                          const holderRatio = holderWidth / holderHeight;
+                          let dispW = holderWidth;
+                          let dispH = holderHeight;
+                          let offsetX = 0;
+                          let offsetY = 0;
+                          if (holderRatio > imageRatio) {
+                            // barras horizontales
+                            dispH = holderHeight;
+                            dispW = dispH * imageRatio;
+                            offsetX = (holderWidth - dispW) / 2;
+                          } else {
+                            // barras verticales
+                            dispW = holderWidth;
+                            dispH = dispW / imageRatio;
+                            offsetY = (holderHeight - dispH) / 2;
+                          }
+                          const size = 12;
+                          return {
+                            left: offsetX + dispW * HOTSPOT.x - size / 2,
+                            top: offsetY + dispH * HOTSPOT.y - size / 2,
+                            width: size,
+                            height: size,
+                            borderRadius: size / 2,
+                          };
+                        })()
+                      : {}),
+                    right: holderWidth ? undefined : 24,
+                    bottom: holderHeight ? undefined : 120,
+                    zIndex: 10,
+                  },
+                ]}
+              >
+                <Pressable style={styles.hoverTouch} onPress={handleZoomOut} />
+              </Animated.View>
+            )}
+
+            {/* logo moved outside of animated container to avoid being affected by transforms */}
+          </Animated.View>
+
+          {showLogo && (
             <Animated.View
               style={[
-                styles.hoverCircleBase,
-                pulseStyle,
                 {
-                  // Calcular caja real de la imagen (resizeMode contain)
+                  position: 'absolute',
+                  zIndex: 20,
+                  pointerEvents: 'none',
                   ...(holderWidth && holderHeight
                     ? (() => {
                         const holderRatio = holderWidth / holderHeight;
@@ -239,101 +309,62 @@ export default function EncendidoScreen({ navigation }: any) {
                         let offsetX = 0;
                         let offsetY = 0;
                         if (holderRatio > imageRatio) {
-                          // barras horizontales
                           dispH = holderHeight;
                           dispW = dispH * imageRatio;
                           offsetX = (holderWidth - dispW) / 2;
                         } else {
-                          // barras verticales
                           dispW = holderWidth;
                           dispH = dispW / imageRatio;
                           offsetY = (holderHeight - dispH) / 2;
                         }
-                        const size = 12;
+                        const nx = Math.max(0, Math.min(1, LOGO.x));
+                        const ny = Math.max(0, Math.min(1, LOGO.y));
                         return {
-                          left: offsetX + dispW * HOTSPOT.x - size / 2,
-                          top: offsetY + dispH * HOTSPOT.y - size / 2,
-                          width: size,
-                          height: size,
-                          borderRadius: size / 2,
+                          left: offsetX + dispW * nx,
+                          top: offsetY + dispH * ny,
+                          width: LOGO.width,
+                          height: LOGO.height,
                         };
                       })()
-                    : {}),
-                  right: holderWidth ? undefined : 24,
-                  bottom: holderHeight ? undefined : 120,
-                  zIndex: 10,
+                    : {
+                        left: 12,
+                        top: 12,
+                        width: LOGO.width,
+                        height: LOGO.height,
+                      }),
                 },
+                logoAnimatedStyle,
               ]}
             >
-              <Pressable style={styles.hoverTouch} onPress={handleZoomOut} />
+              <Image
+                source={require('../../Images/logo_encendido.png')}
+                style={{ width: '100%', height: '100%' }}
+                resizeMode="contain"
+              />
             </Animated.View>
           )}
 
-          {/* logo moved outside of animated container to avoid being affected by transforms */}
-        </Animated.View>
+          {showHint && (
+            <View style={styles.hintContainer} pointerEvents="box-none">
+              <View style={styles.hintBoxRow}>
+                <Text style={styles.hintText}>
+                  Encienda el Equipo en el circulo rojo
+                </Text>
+              </View>
+            </View>
+          )}
+        </View>
 
-        {showLogo && (
+        {showInfo && (
           <Animated.View
-            style={[
-              {
-                position: 'absolute',
-                zIndex: 20,
-                pointerEvents: 'none',
-                ...(holderWidth && holderHeight
-                  ? (() => {
-                      const holderRatio = holderWidth / holderHeight;
-                      let dispW = holderWidth;
-                      let dispH = holderHeight;
-                      let offsetX = 0;
-                      let offsetY = 0;
-                      if (holderRatio > imageRatio) {
-                        dispH = holderHeight;
-                        dispW = dispH * imageRatio;
-                        offsetX = (holderWidth - dispW) / 2;
-                      } else {
-                        dispW = holderWidth;
-                        dispH = dispW / imageRatio;
-                        offsetY = (holderHeight - dispH) / 2;
-                      }
-                      const nx = Math.max(0, Math.min(1, LOGO.x));
-                      const ny = Math.max(0, Math.min(1, LOGO.y));
-                      return {
-                        left: offsetX + dispW * nx,
-                        top: offsetY + dispH * ny,
-                        width: LOGO.width,
-                        height: LOGO.height,
-                      };
-                    })()
-                  : { left: 12, top: 12, width: LOGO.width, height: LOGO.height }),
-              },
-              logoAnimatedStyle,
-            ]}
+            style={[styles.infoAnimatedContainer, infoAnimatedStyle]}
           >
-            <Image
-              source={require('../../Images/logo_encendido.png')}
-              style={{ width: '100%', height: '100%' }}
-              resizeMode="contain"
-            />
+            <Surface style={styles.infoSurface} elevation={2}>
+              <Text style={styles.infoTitle}>Información</Text>
+              <Text style={styles.infoText}>{infoText}</Text>
+            </Surface>
           </Animated.View>
         )}
-
-        {showHint && (
-          <View style={styles.hintContainer} pointerEvents="box-none">
-            <View style={styles.hintBoxRow}>
-              <Text style={styles.hintText}>Encienda el Equipo en el circulo rojo</Text>
-            </View>
-          </View>
-        )}
-      </View>
-
-      {showInfo && (
-        <Animated.View style={[styles.infoAnimatedContainer, infoAnimatedStyle]}>
-          <Surface style={styles.infoSurface} elevation={2}>
-            <Text style={styles.infoTitle}>Información</Text>
-            <Text style={styles.infoText}>{infoText}</Text>
-          </Surface>
-        </Animated.View>
-      )}
       </ScrollView>
     </View>
   );
