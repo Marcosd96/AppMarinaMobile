@@ -1,6 +1,13 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Image } from 'react-native';
-import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
+import {
+  Appbar,
+  Text,
+  Surface,
+  Card,
+  Button,
+  DataTable,
+} from 'react-native-paper';
 
 export default function ConceptosTecnicosScreen({ navigation }: any) {
   return (
@@ -379,6 +386,773 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             </View>
           </Card.Content>
         </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              ANTENA dipolo HF R&S® HX002H1 (Para Estaciones de Radio en tierra)
+            </Text>
+            <Text style={styles.paragraph}>
+              La Antena dipolo HF R&S®HX002H1 es adecuada para establecer
+              enlaces de radio a cualquier distancia. En particular, la
+              cobertura omnidireccional optimizada garantiza una alta fiabilidad
+              de transmisión en distancias cortas y medias.
+            </Text>
+            <Text style={styles.paragraph}>
+              El R&S®HX002H1 se puede utilizar junto con los transceptores HF de
+              150 W de la familia SERIES 4100. El tiempo de fraguado
+              extremadamente rápido permitiendo la operación de salto de
+              frecuencia en línea con R&S®SECOM‑H.
+            </Text>
+            <Text style={styles.paragraph}>
+              La antena permite una sintonización silenciosa en todo el rango de
+              frecuencia de 1,5 MHz a 30 MHz. Para ello, la unidad de
+              sintonización integrada debe aprender primero los ajustes de
+              sintonización correctos para la antena en un rango de frecuencia
+              definido por el usuario. A partir de entonces, la antena alcanza
+              tiempos de sintonización de &lt; 5 ms.
+            </Text>
+            <Text style={styles.paragraph}>
+              Se prestó especial atención a la obtención de una protección
+              contra rayos eficaz. El ATU está completamente protegido contra el
+              arco contra los rayos directos. Está probado para soportar arcos
+              de 10 kV / 10 kA.
+            </Text>
+            <Image
+              source={require('../../Images/HF_R&S_HX002H1.png')}
+              style={[styles.fillgunImage, { height: 260, marginTop: 12 }]}
+              resizeMode="contain"
+            />
+            <View style={styles.bullets}>
+              <Text style={styles.bullet}>
+                Cobertura omnidireccional con radiación de alto ángulo.
+              </Text>
+              <Text style={styles.bullet}>Sin zona de salto.</Text>
+              <Text style={styles.bullet}>
+                Instalación de un solo mástil, no se requiere plano de tierra.
+              </Text>
+              <Text style={styles.bullet}>
+                Unidad de sintonización integrada capaz de salto de frecuencia
+                R&S®SECOM‑H.
+              </Text>
+              <Text style={styles.bullet}>
+                Manejo de potencia 150 W PEP, 100 W CW al 100% del ciclo de
+                trabajo.
+              </Text>
+              <Text style={styles.bullet}>
+                Sintonización silenciosa en todo el rango de frecuencia de HF de
+                1,5 MHz a 30 MHz.
+              </Text>
+              <Text style={styles.bullet}>
+                Baja probabilidad de interceptación (LPI).
+              </Text>
+            </View>
+          </Card.Content>
+        </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              Antena HF STA 100 PM/M (Optimizada para uso a bordo de buques)
+            </Text>
+            <Text style={styles.paragraph}>
+              Las Antenas HF (receptoras / transceptoras) son una parte crucial
+              de una comunicación de radio confiable de largo alcance. Las
+              antenas son fabricadas por la empresa alemana ELNA con las
+              siguientes características:
+            </Text>
+            <View style={styles.bullets}>
+              <Text style={styles.bullet}>
+                Cobertura omnidireccional con radiación de alto ángulo.
+              </Text>
+              <Text style={styles.bullet}>Sin zona de salto.</Text>
+              <Text style={styles.bullet}>
+                Instalación de un solo mástil, no se requiere plano de tierra.
+              </Text>
+              <Text style={styles.bullet}>
+                Unidad de sintonización integrada capaz de salto de frecuencia
+                R&S®SECOM‑H.
+              </Text>
+              <Text style={styles.bullet}>
+                Manejo de potencia 150 W PEP, 100 W CW al 100% del ciclo de
+                trabajo.
+              </Text>
+              <Text style={styles.bullet}>
+                Sintonización silenciosa en todo el rango de frecuencia de HF de
+                1,5 MHz a 30 MHz.
+              </Text>
+              <Text style={styles.bullet}>
+                Baja probabilidad de interceptación (LPI).
+              </Text>
+              <Text style={styles.bullet}>
+                Rango de frecuencia de 0,1 a 30 MHz (frecuencia media / alta).
+              </Text>
+              <Text style={styles.bullet}>
+                Resiste velocidades de viento de hasta 200 km/h.
+              </Text>
+              <Text style={styles.bullet}>
+                Fabricadas de plástico reforzado con fibra de vidrio.
+              </Text>
+              <Text style={styles.bullet}>
+                Excelente resistencia frente a hielo, viento e incrustaciones.
+              </Text>
+            </View>
+            <Image
+              source={require('../../Images/Antena_HF_STA_100_PMM.jpg')}
+              style={[styles.fillgunImage, { height: 260, marginTop: 12 }]}
+              resizeMode="contain"
+            />
+          </Card.Content>
+        </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              ANTENA GPS
+            </Text>
+            <Text style={styles.paragraph}>
+              La antena GPS deberá tener una visibilidad clara del satélite para
+              poder recuperar su posición GPS actual e información de
+              sincronización del GPS.
+            </Text>
+            <Text style={styles.paragraph}>
+              Si la recepción GPS se pierde temporalmente o la visibilidad del
+              satélite es limitada, se transmite información de posicionamiento
+              GPS vacía o parcial.
+            </Text>
+            <Text style={styles.paragraph}>
+              Dado que se requiere la señal de hora GPS para la sincronización
+              del sistema, las transmisiones programadas no son compatibles si
+              nunca se ha recibido la señal de hora GPS.
+            </Text>
+            <Image
+              source={require('../../Images/antena_gps.jpg')}
+              style={[styles.fillgunImage, { height: 240, marginTop: 12 }]}
+              resizeMode="contain"
+            />
+          </Card.Content>
+        </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              Tipos de Modulación
+            </Text>
+            <DataTable style={[styles.dataTable, styles.dtTable]}>
+              <DataTable.Row
+                style={[styles.rowWrap, styles.dtRow, styles.dtHeader]}
+              >
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Tipo de Emisión</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>ITU Designación</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>ITU (antigua)</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Posterior (design)</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>Telegrafía Morse</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A1A</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A1</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>CW</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Modulación de amplitud, voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A3E</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A3</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>AM</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Modulación de amplitud equivalente, banda lateral superior,
+                    con portadora, voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>H3E</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A3H</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>AME</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral superior (USB), voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>J3E+</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A3J</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>SSB (USB)</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral superior (LSB), voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>J3E-</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A3J</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>SSB (LSB)</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral superior (USB), datos
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>J2D+</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A9J</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>AFSK, Módem</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral superior (LSB), datos
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>J2D-</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>A9J</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>AFSK, Módem</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Frecuencia portadora modulada, voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>F3E</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>F3</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>FM</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Frecuencia modulada (Frequency Shift Keying)
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>F1D</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>F3</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>FM</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral independiente, voz
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>B8E</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>—</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>ISB</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+                <DataTable.Cell
+                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>
+                    Banda lateral independiente, datos
+                  </Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>B7D</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.cellText}>—</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[
+                    styles.colNarrowLast,
+                    styles.dtCellLast,
+                    styles.dtPad,
+                  ]}
+                >
+                  <Text style={styles.cellText}>ISB (data)</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+            </DataTable>
+          </Card.Content>
+        </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              Diseño de la página del menú
+            </Text>
+            <Image
+              source={require('../../Images/disenho_pag_menu.jpg')}
+              style={styles.menuDesignImage}
+              resizeMode="contain"
+            />
+            <View style={styles.menuTextBlock}>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>1.</Text> Símbolo del dominio del
+                menú
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>2.</Text> Indicación: "Comunicación
+                cifrada" o "Comunicación simple".
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>3.</Text> Número de menú.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>4.</Text> Título del menú.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>5.</Text> Iconos.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>6.</Text> Icono del GPS.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>7.</Text> Tipo de sesión de control
+                de radio (MON / ADV / FIX / LOC).
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>8.</Text> Cabecera del menú.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>9.</Text> Etiqueta de tecla suave.
+              </Text>
+              <Text style={styles.menuItem}>
+                <Text style={styles.menuNum}>10.</Text> Número de Radio
+                Conectada (por ejemplo: LOC para radio local) o Estado de la
+                Conexión.
+              </Text>
+            </View>
+          </Card.Content>
+        </Surface>
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              Íconos y símbolos
+            </Text>
+            <Text style={styles.paragraph}>
+              Los íconos y símbolos se muestran en el encabezado del menú. Los
+              íconos indican los dominios del menú y los modos de comunicación.
+            </Text>
+            <DataTable
+              style={[styles.dataTable, styles.dtTable, { marginTop: 8 }]}
+            >
+              <DataTable.Row
+                style={[styles.rowWrap, styles.dtRow, styles.dtHeader]}
+              >
+                <DataTable.Cell
+                  style={[styles.iconHeader, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Icono</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.noteHeader, styles.dtCellLast, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Nota</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              {[
+                {
+                  img: require('../../Images/iconos/1.jpg'),
+                  note: 'Menú Principal',
+                },
+                {
+                  img: require('../../Images/iconos/2.png'),
+                  note: 'Indica el menú de mantenimiento (Ver secc. 3.4 Mantenimiendo de la radio)y el menú de la pistola de llenado (Ver secc. 3.3 Control y Vigilancia de la radio y la unidad de control).',
+                },
+                {
+                  img: require('../../Images/iconos/3.png'),
+                  note: 'Indica los menús FF (Frecuencia fija).',
+                },
+                {
+                  img: require('../../Images/iconos/4.png'),
+                  note: 'Indica los menús ALE (opción). Para operar Establecimiento de Enlace Automático.',
+                },
+                {
+                  img: require('../../Images/iconos/5.png'),
+                  note: 'El ícono representa el funcionamiento de ALE‑2G.',
+                },
+                {
+                  img: require('../../Images/iconos/6.png'),
+                  note: 'Icono significa operación ALE‑3G.',
+                },
+                {
+                  img: require('../../Images/iconos/7.png'),
+                  note: 'Operación general de ALE (ALE, ALE‑2G y ALE‑3G).',
+                },
+                {
+                  img: require('../../Images/iconos/8.png'),
+                  note: 'Indica los menús de SECOM‑H (opción).',
+                },
+                {
+                  img: require('../../Images/iconos/9.png'),
+                  note: 'Indica los menús del Modem HF (opción).',
+                },
+              ].map((row, idx) => (
+                <DataTable.Row
+                  key={`icons-${idx}`}
+                  style={[styles.rowWrap, styles.dtRow]}
+                >
+                  <DataTable.Cell
+                    style={[styles.iconCell, styles.dtCell, styles.dtPad]}
+                  >
+                    <Image
+                      source={row.img}
+                      style={styles.iconImage}
+                      resizeMode="contain"
+                    />
+                  </DataTable.Cell>
+                  <DataTable.Cell
+                    style={[styles.noteCell, styles.dtCellLast, styles.dtPad]}
+                  >
+                    <Text style={styles.cellText}>{row.note}</Text>
+                  </DataTable.Cell>
+                </DataTable.Row>
+              ))}
+            </DataTable>
+          </Card.Content>
+        </Surface>
+
+        <Surface style={styles.card} elevation={2}>
+          <Card.Content>
+            <Text variant="headlineSmall" style={styles.title}>
+              Símbolos en el encabezado
+            </Text>
+            <Text style={styles.paragraph}>
+              Además, en el encabezado del menú pueden aparecer varios símbolos.
+            </Text>
+            <DataTable
+              style={[styles.dataTable, styles.dtTable, { marginTop: 8 }]}
+            >
+              <DataTable.Row
+                style={[styles.rowWrap, styles.dtRow, styles.dtHeader]}
+              >
+                <DataTable.Cell
+                  style={[styles.iconHeader, styles.dtCell, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Símbolo</Text>
+                </DataTable.Cell>
+                <DataTable.Cell
+                  style={[styles.noteHeader, styles.dtCellLast, styles.dtPad]}
+                >
+                  <Text style={styles.dtHeaderTitle}>Nota</Text>
+                </DataTable.Cell>
+              </DataTable.Row>
+
+              {[
+                {
+                  img: require('../../Images/iconos/10.png'),
+                  note: 'Indica que la función de silenciación de radio actualmente silencia el audio.',
+                },
+                {
+                  img: require('../../Images/iconos/11.png'),
+                  note: 'Indica que la función de silenciación de radio actualmente silencia el audio.',
+                },
+                {
+                  img: require('../../Images/iconos/12.png'),
+                  note: 'Conectado a un altavoz externo.',
+                },
+                {
+                  img: require('../../Images/iconos/13.png'),
+                  note: 'Cualquier transmisión y recepción están habilitadas.',
+                },
+                {
+                  img: require('../../Images/iconos/14.png'),
+                  note: "Transmisión deshabilitada por 'TX IHBT', comando remoto o fuente externa conectada a X26.20 (inhibición de TX).",
+                },
+                {
+                  img: require('../../Images/iconos/15.png'),
+                  note: 'Para más detalles, véase la sección 9 Dibujos Descripción de la interfaz: línea TxInhibit.',
+                },
+                {
+                  img: require('../../Images/iconos/16.png'),
+                  note: 'Cualquier recepción es dehabilitada por una fuente externa conectada a X26.35 (RX inhibit). Para más detalles ver secc. 9 Dibujos Descripción de la interfaz = línea RxInhibit.',
+                },
+                {
+                  img: require('../../Images/iconos/17.png'),
+                  note: 'Se desactiva cualquier transmisión y recepción (RX y TX inhiben).',
+                },
+                {
+                  img: require('../../Images/iconos/18.png'),
+                  note: 'Para más detalles, véase la secc. 9 Dibujos Descripción de la interfaz = línea RxInhibit y TxInhibit. 	',
+                },
+                {
+                  img: require('../../Images/iconos/19.png'),
+                  note: 'Modo de sitio dividido activo. Split Site Controller conectado; RX y TX posibles.',
+                },
+                {
+                  img: require('../../Images/iconos/20.png'),
+                  note: 'El Transmisor de Sitio Dividido está en Tx-Inhibit y por lo tanto no puede transmitir. El receptor de Sitio Dividido está en RX-Inhibit y no puede recibir. Si solo el transmisor está inhibido. sólo la "X" de TX se muestra en rojo. Lo mismo aplica si sólo el Receptor de Sitio Dividido está en RX inhibido.',
+                },
+                {
+                  img: require('../../Images/iconos/21.png'),
+                  note: 'El transmisor y el receptor no están operativos. Si solo el Transmisor de Sitio Dividido no está operativo, sólo el símbolo de TX se muestra en rojo. Lo mismo se aplica so sólo el Receptor de Sitio Dividido no está operativo.',
+                },
+                {
+                  img: require('../../Images/iconos/22.png'),
+                  note: 'Modo de sitio dividido activo: transmisor separado, recepción con hardware local.',
+                },
+                {
+                  img: require('../../Images/iconos/23.png'),
+                  note: 'No hay posición GPS disponible.',
+                },
+                {
+                  img: require('../../Images/iconos/24.png'),
+                  note: 'Fijación de posición GPS en 2D (hasta tres satélites).',
+                },
+                {
+                  img: require('../../Images/iconos/25.png'),
+                  note: 'Posición GPS fija 3D (cuatro o más satélites).',
+                },
+                {
+                  img: require('../../Images/iconos/26.png'),
+                  note: 'Módulo de interfaz DSC (opción) presente.',
+                },
+                {
+                  img: require('../../Images/iconos/27.png'),
+                  note: 'DSC no está conectado o no controla la radio.',
+                },
+                {
+                  img: require('../../Images/iconos/28.png'),
+                  note: 'DSC está tomando el control.',
+                },
+                {
+                  img: require('../../Images/iconos/29.png'),
+                  note: 'DSC tiene control sobre parámetros de la radio.',
+                },
+              ].map((row, idx) => (
+                <DataTable.Row
+                  key={`sym1-${idx}`}
+                  style={[styles.rowWrap, styles.dtRow]}
+                >
+                  <DataTable.Cell
+                    style={[styles.iconCell, styles.dtCell, styles.dtPad]}
+                  >
+                    <Image
+                      source={row.img}
+                      style={styles.iconImage}
+                      resizeMode="contain"
+                    />
+                  </DataTable.Cell>
+                  <DataTable.Cell
+                    style={[styles.noteCell, styles.dtCellLast, styles.dtPad]}
+                  >
+                    <Text style={styles.cellText}>{row.note}</Text>
+                  </DataTable.Cell>
+                </DataTable.Row>
+              ))}
+            </DataTable>
+          </Card.Content>
+        </Surface>
       </ScrollView>
     </View>
   );
@@ -426,6 +1200,84 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
     backgroundColor: 'white',
+  },
+  colWide: {
+    flex: 2.2,
+  },
+  colNarrow: {
+    flex: 1.1,
+  },
+  colNarrowLast: {
+    flex: 1.4,
+  },
+  dataTable: {
+    width: '100%',
+  },
+  rowWrap: {
+    alignItems: 'stretch',
+    flexWrap: 'wrap',
+  },
+  cellText: {
+    flexWrap: 'wrap',
+    flexShrink: 1,
+    width: '100%',
+  },
+  dtTable: {
+    borderWidth: 1,
+    borderColor: '#d0d5dd',
+    borderRadius: 8,
+  },
+  dtHeader: {
+    backgroundColor: '#f5faff',
+  },
+  dtHeaderTitle: {
+    fontWeight: '700',
+    color: '#0b4aa2',
+    fontSize: 11,
+    lineHeight: 14,
+    flexWrap: 'wrap',
+    flexShrink: 1,
+    textAlign: 'center',
+    width: '100%',
+  },
+  dtRow: {
+    borderTopWidth: 1,
+    borderTopColor: '#eef2f6',
+  },
+  dtCell: {
+    borderRightWidth: 1,
+    borderRightColor: '#eef2f6',
+    minWidth: 0,
+    flexShrink: 1,
+    flexBasis: 0,
+  },
+  dtCellLast: {
+    borderRightWidth: 0,
+    minWidth: 0,
+    flexShrink: 1,
+    flexBasis: 0,
+  },
+  dtPad: {
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+  },
+  iconHeader: {
+    width: 72,
+  },
+  noteHeader: {
+    flex: 1,
+  },
+  iconCell: {
+    width: 72,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  noteCell: {
+    flex: 1,
+  },
+  iconImage: {
+    width: 40,
+    height: 28,
   },
   row: {
     flexDirection: 'row',
@@ -495,5 +1347,32 @@ const styles = StyleSheet.create({
     width: 220,
     height: 160,
     alignSelf: 'center',
+  },
+  menuDesignImage: {
+    width: '100%',
+    height: 320,
+    marginTop: 8,
+    alignSelf: 'center',
+  },
+  menuRow: {
+    flexDirection: 'row',
+    gap: 12,
+    alignItems: 'flex-start',
+  },
+  menuTextCol: {
+    flex: 1,
+    paddingLeft: 6,
+  },
+  menuTextBlock: {
+    marginTop: 8,
+  },
+  menuItem: {
+    marginBottom: 6,
+    color: '#344054',
+    lineHeight: 20,
+  },
+  menuNum: {
+    fontWeight: '700',
+    color: '#0b4aa2',
   },
 });
