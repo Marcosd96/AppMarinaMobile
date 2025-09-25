@@ -15,7 +15,10 @@ import EncendidoScreen from '../screens/EncendidoScreen';
 import PostmanScreen from '../screens/PostmanScreen';
 import FillgunScreen from '../screens/FillgunScreen';
 import FallasScreen from '../screens/FallasScreen';
-import VistasScreen from '../screens/VistasScreen';
+import VistasScreen from '../screens/VistasScreen.tsx';
+import { View, StyleSheet } from 'react-native';
+import { Text, Divider } from 'react-native-paper';
+import Animated, { Easing, interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 const Drawer = createDrawerNavigator();
 const OperatividadStack = createStackNavigator();
@@ -29,6 +32,51 @@ function OperatividadStackNavigator() {
       />
       <OperatividadStack.Screen name="Encendido" component={EncendidoScreen} />
     </OperatividadStack.Navigator>
+  );
+}
+
+function DrawerSection({
+  label,
+  open,
+  onToggle,
+  children,
+}: {
+  label: string;
+  open: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) {
+  const progress = useSharedValue(open ? 1 : 0);
+  React.useEffect(() => {
+    progress.value = withTiming(open ? 1 : 0, { duration: 220, easing: Easing.out(Easing.cubic) });
+  }, [open, progress]);
+
+  const arrowStyle = useAnimatedStyle(() => ({
+    transform: [{ rotate: `${interpolate(progress.value, [0, 1], [0, 90])}deg` }],
+  }));
+  const contentStyle = useAnimatedStyle(() => ({
+    opacity: withTiming(open ? 1 : 0, { duration: 180 }),
+    transform: [{ scaleY: interpolate(progress.value, [0, 1], [0.88, 1]) }],
+  }));
+
+  return (
+    <View>
+      <DrawerItem
+        label={() => (
+          <View style={styles.sectionHeaderRow}>
+            <Text variant="titleSmall" style={styles.sectionHeaderText}>{label}</Text>
+            <Animated.Text style={[styles.sectionArrow, arrowStyle]}>▸</Animated.Text>
+          </View>
+        )}
+        onPress={onToggle}
+        style={styles.sectionHeaderItem}
+      />
+      {open ? (
+        <Animated.View style={[styles.sectionContent, contentStyle]}>
+          {children}
+        </Animated.View>
+      ) : null}
+    </View>
   );
 }
 
@@ -61,60 +109,60 @@ function CustomDrawerContent(props: any) {
   };
   return (
     <DrawerContentScrollView {...props}>
+      <Animated.View style={styles.drawerHeader}>
+        <Text variant="titleMedium" style={styles.drawerTitle}>App Marina</Text>
+        <Text variant="bodySmall" style={styles.drawerSubtitle}>Navegación</Text>
+      </Animated.View>
+      <Divider style={styles.divider} />
+
       <DrawerItem label="Home" onPress={() => navigateAndClose('Home')} />
       <DrawerItem
         label="Introducción HF"
         onPress={() => navigateAndClose('IntroduccionHF')}
       />
 
-      {/* Conceptos Técnicos */}
-      <DrawerItem
-        label={`Conceptos Técnicos ${sectionsOpen.Conceptos ? '▾' : '▸'}`}
-        onPress={() => toggleSection('Conceptos')}
-      />
-      {sectionsOpen.Conceptos ? (
-        <>
-          <DrawerItem
-            label="Menú Principal"
-            style={{ marginLeft: 16 }}
-            onPress={() =>
-              navigateAndClose('ConceptosTecnicos', {
-                screen: 'ConceptosTecnicosHome',
-              })
-            }
-          />
-          <DrawerItem
-            label="Vistas"
-            style={{ marginLeft: 16 }}
-            onPress={() => navigateAndClose('Vistas')}
-          />
-        </>
-      ) : null}
+      <DrawerSection
+        label="Conceptos Técnicos"
+        open={sectionsOpen.Conceptos}
+        onToggle={() => toggleSection('Conceptos')}
+      >
+        <DrawerItem
+          label="Menú Principal"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('ConceptosTecnicos', {
+              screen: 'ConceptosTecnicosHome',
+            })
+          }
+        />
+        <DrawerItem
+          label="Vistas"
+          style={styles.childItem}
+          onPress={() => navigateAndClose('Vistas')}
+        />
+      </DrawerSection>
 
-      {/* Operatividad */}
-      <DrawerItem
-        label={`Operatividad ${sectionsOpen.Operatividad ? '▾' : '▸'}`}
-        onPress={() => toggleSection('Operatividad')}
-      />
-      {sectionsOpen.Operatividad ? (
-        <>
-          <DrawerItem
-            label="Menu Principal"
-            style={{ marginLeft: 16 }}
-            onPress={() =>
-              navigateAndClose('Operatividad', { screen: 'OperatividadHome' })
-            }
-          />
+      <DrawerSection
+        label="Operatividad"
+        open={sectionsOpen.Operatividad}
+        onToggle={() => toggleSection('Operatividad')}
+      >
+        <DrawerItem
+          label="Menu Principal"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'OperatividadHome' })
+          }
+        />
 
-          <DrawerItem
-            label="Encendido"
-            style={{ marginLeft: 16 }}
-            onPress={() =>
-              navigateAndClose('Operatividad', { screen: 'Encendido' })
-            }
-          />
-        </>
-      ) : null}
+        <DrawerItem
+          label="Encendido"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'Encendido' })
+          }
+        />
+      </DrawerSection>
 
       <DrawerItem label="Postman" onPress={() => navigateAndClose('Postman')} />
       <DrawerItem label="Fillgun" onPress={() => navigateAndClose('Fillgun')} />
@@ -128,7 +176,19 @@ export default function AppNavigator() {
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
-        screenOptions={{ headerShown: false }}
+        screenOptions={{
+          headerShown: false,
+          drawerType: 'front',
+          swipeEnabled: true,
+          swipeEdgeWidth: 40,
+          overlayColor: 'rgba(0,0,0,0.15)',
+          drawerStyle: {
+            width: 290,
+            backgroundColor: 'white',
+            borderRightColor: 'rgba(0,0,0,0.08)',
+            borderRightWidth: StyleSheet.hairlineWidth,
+          },
+        }}
         drawerContent={props => <CustomDrawerContent {...props} />}
       >
         <Drawer.Screen name="Home" component={AppContent} />
@@ -159,3 +219,41 @@ export default function AppNavigator() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  drawerHeader: {
+    paddingHorizontal: 16,
+    paddingTop: 12,
+    paddingBottom: 8,
+  },
+  drawerTitle: {
+    fontWeight: '700',
+  },
+  drawerSubtitle: {
+    opacity: 0.6,
+  },
+  divider: {
+    marginVertical: 8,
+  },
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  sectionHeaderText: {
+    fontWeight: '600',
+  },
+  sectionArrow: {
+    opacity: 0.6,
+  },
+  sectionHeaderItem: {
+    marginTop: 4,
+  },
+  sectionContent: {
+    paddingLeft: 12,
+  },
+  childItem: {
+    marginLeft: 8,
+  },
+});
