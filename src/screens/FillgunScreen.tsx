@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { ScrollView, StyleSheet, View, useWindowDimensions, Image } from 'react-native';
 import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
+import { useFocusEffect } from '@react-navigation/native';
 import Animated, {
   Extrapolate,
   Easing,
@@ -176,12 +177,27 @@ export default function FillgunScreen({ navigation }: any) {
 
   const isSmall = windowWidth < 380;
 
-  useEffect(() => {
-    headerTranslateY.value = withTiming(0, { duration: 520, easing: Easing.out(Easing.cubic) });
-    headerOpacity.value = withTiming(1, { duration: 520, easing: Easing.out(Easing.cubic) });
-    cardTranslateY.value = withTiming(0, { duration: 560, easing: Easing.out(Easing.cubic) });
-    cardOpacity.value = withTiming(1, { duration: 560, easing: Easing.out(Easing.cubic) });
-  }, [headerTranslateY, headerOpacity, cardTranslateY, cardOpacity]);
+  useFocusEffect(
+    useCallback(() => {
+      // Reset instantly to initial state
+      setCurrentStep(0);
+      animatedIndex.value = 0;
+      headerTranslateY.value = -24;
+      headerOpacity.value = 0;
+      cardTranslateY.value = 24;
+      cardOpacity.value = 0;
+
+      // Run entrance animations on focus
+      headerTranslateY.value = withTiming(0, { duration: 520, easing: Easing.out(Easing.cubic) });
+      headerOpacity.value = withTiming(1, { duration: 520, easing: Easing.out(Easing.cubic) });
+      cardTranslateY.value = withTiming(0, { duration: 560, easing: Easing.out(Easing.cubic) });
+      cardOpacity.value = withTiming(1, { duration: 560, easing: Easing.out(Easing.cubic) });
+
+      return () => {
+        // optional: stop animations or leave values as-is
+      };
+    }, [headerTranslateY, headerOpacity, cardTranslateY, cardOpacity])
+  );
 
   const headerAnimatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: headerTranslateY.value }],
