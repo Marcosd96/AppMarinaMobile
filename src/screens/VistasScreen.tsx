@@ -10,6 +10,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { Image as RNImage } from 'react-native';
+import ScreenEntrance from '../components/ScreenEntrance';
 
 type Hotspot = {
   id: string;
@@ -432,6 +433,7 @@ export default function VistasScreen({ navigation }: any) {
       </Appbar.Header>
 
       <View style={styles.content}>
+        <ScreenEntrance style={{ flex: 1 }}>
         <Surface style={styles.imageCard} elevation={2}>
           <View
             style={styles.canvas}
@@ -504,6 +506,7 @@ export default function VistasScreen({ navigation }: any) {
             </GestureDetector>
           </View>
         </Surface>
+        </ScreenEntrance>
 
         <View style={styles.actionsRow}>
           <Button
@@ -527,6 +530,7 @@ export default function VistasScreen({ navigation }: any) {
             Reiniciar vista
           </Button>
         </View>
+        <ScreenEntrance delay={80} style={{ flex: 1 }}>
         <Surface style={styles.descSurface} elevation={2}>
           <View style={styles.descHeader}>
             <Text variant="titleMedium" style={styles.descTitle}>
@@ -557,6 +561,7 @@ export default function VistasScreen({ navigation }: any) {
             )}
           </ScrollView>
         </Surface>
+        </ScreenEntrance>
       </View>
     </View>
   );

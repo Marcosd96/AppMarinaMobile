@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
+import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function OperatividadScreen({ navigation }: any) {
   return (
@@ -14,6 +15,7 @@ export default function OperatividadScreen({ navigation }: any) {
         style={styles.scrollView}
         contentContainerStyle={styles.content}
       >
+        <ScreenEntrance>
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
             <Text variant="headlineSmall" style={styles.title}>
@@ -25,7 +27,9 @@ export default function OperatividadScreen({ navigation }: any) {
             </Text>
           </Card.Content>
         </Surface>
+        </ScreenEntrance>
 
+        <ScreenEntrance delay={80}>
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
             <Text variant="headlineSmall" style={styles.title}>
@@ -39,7 +43,9 @@ export default function OperatividadScreen({ navigation }: any) {
             </Text>
           </Card.Content>
         </Surface>
+        </ScreenEntrance>
 
+        <ScreenEntrance delay={140}>
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
             <Text variant="headlineSmall" style={styles.title}>
@@ -52,6 +58,7 @@ export default function OperatividadScreen({ navigation }: any) {
             </Text>
           </Card.Content>
         </Surface>
+        </ScreenEntrance>
       </ScrollView>
     </View>
   );

@@ -8,6 +8,7 @@ import {
   Button,
   DataTable,
 } from 'react-native-paper';
+import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function ConceptosTecnicosScreen({ navigation }: any) {
   return (
@@ -21,6 +22,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
         style={styles.scrollView}
         contentContainerStyle={styles.content}
       >
+        <ScreenEntrance>
         {/* Especificaciones: tabla + lista codificadas */}
         <Surface style={styles.card} elevation={2}>
           <Card.Content>
@@ -1153,6 +1155,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             </DataTable>
           </Card.Content>
         </Surface>
+        </ScreenEntrance>
       </ScrollView>
     </View>
   );
