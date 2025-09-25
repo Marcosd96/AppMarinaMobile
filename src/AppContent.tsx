@@ -114,6 +114,7 @@ export default function AppContent({ navigation }: any) {
   return (
     <View style={styles.container}>
       <Appbar.Header mode="center-aligned" style={styles.header}>
+        <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content
           title="HF ROHDE & SCHWARZ"
           titleStyle={{ fontSize: layout.headerTitleSize }}

@@ -110,7 +110,7 @@ function CustomDrawerContent(props: any) {
   return (
     <DrawerContentScrollView {...props}>
       <Animated.View style={styles.drawerHeader}>
-        <Text variant="titleMedium" style={styles.drawerTitle}>App Marina</Text>
+        <Text variant="titleMedium" style={styles.drawerTitle}>HF ROHDE & SCHWARZ</Text>
         <Text variant="bodySmall" style={styles.drawerSubtitle}>Navegación</Text>
       </Animated.View>
       <Divider style={styles.divider} />
