@@ -66,6 +66,65 @@ export default function OperatividadScreen({ navigation }: any) {
                 <Text variant="bodyMedium" style={styles.paragraph}>
                   Es un dispositivo de interconexión utilizado para conectar equipos de red, formando una Red de Área Local (LAN). Sus especificaciones técnicas siguen el estándar Ethernet (IEEE 802.3). Es un switch gestionado de Capa 3 (L3) con 16 puertos. Incluye características como Control de Flujo, Capacidad Duplex, Switching de Capa 3, Switching de Capa 2, Auto-detección por Dispositivo, Soporte DHCP, Soporte BootP, Soporte ARP, Soporte VLAN, Auto Uplink (MDI/MDI-X Automático), IGMP Snooping, Activatable, Soporte IPv6 y Compatibilidad con Jumbo Frames.
                 </Text>
+                <Text variant="titleMedium" style={styles.subtitle}>
+                  Servidor Dell PowerEdge R310
+                </Text>
+                <Image
+                  source={require('../../Images/partes_del_sistema/servidor.png')}
+                  style={[styles.deviceImage, styles.tightImage]}
+                  resizeMode="contain"
+                />
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  El Servidor Dell PowerEdge R310 es un servidor para rack de un socket y 1U de alto rendimiento que cuenta con un procesamiento flexible, capacidad de ampliación, gestión simplificada, protección de datos y opciones de seguridad. Opciones de procesador y configuraciones de memoria que se equilibran para ejecutar aplicaciones, como Windows® Small Business Server, Business Center Essentials, SQL Workgroup/Standard, Oracle® 11g Standard, VMware®, Active Directory®, SharePoint® y archivo/impresión. Opciones de múltiples RAID y hasta cuatro discos duros de 2,5" o 3,5" para ayudar a mantener protegidos los datos.
+                </Text>
+                <Text variant="titleMedium" style={styles.subtitle}>
+                  R&S GB4000V Unidad de Audio
+                </Text>
+                <Image
+                  source={require('../../Images/partes_del_sistema/unidad_de_audio.png')}
+                  style={[styles.deviceImage, styles.tightImage]}
+                  resizeMode="contain"
+                />
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  El R&S GB4000V es una unidad de audio remota. Es ideal para pequeños sistemas ATC donde no hay un interruptor de voz dedicado. El R&S GB4000V proporciona audio, PTT y silenciamiento hacia y desde radios en una ubicación remota. La unidad es compacta y cabe en cualquier consola. El R&S GB4000V se puede conectar a las radios mediante E & M de 4 hilos (línea analógica) o voz sobre IP (VoIP). Los tonos disponibles son 2040 Hz (PTT) y 2440 Hz (SQ).
+                </Text>
+                <Text variant="titleMedium" style={styles.subtitle}>
+                  Computador
+                </Text>
+                <Image
+                  source={require('../../Images/partes_del_sistema/computador.png')}
+                  style={[styles.serverImage]}
+                  resizeMode="contain"
+                />
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  Es instalado en el Rack para la instalación de las operaciones basadas en perfiles y las aplicaciones como:
+                </Text>
+                <Text variant="titleMedium" style={styles.subtitle}>
+                  R&S®Postman III
+                </Text>
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  • E-mail: Admite clientes de correo electrónico estándar{'\n'}
+                  • MapTrack: Transporte y visualización de datos GPS{'\n'}
+                  • Chat: Comunicación de mensajes cortos entre estaciones{'\n'}
+                  • Transferencia de archivos: Envío de cualquier tipo de archivo entre estaciones{'\n'}
+                  • Servicio de Fax / Voz: Fax y correo de voz
+                </Text>
+                <Text variant="titleMedium" style={styles.subtitle}>
+                  Fuente de alimentación externa R&S® M3SR IN4000A
+                </Text>
+                <Image
+                  source={require('../../Images/partes_del_sistema/fuente_externa.png')}
+                  style={[styles.deviceImage, styles.tightImage]}
+                  resizeMode="contain"
+                />
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  Proporciona más energía real (watts) para proteger más equipos y dejar espacio para expandir los sistemas IT con un factor de energía de 0.9. Simplifica el monitoreo y administración de UPS con una interfaz de usuario de LCD luminosa. Extiende el tiempo de ejecución de la batería para dispositivos críticos con segmentos de carga. Maximiza los tiempos de ejecución con módulos opcionales de batería prolongada.
+                </Text>
+                <Text variant="bodyMedium" style={styles.paragraph}>
+                  <Text style={styles.specLabel}>RANGO DE ENERGÍA:</Text> 700-3000 VA{'\n'}
+                  <Text style={styles.specLabel}>VOLTAJE:</Text> 120, 208, 220-240 Vac{'\n'}
+                  <Text style={styles.specLabel}>FRECUENCIA:</Text> 50/60 Hz
+                </Text>
               </Card.Content>
             </Surface>
 
@@ -123,6 +182,15 @@ const styles = StyleSheet.create({
   tightImage: {
     marginTop: -30,
     marginBottom: -30,
+  },
+  serverImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 8,
+  },
+  specLabel: {
+    fontWeight: 'bold',
+    color: '#1976d2',
   },
   button: {
     marginTop: 20,

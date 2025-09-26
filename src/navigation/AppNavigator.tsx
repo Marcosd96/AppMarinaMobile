@@ -16,6 +16,7 @@ import PostmanScreen from '../screens/PostmanScreen';
 import FillgunScreen from '../screens/FillgunScreen';
 import FallasScreen from '../screens/FallasScreen';
 import VistasScreen from '../screens/VistasScreen.tsx';
+import ArmadoRackScreen from '../screens/Armado_Rack';
 import { View, StyleSheet } from 'react-native';
 import { Text, Divider } from 'react-native-paper';
 import Animated, { Easing, interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -140,6 +141,11 @@ function CustomDrawerContent(props: any) {
           style={styles.childItem}
           onPress={() => navigateAndClose('Vistas')}
         />
+        <DrawerItem
+          label="Armado del Rack"
+          style={styles.childItem}
+          onPress={() => navigateAndClose('ArmadoRack')}
+        />
       </DrawerSection>
 
       <DrawerSection
@@ -215,6 +221,11 @@ export default function AppNavigator() {
         />
         <Drawer.Screen name="Fallas" component={FallasScreen} />
         <Drawer.Screen name="Vistas" component={VistasScreen} />
+        <Drawer.Screen 
+          name="ArmadoRack" 
+          component={ArmadoRackScreen}
+          options={{ title: 'Armado del Rack' }}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
