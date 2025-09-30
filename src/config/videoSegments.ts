@@ -15,52 +15,100 @@ export interface VideoSegment {
 export const videoSegments: VideoSegment[] = [
   {
     startTime: 0,
-    endTime: 8,
-    instruction: "Haz clic en el botón de inicio del sistema",
-    clickTarget: { 
-      x: screenWidth * 0.3, 
-      y: screenHeight * 0.4, 
-      width: 120, 
-      height: 50 
+    endTime: 2,
+    instruction: "EATON 9130 UPS",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
     },
-    description: "Primero necesitamos encender el sistema principal"
+    description: "Ubicar la unidad de Alimentación.",
   },
   {
-    startTime: 8,
-    endTime: 15,
-    instruction: "Selecciona la configuración de red",
-    clickTarget: { 
-      x: screenWidth * 0.2, 
-      y: screenHeight * 0.6, 
-      width: 100, 
-      height: 40 
+    startTime: 2,
+    endTime: 6,
+    instruction: "COMPUTADOR",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
     },
-    description: "Configura la conexión de red para el equipo"
+    description: "Ubicar el computador.",
   },
   {
-    startTime: 15,
-    endTime: 22,
-    instruction: "Activa el módulo de comunicación",
-    clickTarget: { 
-      x: screenWidth * 0.5, 
-      y: screenHeight * 0.5, 
-      width: 110, 
-      height: 45 
+    startTime: 6,
+    endTime: 11,
+    instruction: "R&S GB400V Unidad de Audio",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
     },
-    description: "Habilita la comunicación con otros dispositivos"
+    description: "Ubicar la unidad de audio.",
   },
   {
-    startTime: 22,
+    startTime: 11,
+    endTime: 16,
+    instruction: "SERVIDOR DEL POWEREDGE R310",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
+    },
+    description: "Ubicar el servidor del Poweredge R310.",
+  },
+  {
+    startTime: 16,
+    endTime: 21,
+    instruction: "SWITCH DELL POWERCONNECT 2816",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
+    },
+    description: "Ubicar el switch DELL Powerconnect 2816.",
+  },
+  {
+    startTime: 21,
+    endTime: 26,
+    instruction: "FUENTE DE ALIMENTACION EXTERNA R&S M3SR IN400A",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
+    },
+    description: "Ubicar la fuente de alimentación externa R&S M3SR IN400A.",
+  },
+  {
+    startTime: 26,
     endTime: 30,
-    instruction: "Confirma la configuración",
-    clickTarget: { 
-      x: screenWidth * 0.4, 
-      y: screenHeight * 0.7, 
-      width: 90, 
-      height: 40 
+    instruction: "R&S ",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
     },
-    description: "Finaliza la configuración del sistema"
-  }
+    description: "Descripción del Paso 7 (edítame)",
+  },
+  {
+    startTime: 30,
+    endTime: 33,
+    instruction: "TUTORIAL COMPLETADO",
+    clickTarget: {
+      x: screenWidth * 0.5,
+      y: screenHeight * 0.6,
+      width: 120,
+      height: 50,
+    },
+    description: "Tutorial completado.",
+  },
 ];
 
 // Función para ajustar las coordenadas según el tamaño real del video
