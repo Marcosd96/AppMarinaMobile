@@ -65,21 +65,6 @@ export default function FallasScreen({ navigation }: any) {
           </Surface>
         </ScreenEntrance>
 
-        <ScreenEntrance delay={80}>
-          <Surface style={styles.card} elevation={2}>
-            <Card.Content>
-              <Text variant="headlineSmall" style={styles.title}>
-                Fallas Comunes
-              </Text>
-              <Text variant="bodyMedium" style={styles.paragraph}>
-                • Pérdida de señal de RF{'\n'}• Problemas de alimentación{'\n'}•
-                Fallos en conectores{'\n'}• Descalibración de frecuencias{'\n'}•
-                Sobrecalentamiento de componentes
-              </Text>
-            </Card.Content>
-          </Surface>
-        </ScreenEntrance>
-
         <ScreenEntrance delay={120}>
           <Surface style={styles.card} elevation={2}>
             <Card.Content>
