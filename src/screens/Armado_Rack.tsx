@@ -5,11 +5,10 @@ import {
   Alert,
 } from 'react-native';
 import Video, { VideoRef } from 'react-native-video';
-import { Text, Button, ProgressBar } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, Button, Appbar } from 'react-native-paper';
 import { videoSegments } from '../config/videoSegments';
 
-const ArmadoRackScreen = () => {
+const ArmadoRackScreen = ({ navigation }: any) => {
   const videoRef = useRef<VideoRef>(null);
   const [currentSegment, setCurrentSegment] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -49,16 +48,12 @@ const ArmadoRackScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text variant="headlineSmall" style={styles.title}>
-          Armado del Rack
-        </Text>
-        <Text variant="bodyMedium" style={styles.subtitle}>
-          Paso {currentSegment + 1} de {videoSegments.length}
-        </Text>
-        <ProgressBar progress={videoProgress} color="#4CAF50" style={styles.progressBar} />
-      </View>
+    <View style={styles.container}>
+      <Appbar.Header mode="center-aligned" style={styles.header}>
+        <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
+        <Appbar.Content title="Armado del Rack" 
+        />
+      </Appbar.Header>
 
       <View style={styles.videoContainer}>
         <Video
@@ -100,7 +95,7 @@ const ArmadoRackScreen = () => {
           <Text variant="bodyLarge">Cargando video...</Text>
         </View>
       ) : null}
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -110,9 +105,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    padding: 16,
-    backgroundColor: 'white',
-    elevation: 2,
+    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   title: {
     fontWeight: 'bold',
