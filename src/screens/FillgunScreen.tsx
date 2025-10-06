@@ -19,10 +19,9 @@ type SlideItemProps = {
   animatedIndex: SharedValue<number>;
   source: any;
   title: string;
-  description: string;
 };
 
-function SlideItem({ index, width, animatedIndex, source, title, description }: SlideItemProps) {
+function SlideItem({ index, width, animatedIndex, source, title }: SlideItemProps) {
   const slideStyle = useAnimatedStyle(() => ({
     transform: [
       {
@@ -73,9 +72,6 @@ function SlideItem({ index, width, animatedIndex, source, title, description }: 
       <Text variant="titleMedium" style={styles.stepTitle}>
         {title}
       </Text>
-      <Text variant="bodyMedium" style={styles.paragraph}>
-        {description}
-      </Text>
     </Animated.View>
   );
 }
@@ -113,29 +109,21 @@ export default function FillgunScreen({ navigation }: any) {
       {
         key: 'paso1',
         title: 'Paso 1: Preparación',
-        description:
-          'Verifique el estado del sistema y prepare el área de trabajo. Asegure conexiones y equipos.',
         source: require('../../Images/usodelfillgun/paso1.png'),
       },
       {
         key: 'paso2',
         title: 'Paso 2: Conexión',
-        description:
-          'Conecte el Fillgun según el procedimiento. Compruebe que no existan fugas.',
         source: require('../../Images/usodelfillgun/paso2.png'),
       },
       {
         key: 'paso3',
         title: 'Paso 3: Configuración',
-        description:
-          'Configure los parámetros de presión y flujo de acuerdo al equipo.',
         source: require('../../Images/usodelfillgun/paso3.png'),
       },
       {
         key: 'paso4',
-        title: 'Paso 4: Verificación',
-        description:
-          'Inicie el proceso y monitoree. Verifique niveles y registre resultados.',
+        title: 'Paso 4: Descarga',
         source: require('../../Images/usodelfillgun/paso4.png'),
       },
     ],
@@ -241,7 +229,6 @@ export default function FillgunScreen({ navigation }: any) {
                       animatedIndex={animatedIndex}
                       source={step.source}
                       title={step.title}
-                      description={step.description}
                     />
                   ))}
                 </Animated.View>

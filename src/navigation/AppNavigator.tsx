@@ -11,6 +11,7 @@ import AppContent from '../AppContent';
 import IntroduccionHFScreen from '../screens/IntroduccionHFScreen';
 import ConceptosTecnicosScreen from '../screens/ConceptosTecnicosScreen';
 import OperatividadScreen from '../screens/OperatividadScreen';
+import ConceptoHardwareScreen from '../screens/ConceptoHardwareScreen';
 import EncendidoScreen from '../screens/EncendidoScreen';
 import PostmanScreen from '../screens/PostmanScreen';
 import FillgunScreen from '../screens/FillgunScreen';
@@ -137,6 +138,11 @@ function CustomDrawerContent(props: any) {
           }
         />
         <DrawerItem
+          label="Concepto del Hardware"
+          style={styles.childItem}
+          onPress={() => navigateAndClose('ConceptoHardware')}
+        />
+        <DrawerItem
           label="Vistas"
           style={styles.childItem}
           onPress={() => navigateAndClose('Vistas')}
@@ -221,6 +227,11 @@ export default function AppNavigator() {
         />
         <Drawer.Screen name="Fallas" component={FallasScreen} />
         <Drawer.Screen name="Vistas" component={VistasScreen} />
+        <Drawer.Screen
+          name="ConceptoHardware"
+          component={ConceptoHardwareScreen}
+          options={{ title: 'Concepto del Hardware' }}
+        />
         <Drawer.Screen 
           name="ArmadoRack" 
           component={ArmadoRackScreen}
