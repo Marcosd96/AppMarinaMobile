@@ -69,7 +69,7 @@ function Accordion({
 export default function PostmanScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-		<Appbar.Header mode="center-aligned" style={styles.header}>
+      <Appbar.Header mode="center-aligned" style={styles.header}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="R&S Postman III" />
       </Appbar.Header>
@@ -84,15 +84,15 @@ export default function PostmanScreen({ navigation }: any) {
               <Icon name="book-open-variant" size={48} color="#1976D2" />
               <Text variant="headlineMedium" style={styles.heroTitle}>
                 Manual de Instalación
-            </Text>
+              </Text>
               <Text variant="bodyMedium" style={styles.heroSubtitle}>
                 R&S NS5150 / Postman III
-            </Text>
+              </Text>
               <Chip icon="file-document" style={styles.chip}>
                 Version 01 - 2020
               </Chip>
             </View>
-        </Surface>
+          </Surface>
         </ScreenEntrance>
 
         {/* SECTION 1 */}
@@ -107,12 +107,12 @@ export default function PostmanScreen({ navigation }: any) {
             contiene instrucciones para configurar el entorno del sistema R&S
             NS5150. Este manual describe la instalación para la versión 04.06 o
             posterior.
-            </Text>
+          </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
             El R&S NS5150 puede instalarse en diferentes entornos. Los
             siguientes tipos de integración son soportados:
-            </Text>
+          </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
             📚 Tipos de Integración Soportados:
@@ -3730,15 +3730,19 @@ export default function PostmanScreen({ navigation }: any) {
           delay={200}
         >
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Este apéndice proporciona información detallada sobre configuraciones avanzadas, integración de servicios externos, gestión de usuarios y resolución de problemas comunes.
+            Este apéndice proporciona información detallada sobre
+            configuraciones avanzadas, integración de servicios externos,
+            gestión de usuarios y resolución de problemas comunes.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
-            📡 8.1 Integración de Servicios Externos de Transferencia de Datos (DTS)
+            📡 8.1 Integración de Servicios Externos de Transferencia de Datos
+            (DTS)
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            R&S Postman III soporta los siguientes tipos de software DTS externo ("Data Transfer Service"):
+            R&S Postman III soporta los siguientes tipos de software DTS externo
+            ("Data Transfer Service"):
           </Text>
 
           <View style={styles.checkList}>
@@ -3751,7 +3755,9 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Para usar uno de los paquetes de software DTS, la opción respectiva debe seleccionarse durante la instalación como se describe en el Capítulo 5.4, "Selección del Tipo de Instalación y Opciones".
+            Para usar uno de los paquetes de software DTS, la opción respectiva
+            debe seleccionarse durante la instalación como se describe en el
+            Capítulo 5.4, "Selección del Tipo de Instalación y Opciones".
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3759,13 +3765,24 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Para usar los paquetes de software DTS instalados, se deben configurar una o más instancias de cada tipo DTS usando la utilidad R&S Device Discovery. Una instancia también se llama "dispositivo virtual".
+            Para usar los paquetes de software DTS instalados, se deben
+            configurar una o más instancias de cada tipo DTS usando la utilidad
+            R&S Device Discovery. Una instancia también se llama "dispositivo
+            virtual".
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión como usuario <Text style={styles.bold}>Installer</Text> e inicie la utilidad R&S Device Discovery.</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión como usuario{' '}
+              <Text style={styles.bold}>Installer</Text> e inicie la utilidad
+              R&S Device Discovery.
+            </Text>
 
-            <Text style={styles.step}>2. Haga clic en el comando "Add S5066Device..." o "Add RSIRPDevice..." para agregar una instancia DTS (dispositivo virtual) al panel de dispositivos.</Text>
+            <Text style={styles.step}>
+              2. Haga clic en el comando "Add S5066Device..." o "Add
+              RSIRPDevice..." para agregar una instancia DTS (dispositivo
+              virtual) al panel de dispositivos.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3780,7 +3797,8 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Edite el nombre del dispositivo virtual haciendo clic en el nombre del dispositivo.
+            Edite el nombre del dispositivo virtual haciendo clic en el nombre
+            del dispositivo.
           </Text>
 
           <View style={styles.imageContainer}>
@@ -3795,7 +3813,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>4. Haga clic en "Options" para expandir el panel de opciones y verificar o ajustar las opciones del dispositivo virtual.</Text>
+            <Text style={styles.step}>
+              4. Haga clic en "Options" para expandir el panel de opciones y
+              verificar o ajustar las opciones del dispositivo virtual.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3810,7 +3831,11 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>5. Finalmente haga clic en "Update DEVCON" para agregar el dispositivo virtual al sistema y reiniciar todos los servicios dependientes.</Text>
+            <Text style={styles.step}>
+              5. Finalmente haga clic en "Update DEVCON" para agregar el
+              dispositivo virtual al sistema y reiniciar todos los servicios
+              dependientes.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3818,20 +3843,40 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Para agregar un nuevo usuario R&S Postman III a un sitio, proceda de la siguiente manera:
+            Para agregar un nuevo usuario R&S Postman III a un sitio, proceda de
+            la siguiente manera:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Crear una cuenta de usuario de Windows para el nuevo usuario tanto en el servidor como en uno o más clientes.</Text>
-            <Text style={styles.step}>2. Agregar la cuenta de usuario de Windows al grupo <Text style={styles.bold}>PMIII-User</Text> en el servidor.</Text>
-            <Text style={styles.step}>3. Crear una cuenta de usuario UMAN usando el nombre del usuario como login usando el R&S Postman III Extended User Manager (UMAN).</Text>
-            <Text style={styles.step}>4. Agregar la cuenta de usuario UMAN al grupo PMIII Operators.</Text>
-            <Text style={styles.step}>5. Crear una cuenta de usuario Postman III usando la Consola de Administración R&S Postman III. Esto creará implícitamente una cuenta de correo para el nuevo usuario.</Text>
-            <Text style={styles.step}>6. Configurar el cliente de correo (Mozilla Thunderbird) en cada PC cliente.</Text>
+            <Text style={styles.step}>
+              1. Crear una cuenta de usuario de Windows para el nuevo usuario
+              tanto en el servidor como en uno o más clientes.
+            </Text>
+            <Text style={styles.step}>
+              2. Agregar la cuenta de usuario de Windows al grupo{' '}
+              <Text style={styles.bold}>PMIII-User</Text> en el servidor.
+            </Text>
+            <Text style={styles.step}>
+              3. Crear una cuenta de usuario UMAN usando el nombre del usuario
+              como login usando el R&S Postman III Extended User Manager (UMAN).
+            </Text>
+            <Text style={styles.step}>
+              4. Agregar la cuenta de usuario UMAN al grupo PMIII Operators.
+            </Text>
+            <Text style={styles.step}>
+              5. Crear una cuenta de usuario Postman III usando la Consola de
+              Administración R&S Postman III. Esto creará implícitamente una
+              cuenta de correo para el nuevo usuario.
+            </Text>
+            <Text style={styles.step}>
+              6. Configurar el cliente de correo (Mozilla Thunderbird) en cada
+              PC cliente.
+            </Text>
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Estos pasos se describen con más detalle en las siguientes secciones.
+            Estos pasos se describen con más detalle en las siguientes
+            secciones.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3839,7 +3884,8 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los siguientes parámetros deben definirse para cada usuario R&S Postman III de cada sitio R&S Postman III.
+            Los siguientes parámetros deben definirse para cada usuario R&S
+            Postman III de cada sitio R&S Postman III.
           </Text>
 
           <View style={styles.parameterTable}>
@@ -3847,34 +3893,52 @@ export default function PostmanScreen({ navigation }: any) {
               <Text style={styles.parameterName}>User name</Text>
               <Text style={styles.parameterExample}>Ejemplo: OpMU2</Text>
               <Text style={styles.parameterDesc}>El nombre del usuario.</Text>
-              <Text style={styles.parameterRemarks}>Usado para: cuenta de usuario de Windows, cuenta de usuario R&S Postman III, grupo de trabajo, cuenta UMAN</Text>
+              <Text style={styles.parameterRemarks}>
+                Usado para: cuenta de usuario de Windows, cuenta de usuario R&S
+                Postman III, grupo de trabajo, cuenta UMAN
+              </Text>
             </View>
 
             <View style={styles.parameterRow}>
               <Text style={styles.parameterName}>Password</Text>
               <Text style={styles.parameterExample}>Ejemplo: 123456</Text>
-              <Text style={styles.parameterDesc}>La contraseña del usuario.</Text>
-              <Text style={styles.parameterRemarks}>No use el valor predeterminado.</Text>
+              <Text style={styles.parameterDesc}>
+                La contraseña del usuario.
+              </Text>
+              <Text style={styles.parameterRemarks}>
+                No use el valor predeterminado.
+              </Text>
             </View>
 
             <View style={styles.parameterRow}>
               <Text style={styles.parameterName}>Mail account</Text>
               <Text style={styles.parameterExample}>Ejemplo: OpMU2</Text>
-              <Text style={styles.parameterDesc}>El nombre de la cuenta de correo del usuario.</Text>
-              <Text style={styles.parameterRemarks}>El nombre de la cuenta de correo debe ser idéntico al nombre de usuario.</Text>
+              <Text style={styles.parameterDesc}>
+                El nombre de la cuenta de correo del usuario.
+              </Text>
+              <Text style={styles.parameterRemarks}>
+                El nombre de la cuenta de correo debe ser idéntico al nombre de
+                usuario.
+              </Text>
             </View>
 
             <View style={styles.parameterRow}>
               <Text style={styles.parameterName}>Management privileges</Text>
               <Text style={styles.parameterExample}>Ejemplo: All</Text>
-              <Text style={styles.parameterDesc}>Los privilegios de gestión R&S Postman III.</Text>
+              <Text style={styles.parameterDesc}>
+                Los privilegios de gestión R&S Postman III.
+              </Text>
             </View>
           </View>
 
           <View style={styles.infoBox}>
             <Icon name="alert" size={18} color="#FF9800" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Limitación de nombre de usuario: Solo el guion bajo "_" está permitido como carácter especial en el nombre de usuario más adelante en R&S NS5150 UMAN. No está permitido crear usuarios de Windows y R&S NS5150 con caracteres especiales como "." que no se pueden crear en R&S NS5150 UMAN más adelante.
+              Limitación de nombre de usuario: Solo el guion bajo "_" está
+              permitido como carácter especial en el nombre de usuario más
+              adelante en R&S NS5150 UMAN. No está permitido crear usuarios de
+              Windows y R&S NS5150 con caracteres especiales como "." que no se
+              pueden crear en R&S NS5150 UMAN más adelante.
             </Text>
           </View>
 
@@ -3883,7 +3947,9 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Realice los siguientes pasos tanto en un servidor R&S Postman III como en cada cliente R&S Postman III que deba ser accesible para el nuevo usuario.
+            Realice los siguientes pasos tanto en un servidor R&S Postman III
+            como en cada cliente R&S Postman III que deba ser accesible para el
+            nuevo usuario.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
@@ -3898,27 +3964,62 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión en Windows usando la cuenta <Text style={styles.bold}>Installer</Text>.</Text>
-            <Text style={styles.step}>2. Haga clic en "Start" {'>'} "Windows Administrative Tools" {'>'} "Computer Management". En el árbol, navegue al elemento "Computer" {'>'} "System Tools" {'>'} "Local Users and Groups". Alternativamente, inicie <Text style={styles.bold}>lusrmgr.msc</Text>.</Text>
-            <Text style={styles.step}>3. Haga clic derecho en "Users" y seleccione "New User..." para abrir el diálogo "New User".</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión en Windows usando la cuenta{' '}
+              <Text style={styles.bold}>Installer</Text>.
+            </Text>
+            <Text style={styles.step}>
+              2. Haga clic en "Start" {'>'} "Windows Administrative Tools" {'>'}{' '}
+              "Computer Management". En el árbol, navegue al elemento "Computer"{' '}
+              {'>'} "System Tools" {'>'} "Local Users and Groups".
+              Alternativamente, inicie{' '}
+              <Text style={styles.bold}>lusrmgr.msc</Text>.
+            </Text>
+            <Text style={styles.step}>
+              3. Haga clic derecho en "Users" y seleccione "New User..." para
+              abrir el diálogo "New User".
+            </Text>
             <Text style={styles.step}>4. Ingrese el nombre de usuario.</Text>
             <Text style={styles.step}>5. Ingrese la contraseña dos veces.</Text>
-            <Text style={styles.step}>6. Desmarque la casilla "User must change password at next logon".</Text>
-            <Text style={styles.step}>7. Marque la casilla "Password never expires".</Text>
-            <Text style={styles.step}>8. Haga clic en "Create" para crear el nuevo usuario.</Text>
-            <Text style={styles.step}>9. Haga clic en "Close" para cerrar el diálogo "New User".</Text>
+            <Text style={styles.step}>
+              6. Desmarque la casilla "User must change password at next logon".
+            </Text>
+            <Text style={styles.step}>
+              7. Marque la casilla "Password never expires".
+            </Text>
+            <Text style={styles.step}>
+              8. Haga clic en "Create" para crear el nuevo usuario.
+            </Text>
+            <Text style={styles.step}>
+              9. Haga clic en "Close" para cerrar el diálogo "New User".
+            </Text>
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Con Windows Domain-Controller, la cuenta se crea en el dominio de Windows. Los siguientes pasos son requeridos solo en el servidor:
+            Con Windows Domain-Controller, la cuenta se crea en el dominio de
+            Windows. Los siguientes pasos son requeridos solo en el servidor:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Haga clic derecho en el usuario recién creado y seleccione "Properties" para abrir el diálogo "User Properties".</Text>
-            <Text style={styles.step}>2. Seleccione la pestaña "Member Of".</Text>
-            <Text style={styles.step}>3. Haga clic en el botón "Add..." para abrir el diálogo "Select Groups".</Text>
-            <Text style={styles.step}>4. Haga clic en "Advanced" y luego en "Find Now" para listar todos los grupos de Windows.</Text>
-            <Text style={styles.step}>5. Seleccione el grupo <Text style={styles.bold}>PMIII-User</Text> y haga clic en "OK" tres veces para cerrar todos los diálogos.</Text>
+            <Text style={styles.step}>
+              1. Haga clic derecho en el usuario recién creado y seleccione
+              "Properties" para abrir el diálogo "User Properties".
+            </Text>
+            <Text style={styles.step}>
+              2. Seleccione la pestaña "Member Of".
+            </Text>
+            <Text style={styles.step}>
+              3. Haga clic en el botón "Add..." para abrir el diálogo "Select
+              Groups".
+            </Text>
+            <Text style={styles.step}>
+              4. Haga clic en "Advanced" y luego en "Find Now" para listar todos
+              los grupos de Windows.
+            </Text>
+            <Text style={styles.step}>
+              5. Seleccione el grupo <Text style={styles.bold}>PMIII-User</Text>{' '}
+              y haga clic en "OK" tres veces para cerrar todos los diálogos.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3926,25 +4027,62 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los siguientes pasos deben realizarse solo en un servidor R&S Postman III:
+            Los siguientes pasos deben realizarse solo en un servidor R&S
+            Postman III:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión en Windows usando la cuenta <Text style={styles.bold}>Installer</Text>.</Text>
-            <Text style={styles.step}>2. Presione [Win+R] para abrir el diálogo "Run".</Text>
-            <Text style={styles.step}>3. Ingrese <Text style={styles.bold}>http://localhost:8080/simcos2</Text> para lanzar la Interfaz Web Extendida de Postman.</Text>
-            <Text style={styles.step}>4. Haga clic en el ícono "UMAN" para lanzar el Administrador de Usuario Extendido de Postman.</Text>
-            <Text style={styles.step}>5. Haga clic en "Add..." en la pestaña "Users" para abrir el diálogo UMAN "Add/Edit User".</Text>
-            <Text style={styles.step}>6. Ingrese el nuevo nombre de usuario en los campos "User Name" y "Login".</Text>
-            <Text style={styles.step}>7. Haga clic en "Ok" para agregar la cuenta de usuario UMAN y cerrar el diálogo.</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión en Windows usando la cuenta{' '}
+              <Text style={styles.bold}>Installer</Text>.
+            </Text>
+            <Text style={styles.step}>
+              2. Presione [Win+R] para abrir el diálogo "Run".
+            </Text>
+            <Text style={styles.step}>
+              3. Ingrese{' '}
+              <Text style={styles.bold}>http://localhost:8080/simcos2</Text>{' '}
+              para lanzar la Interfaz Web Extendida de Postman.
+            </Text>
+            <Text style={styles.step}>
+              4. Haga clic en el ícono "UMAN" para lanzar el Administrador de
+              Usuario Extendido de Postman.
+            </Text>
+            <Text style={styles.step}>
+              5. Haga clic en "Add..." en la pestaña "Users" para abrir el
+              diálogo UMAN "Add/Edit User".
+            </Text>
+            <Text style={styles.step}>
+              6. Ingrese el nuevo nombre de usuario en los campos "User Name" y
+              "Login".
+            </Text>
+            <Text style={styles.step}>
+              7. Haga clic en "Ok" para agregar la cuenta de usuario UMAN y
+              cerrar el diálogo.
+            </Text>
             <Text style={styles.step}>8. Seleccione la pestaña "Groups".</Text>
             <Text style={styles.step}>9. Seleccione el grupo "Operators".</Text>
-            <Text style={styles.step}>10. Haga clic en "Edit..." para abrir el diálogo UMAN "Add/Edit Group".</Text>
-            <Text style={styles.step}>11. Seleccione la pestaña "Members".</Text>
-            <Text style={styles.step}>12. Haga clic en "Add..." para abrir el diálogo UMAN "Add/Edit Group" – "Add Members".</Text>
-            <Text style={styles.step}>13. Seleccione el nuevo nombre de usuario.</Text>
-            <Text style={styles.step}>14. Haga clic en "Ok" dos veces para agregar el usuario al grupo y cerrar todos los diálogos.</Text>
-            <Text style={styles.step}>15. Haga clic en "Exit" para cerrar la ventana UMAN.</Text>
+            <Text style={styles.step}>
+              10. Haga clic en "Edit..." para abrir el diálogo UMAN "Add/Edit
+              Group".
+            </Text>
+            <Text style={styles.step}>
+              11. Seleccione la pestaña "Members".
+            </Text>
+            <Text style={styles.step}>
+              12. Haga clic en "Add..." para abrir el diálogo UMAN "Add/Edit
+              Group" – "Add Members".
+            </Text>
+            <Text style={styles.step}>
+              13. Seleccione el nuevo nombre de usuario.
+            </Text>
+            <Text style={styles.step}>
+              14. Haga clic en "Ok" dos veces para agregar el usuario al grupo y
+              cerrar todos los diálogos.
+            </Text>
+            <Text style={styles.step}>
+              15. Haga clic en "Exit" para cerrar la ventana UMAN.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3952,26 +4090,67 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los siguientes pasos deben realizarse solo en un servidor R&S Postman III.
+            Los siguientes pasos deben realizarse solo en un servidor R&S
+            Postman III.
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión en Windows usando la cuenta <Text style={styles.bold}>Installer</Text>.</Text>
-            <Text style={styles.step}>2. Lance la Consola de Administración R&S Postman III.</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión en Windows usando la cuenta{' '}
+              <Text style={styles.bold}>Installer</Text>.
+            </Text>
+            <Text style={styles.step}>
+              2. Lance la Consola de Administración R&S Postman III.
+            </Text>
             <Text style={styles.step}>3. Seleccione la pestaña "Users".</Text>
-            <Text style={styles.step}>4. Haga clic en el botón de la barra de herramientas "Create new user" o presione [Ctrl+Shift+U] para abrir el diálogo "User".</Text>
-            <Text style={styles.step}>5. Ingrese el nuevo nombre de usuario en el campo "First Name".</Text>
-            <Text style={styles.step}>6. Ingrese el nuevo nombre de usuario en el campo "User logon name".</Text>
+            <Text style={styles.step}>
+              4. Haga clic en el botón de la barra de herramientas "Create new
+              user" o presione [Ctrl+Shift+U] para abrir el diálogo "User".
+            </Text>
+            <Text style={styles.step}>
+              5. Ingrese el nuevo nombre de usuario en el campo "First Name".
+            </Text>
+            <Text style={styles.step}>
+              6. Ingrese el nuevo nombre de usuario en el campo "User logon
+              name".
+            </Text>
             <Text style={styles.step}>7. Seleccione la pestaña "E-mail".</Text>
-            <Text style={styles.step}>8. Ingrese el nuevo nombre de cuenta de correo en el campo "E-mail Account Name".</Text>
-            <Text style={styles.step}>9. Seleccione el nombre del sitio local de la lista desplegable "Mail Server Site".</Text>
-            <Text style={styles.step}>10. Seleccione la pestaña "Management Authorisation".</Text>
-            <Text style={styles.step}>11. Haga clic en "Assign all" para asignar todos los privilegios de gestión al nuevo usuario.</Text>
-            <Text style={styles.step}>12. Haga clic en "Ok" para agregar el nuevo usuario.</Text>
-            <Text style={styles.substep}>  Se muestra el diálogo "Create New User".</Text>
-            <Text style={styles.step}>13. Ingrese una contraseña para la cuenta de correo del nuevo usuario (dos veces) y haga clic en "Ok".</Text>
-            <Text style={styles.step}>14. Si se muestra el diálogo "Mail Server Authentication", ingrese <Text style={styles.bold}>Administrator</Text> en el campo "User Name" e ingrese la contraseña del administrador en el campo "Password".</Text>
-            <Text style={styles.step}>15. Haga clic en "Ok" para crear una cuenta de correo para el nuevo usuario.</Text>
+            <Text style={styles.step}>
+              8. Ingrese el nuevo nombre de cuenta de correo en el campo "E-mail
+              Account Name".
+            </Text>
+            <Text style={styles.step}>
+              9. Seleccione el nombre del sitio local de la lista desplegable
+              "Mail Server Site".
+            </Text>
+            <Text style={styles.step}>
+              10. Seleccione la pestaña "Management Authorisation".
+            </Text>
+            <Text style={styles.step}>
+              11. Haga clic en "Assign all" para asignar todos los privilegios
+              de gestión al nuevo usuario.
+            </Text>
+            <Text style={styles.step}>
+              12. Haga clic en "Ok" para agregar el nuevo usuario.
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              Se muestra el diálogo "Create New User".
+            </Text>
+            <Text style={styles.step}>
+              13. Ingrese una contraseña para la cuenta de correo del nuevo
+              usuario (dos veces) y haga clic en "Ok".
+            </Text>
+            <Text style={styles.step}>
+              14. Si se muestra el diálogo "Mail Server Authentication", ingrese{' '}
+              <Text style={styles.bold}>Administrator</Text> en el campo "User
+              Name" e ingrese la contraseña del administrador en el campo
+              "Password".
+            </Text>
+            <Text style={styles.step}>
+              15. Haga clic en "Ok" para crear una cuenta de correo para el
+              nuevo usuario.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3979,13 +4158,23 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los siguientes pasos deben realizarse en cada cliente R&S Postman III donde el cliente Mozilla Thunderbird debe ser accesible para el nuevo usuario.
+            Los siguientes pasos deben realizarse en cada cliente R&S Postman
+            III donde el cliente Mozilla Thunderbird debe ser accesible para el
+            nuevo usuario.
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión en Windows usando la nueva cuenta de usuario.</Text>
-            <Text style={styles.step}>2. Inicie la aplicación Mozilla Thunderbird.</Text>
-            <Text style={styles.step}>3. Ingrese los valores de la tabla de usuario. Para información detallada, consulte el Capítulo 5.14.1, "Setting Up the Email Account".</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión en Windows usando la nueva cuenta de usuario.
+            </Text>
+            <Text style={styles.step}>
+              2. Inicie la aplicación Mozilla Thunderbird.
+            </Text>
+            <Text style={styles.step}>
+              3. Ingrese los valores de la tabla de usuario. Para información
+              detallada, consulte el Capítulo 5.14.1, "Setting Up the Email
+              Account".
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3993,13 +4182,23 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Es posible cambiar la dirección IP de un servidor R&S Postman III después de la instalación y configuración siguiendo estos pasos:
+            Es posible cambiar la dirección IP de un servidor R&S Postman III
+            después de la instalación y configuración siguiendo estos pasos:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Cambiar la dirección IP del adaptador de red en el Panel de Control de Red (ncpa.cpl).</Text>
-            <Text style={styles.step}>2. Cambiar la dirección IP del sitio en la Consola de Administración R&S Postman III.</Text>
-            <Text style={styles.step}>3. Cambiar la dirección IP pública del TMR ("Tactical Management Router").</Text>
+            <Text style={styles.step}>
+              1. Cambiar la dirección IP del adaptador de red en el Panel de
+              Control de Red (ncpa.cpl).
+            </Text>
+            <Text style={styles.step}>
+              2. Cambiar la dirección IP del sitio en la Consola de
+              Administración R&S Postman III.
+            </Text>
+            <Text style={styles.step}>
+              3. Cambiar la dirección IP pública del TMR ("Tactical Management
+              Router").
+            </Text>
             <Text style={styles.step}>4. Reiniciar el servidor.</Text>
           </View>
 
@@ -4012,10 +4211,26 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Haga clic en Start {'>'} Control Panel {'>'} Network and Sharing Center {'>'} Change adapter settings o lance <Text style={styles.bold}>ncpa.cpl</Text> para abrir el applet "Network Control Panel".</Text>
-            <Text style={styles.step}>2. Haga clic derecho en el adaptador de red y seleccione "Properties" del menú contextual para abrir el diálogo "Network Adapter Properties".</Text>
-            <Text style={styles.step}>3. Seleccione Internet Protocol Version 4 (TCP/IPv4) y haga clic en "Properties" para abrir el diálogo Internet Protocol Version 4 (TCP/IPv4).</Text>
-            <Text style={styles.step}>4. Ingrese la nueva dirección IP y haga clic en "OK" dos veces para cerrar todos los diálogos.</Text>
+            <Text style={styles.step}>
+              1. Haga clic en Start {'>'} Control Panel {'>'} Network and
+              Sharing Center {'>'} Change adapter settings o lance{' '}
+              <Text style={styles.bold}>ncpa.cpl</Text> para abrir el applet
+              "Network Control Panel".
+            </Text>
+            <Text style={styles.step}>
+              2. Haga clic derecho en el adaptador de red y seleccione
+              "Properties" del menú contextual para abrir el diálogo "Network
+              Adapter Properties".
+            </Text>
+            <Text style={styles.step}>
+              3. Seleccione Internet Protocol Version 4 (TCP/IPv4) y haga clic
+              en "Properties" para abrir el diálogo Internet Protocol Version 4
+              (TCP/IPv4).
+            </Text>
+            <Text style={styles.step}>
+              4. Ingrese la nueva dirección IP y haga clic en "OK" dos veces
+              para cerrar todos los diálogos.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -4023,15 +4238,41 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie sesión como <Text style={styles.bold}>Installer</Text>.</Text>
-            <Text style={styles.step}>2. Abra la Consola de Administración R&S Postman III.</Text>
-            <Text style={styles.step}>3. Haga clic derecho en el nodo {'<'}country{'>'}{'<'}organization{'>'}Sites{'<'}SiteName{'>'}Equipments/Host Servers{'<'}HostName{'>'}Gw{'<'}HostName{'>'} para abrir el menú contextual "Tactical Gateway".</Text>
-            <Text style={styles.step}>4. Seleccione "Edit Tactical Gateway" para abrir el diálogo "Tactical Gateway".</Text>
-            <Text style={styles.step}>5. Ingrese la nueva dirección IP en el campo "Unicast Address".</Text>
-            <Text style={styles.step}>6. Haga clic en "Ok" para guardar los cambios y cerrar el diálogo "Tactical Gateway".</Text>
-            <Text style={styles.step}>7. Haga clic en el botón parpadeante "Update Gateway Configuration" de la barra de herramientas.</Text>
-            <Text style={styles.step}>8. Repita los pasos anteriores para cada servidor Postman III.</Text>
-            <Text style={styles.step}>9. Alternativamente, puede exportar la configuración del sitio actual desde el servidor local y reimportarla en cada otro servidor.</Text>
+            <Text style={styles.step}>
+              1. Inicie sesión como <Text style={styles.bold}>Installer</Text>.
+            </Text>
+            <Text style={styles.step}>
+              2. Abra la Consola de Administración R&S Postman III.
+            </Text>
+            <Text style={styles.step}>
+              3. Haga clic derecho en el nodo {'<'}country{'>'}
+              {'<'}organization{'>'}Sites{'<'}SiteName{'>'}Equipments/Host
+              Servers{'<'}HostName{'>'}Gw{'<'}HostName{'>'} para abrir el menú
+              contextual "Tactical Gateway".
+            </Text>
+            <Text style={styles.step}>
+              4. Seleccione "Edit Tactical Gateway" para abrir el diálogo
+              "Tactical Gateway".
+            </Text>
+            <Text style={styles.step}>
+              5. Ingrese la nueva dirección IP en el campo "Unicast Address".
+            </Text>
+            <Text style={styles.step}>
+              6. Haga clic en "Ok" para guardar los cambios y cerrar el diálogo
+              "Tactical Gateway".
+            </Text>
+            <Text style={styles.step}>
+              7. Haga clic en el botón parpadeante "Update Gateway
+              Configuration" de la barra de herramientas.
+            </Text>
+            <Text style={styles.step}>
+              8. Repita los pasos anteriores para cada servidor Postman III.
+            </Text>
+            <Text style={styles.step}>
+              9. Alternativamente, puede exportar la configuración del sitio
+              actual desde el servidor local y reimportarla en cada otro
+              servidor.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -4039,26 +4280,49 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            La dirección IP pública del TMR ("Tactical Management Router") debe cambiarse para coincidir con la nueva dirección IP. Use los siguientes métodos para cambiar la dirección IP pública:
+            La dirección IP pública del TMR ("Tactical Management Router") debe
+            cambiarse para coincidir con la nueva dirección IP. Use los
+            siguientes métodos para cambiar la dirección IP pública:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Lance el Asistente de Configuración R&S Postman III.</Text>
+            <Text style={styles.step}>
+              1. Lance el Asistente de Configuración R&S Postman III.
+            </Text>
             <Text style={styles.step}>2. Active la página "Settings".</Text>
-            <Text style={styles.step}>3. Asegúrese de que la nueva dirección IP del servidor se muestre en el campo "Server IP address".</Text>
-            <Text style={styles.step}>4. Active la página "Configuration".</Text>
-            <Text style={styles.step}>5. Seleccione la tarea TMR Source Address.</Text>
-            <Text style={styles.step}>6. Haga clic en el comando "Adjust address and restart TMR service".</Text>
+            <Text style={styles.step}>
+              3. Asegúrese de que la nueva dirección IP del servidor se muestre
+              en el campo "Server IP address".
+            </Text>
+            <Text style={styles.step}>
+              4. Active la página "Configuration".
+            </Text>
+            <Text style={styles.step}>
+              5. Seleccione la tarea TMR Source Address.
+            </Text>
+            <Text style={styles.step}>
+              6. Haga clic en el comando "Adjust address and restart TMR
+              service".
+            </Text>
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Alternativamente puede modificar las configuraciones directamente en el registro de Windows:
+            Alternativamente puede modificar las configuraciones directamente en
+            el registro de Windows:
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie el Editor de Registro (<Text style={styles.bold}>regedit.exe</Text>).</Text>
-            <Text style={styles.step}>2. Navegue a la clave de registro HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Rohde-Schwarz\TMR.</Text>
-            <Text style={styles.step}>3. Cambie el valor PublicIpAddress a la nueva dirección IP.</Text>
+            <Text style={styles.step}>
+              1. Inicie el Editor de Registro (
+              <Text style={styles.bold}>regedit.exe</Text>).
+            </Text>
+            <Text style={styles.step}>
+              2. Navegue a la clave de registro
+              HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Rohde-Schwarz\TMR.
+            </Text>
+            <Text style={styles.step}>
+              3. Cambie el valor PublicIpAddress a la nueva dirección IP.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -4066,7 +4330,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>► Reinicie el servidor para reiniciar todos los servicios y vincularlos a la nueva dirección IP.</Text>
+            <Text style={styles.step}>
+              ► Reinicie el servidor para reiniciar todos los servicios y
+              vincularlos a la nueva dirección IP.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -4074,11 +4341,14 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El concepto es gestionar la libreta de direcciones en una cuenta de Thunderbird. Allí, la libreta de direcciones se exporta a un archivo.
+            El concepto es gestionar la libreta de direcciones en una cuenta de
+            Thunderbird. Allí, la libreta de direcciones se exporta a un
+            archivo.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El archivo se distribuye a otras máquinas y luego se importa en Thunderbird.
+            El archivo se distribuye a otras máquinas y luego se importa en
+            Thunderbird.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -4086,7 +4356,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. En la ventana "Home" de Thunderbird, haga clic en la pestaña "Address Book".</Text>
+            <Text style={styles.step}>
+              1. En la ventana "Home" de Thunderbird, haga clic en la pestaña
+              "Address Book".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4101,7 +4374,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>2. En la pestaña "Address Book", seleccione "Personal Address Book".</Text>
+            <Text style={styles.step}>
+              2. En la pestaña "Address Book", seleccione "Personal Address
+              Book".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4116,7 +4392,11 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>3. En la barra "Address Book", haga clic en "Tools" {'>'} "Export" para exportar la libreta de direcciones. Seleccione el tipo de archivo "vCard (*.vcf)".</Text>
+            <Text style={styles.step}>
+              3. En la barra "Address Book", haga clic en "Tools" {'>'} "Export"
+              para exportar la libreta de direcciones. Seleccione el tipo de
+              archivo "vCard (*.vcf)".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4135,7 +4415,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. En la ventana "Home" de Thunderbird, haga clic en la pestaña "Address Book".</Text>
+            <Text style={styles.step}>
+              1. En la ventana "Home" de Thunderbird, haga clic en la pestaña
+              "Address Book".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4150,7 +4433,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>2. En la pestaña "Address Book", seleccione "Personal Address Book".</Text>
+            <Text style={styles.step}>
+              2. En la pestaña "Address Book", seleccione "Personal Address
+              Book".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4165,8 +4451,14 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>3. En la barra "Address Book", haga clic en "Tools" {'>'} "Import" para importar la libreta de direcciones.</Text>
-            <Text style={styles.step}>4. En el asistente, seleccione "Address Books" y haga clic en "Next".</Text>
+            <Text style={styles.step}>
+              3. En la barra "Address Book", haga clic en "Tools" {'>'} "Import"
+              para importar la libreta de direcciones.
+            </Text>
+            <Text style={styles.step}>
+              4. En el asistente, seleccione "Address Books" y haga clic en
+              "Next".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4181,7 +4473,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>5. Seleccione el tipo de archivo "vCard (*.vcf)" y haga clic en "Next".</Text>
+            <Text style={styles.step}>
+              5. Seleccione el tipo de archivo "vCard (*.vcf)" y haga clic en
+              "Next".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4196,7 +4491,9 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>6. Seleccione la libreta de direcciones y haga clic en "Open".</Text>
+            <Text style={styles.step}>
+              6. Seleccione la libreta de direcciones y haga clic en "Open".
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4211,7 +4508,9 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>7. Haga clic en "Finish" para finalizar la importación.</Text>
+            <Text style={styles.step}>
+              7. Haga clic en "Finish" para finalizar la importación.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -4230,28 +4529,47 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El producto requiere comunicación TCP/IP entre el servidor, las máquinas cliente y los radios IPoA. Durante la instalación, el firewall de Windows está configurado para permitir el tráfico necesario.
+            El producto requiere comunicación TCP/IP entre el servidor, las
+            máquinas cliente y los radios IPoA. Durante la instalación, el
+            firewall de Windows está configurado para permitir el tráfico
+            necesario.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Si se usan firewalls externos o las reglas del firewall de Windows se proporcionan centralmente, asegúrese de que la comunicación TCP pase por los firewalls.
+            Si se usan firewalls externos o las reglas del firewall de Windows
+            se proporcionan centralmente, asegúrese de que la comunicación TCP
+            pase por los firewalls.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Las siguientes tablas listan los puertos que deben ser permitidos por los firewalls.
+            Las siguientes tablas listan los puertos que deben ser permitidos
+            por los firewalls.
           </Text>
 
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Tabla 8-3: Conexiones entrantes del servidor Postman III - Puertos TCP 80, 8080 (comunicación con servidor HTTP), puertos TCP 5098, 5086 (comunicación con servicio COREA), puertos TCP 5100 a 5113 y puerto UDP 4712 (servicios Device Control), puertos TCP (2345, 5200-5222, 5661-5669, 8732, 20203, 29520, 29531) y puertos TCP dinámicos 49152 a 65535 (servicios Postman III), puerto UDP 10161 (servicios Postman III), puertos UDP 2751-2754 (servicios Postman III), puerto UDP 9 (servicios Postman III), puerto UDP 21337 (radios IPoA), puertos TCP 389, 1389 (servicio AL LDS), puertos TCP 25, 110, 143, 587 (servicio Email), puerto TCP 8750 (servicios R&S MapTrack), puerto UDP para importación UDP (fuente de datos GPS over UDP).
+              Tabla 8-3: Conexiones entrantes del servidor Postman III - Puertos
+              TCP 80, 8080 (comunicación con servidor HTTP), puertos TCP 5098,
+              5086 (comunicación con servicio COREA), puertos TCP 5100 a 5113 y
+              puerto UDP 4712 (servicios Device Control), puertos TCP (2345,
+              5200-5222, 5661-5669, 8732, 20203, 29520, 29531) y puertos TCP
+              dinámicos 49152 a 65535 (servicios Postman III), puerto UDP 10161
+              (servicios Postman III), puertos UDP 2751-2754 (servicios Postman
+              III), puerto UDP 9 (servicios Postman III), puerto UDP 21337
+              (radios IPoA), puertos TCP 389, 1389 (servicio AL LDS), puertos
+              TCP 25, 110, 143, 587 (servicio Email), puerto TCP 8750 (servicios
+              R&S MapTrack), puerto UDP para importación UDP (fuente de datos
+              GPS over UDP).
             </Text>
           </View>
 
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Tabla 8-4: Conexiones entrantes del cliente Postman III - Puertos TCP 5400-5500 (clientes Device Control), puertos TCP dinámicos 49152 a 65535 (clientes Postman III).
+              Tabla 8-4: Conexiones entrantes del cliente Postman III - Puertos
+              TCP 5400-5500 (clientes Device Control), puertos TCP dinámicos
+              49152 a 65535 (clientes Postman III).
             </Text>
           </View>
 
@@ -4264,7 +4582,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            En algunas versiones de Java, se abre la ventana "Java Update Needed" cuando un usuario inicia la primera aplicación Java (ej. DEVCON, UMAN, Consola Táctica R&S Postman III, Consola de Administración R&S Postman III).
+            En algunas versiones de Java, se abre la ventana "Java Update
+            Needed" cuando un usuario inicia la primera aplicación Java (ej.
+            DEVCON, UMAN, Consola Táctica R&S Postman III, Consola de
+            Administración R&S Postman III).
           </Text>
 
           <View style={styles.imageContainer}>
@@ -4279,7 +4600,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Si el usuario marca el campo "Do not ask again..." y luego selecciona la opción "Update" o "Block" por error, la aplicación Java no se inicia. No es posible corregir fácilmente esta decisión ya que la ventana no aparece de nuevo.
+            Si el usuario marca el campo "Do not ask again..." y luego
+            selecciona la opción "Update" o "Block" por error, la aplicación
+            Java no se inicia. No es posible corregir fácilmente esta decisión
+            ya que la ventana no aparece de nuevo.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
@@ -4287,14 +4611,14 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • Eliminar todo el perfil de usuario.</Text>
-            <Text style={styles.checkItem}> • Eliminar esta clave de registro: HKEY_CURRENT_USER\Software\AppDataLow\Software\JavaSoft\DeploymentProperties.</Text>
-          </View>
-
-          <View style={styles.successBox}>
-            <Icon name="check-circle" size={20} color="#4CAF50" />
-            <Text variant="bodyMedium" style={styles.successText}>
-              ✅ Sección 8 Completada - Apéndice: Configuración avanzada y mantenimiento
+            <Text style={styles.checkItem}>
+              {' '}
+              • Eliminar todo el perfil de usuario.
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Eliminar esta clave de registro:
+              HKEY_CURRENT_USER\Software\AppDataLow\Software\JavaSoft\DeploymentProperties.
             </Text>
           </View>
         </Accordion>
@@ -4308,7 +4632,7 @@ export default function PostmanScreen({ navigation }: any) {
               Installation Manual (Version 01, 2020) - Documento oficial: 08
               PIII_Installation Manual_en_2020-02-18.pdf
             </Text>
-        </Surface>
+          </Surface>
         </ScreenEntrance>
 
         <ScreenEntrance delay={220}>
@@ -4317,12 +4641,12 @@ export default function PostmanScreen({ navigation }: any) {
               <Text variant="bodySmall" style={styles.publisherText}>
                 <Text style={styles.bold}>Publicado por:</Text> Rohde & Schwarz
                 GmbH & Co. KG
-            </Text>
+              </Text>
               <Text variant="bodySmall" style={styles.publisherText}>
                 <Text style={styles.bold}>Año:</Text> 2020
-            </Text>
+              </Text>
             </View>
-        </Surface>
+          </Surface>
         </ScreenEntrance>
       </ScrollView>
     </View>
