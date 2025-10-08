@@ -2863,7 +2863,11 @@ export default function PostmanScreen({ navigation }: any) {
           delay={160}
         >
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Este capítulo describe la instalación de R&S Postman III con el tipo de integración "Postman III router for MMHS". Para este tipo de integración, el producto R&S Device Control (SIMCOS II fue renombrado a Device Control) debe estar instalado antes del proceso de instalación de R&S Postman III.
+            Este capítulo describe la instalación de R&S Postman III con el tipo
+            de integración "Postman III router for MMHS". Para este tipo de
+            integración, el producto R&S Device Control (SIMCOS II fue
+            renombrado a Device Control) debe estar instalado antes del proceso
+            de instalación de R&S Postman III.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -2875,7 +2879,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Para la instalación de R&S Postman III con el tipo de integración "Postman III router for MMHS", el producto R&S Device Control (SIMCOS II fue renombrado a Device Control) debe estar instalado antes del proceso de instalación de R&S Postman III.
+            Para la instalación de R&S Postman III con el tipo de integración
+            "Postman III router for MMHS", el producto R&S Device Control
+            (SIMCOS II fue renombrado a Device Control) debe estar instalado
+            antes del proceso de instalación de R&S Postman III.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -2883,7 +2890,9 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El proceso de instalación de R&S Postman III requiere que cree una cuenta de usuario local de Windows, que debe ser miembro del grupo local de Windows <Text style={styles.bold}>Administrators</Text>.
+            El proceso de instalación de R&S Postman III requiere que cree una
+            cuenta de usuario local de Windows, que debe ser miembro del grupo
+            local de Windows <Text style={styles.bold}>Administrators</Text>.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
@@ -2899,13 +2908,19 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Lance el Asistente de Configuración R&S Postman III ejecutando el archivo <Text style={styles.bold}>setup.exe</Text> en la carpeta de instalación.
+            Lance el Asistente de Configuración R&S Postman III ejecutando el
+            archivo <Text style={styles.bold}>setup.exe</Text> en la carpeta de
+            instalación.
           </Text>
 
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Instalación implícita del framework .NET: El Asistente de Configuración R&S Postman III depende del Microsoft .NET Framework Versión 4.0 (o posterior). Si esta versión no está instalada, se instala automáticamente cuando se lanza el asistente de configuración por primera vez.
+              Instalación implícita del framework .NET: El Asistente de
+              Configuración R&S Postman III depende del Microsoft .NET Framework
+              Versión 4.0 (o posterior). Si esta versión no está instalada, se
+              instala automáticamente cuando se lanza el asistente de
+              configuración por primera vez.
             </Text>
           </View>
 
@@ -2914,7 +2929,8 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Después de que se ha lanzado el Asistente de Configuración R&S Postman III, se muestra la página "Welcome".
+            Después de que se ha lanzado el Asistente de Configuración R&S
+            Postman III, se muestra la página "Welcome".
           </Text>
 
           <View style={styles.stepsList}>
@@ -2922,9 +2938,19 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • Integration type: Postman III for MMHS</Text>
-            <Text style={styles.checkItem}> • Installation type: Server only</Text>
-            <Text style={styles.checkItem}> • Additional options: RS-IRP (if this option is valid in the target environment)</Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Integration type: Postman III for MMHS
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Installation type: Server only
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Additional options: RS-IRP (if this option is valid in the
+              target environment)
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -2939,7 +2965,9 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>2. Cambie a la pestaña "Settings" para continuar.</Text>
+            <Text style={styles.step}>
+              2. Cambie a la pestaña "Settings" para continuar.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -2947,11 +2975,17 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Cuando las opciones de la pantalla "Welcome" están seleccionadas, la pestaña "Settings" debe abrirse. Para el tipo de integración "Postman III router for MMHS", solo tres elementos de configuración son de importancia. La pestaña "Settings" muestra el estado actual de la máquina. Aquí puede asegurarse de que las configuraciones sean requeridas una vez.
+            Cuando las opciones de la pantalla "Welcome" están seleccionadas, la
+            pestaña "Settings" debe abrirse. Para el tipo de integración
+            "Postman III router for MMHS", solo tres elementos de configuración
+            son de importancia. La pestaña "Settings" muestra el estado actual
+            de la máquina. Aquí puede asegurarse de que las configuraciones sean
+            requeridas una vez.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Tenga en cuenta que las configuraciones en esta captura de pantalla son un ejemplo.
+            Tenga en cuenta que las configuraciones en esta captura de pantalla
+            son un ejemplo.
           </Text>
 
           <View style={styles.imageContainer}>
@@ -2968,7 +3002,10 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Prerequisitos de instalación: R&S TMR se basa en la versión correcta de la biblioteca WinPcap instalada. A menudo esta biblioteca ya está instalada en una versión incorrecta, por ejemplo después del uso de la aplicación Wireshark.
+              Prerequisitos de instalación: R&S TMR se basa en la versión
+              correcta de la biblioteca WinPcap instalada. A menudo esta
+              biblioteca ya está instalada en una versión incorrecta, por
+              ejemplo después del uso de la aplicación Wireshark.
             </Text>
           </View>
 
@@ -2977,12 +3014,20 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • No se abre ninguna aplicación Wireshark (verifique también las sesiones de escritorio remoto abiertas)</Text>
-            <Text style={styles.checkItem}> • WinPcap no está instalado – asegúrese de desinstalarlo si aplica</Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • No se abre ninguna aplicación Wireshark (verifique también las
+              sesiones de escritorio remoto abiertas)
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • WinPcap no está instalado – asegúrese de desinstalarlo si aplica
+            </Text>
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Cierre y reinicie <Text style={styles.bold}>setup.exe</Text> después.
+            Cierre y reinicie <Text style={styles.bold}>setup.exe</Text>{' '}
+            después.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -2990,15 +3035,21 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Cuando la pestaña "Settings" muestra todos los valores requeridos de la máquina actual, cambie a la pestaña "Prerequisites". La pestaña puede mostrar configuraciones que no permiten la operación de TMR. Las configuraciones pueden ajustarse haciendo clic en los botones apropiados.
+            Cuando la pestaña "Settings" muestra todos los valores requeridos de
+            la máquina actual, cambie a la pestaña "Prerequisites". La pestaña
+            puede mostrar configuraciones que no permiten la operación de TMR.
+            Las configuraciones pueden ajustarse haciendo clic en los botones
+            apropiados.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El firewall puede deshabilitarse haciendo clic en "Disable firewall".
+            El firewall puede deshabilitarse haciendo clic en "Disable
+            firewall".
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El weak host routing necesario para TMR puede habilitarse haciendo clic en "Enable weak host send".
+            El weak host routing necesario para TMR puede habilitarse haciendo
+            clic en "Enable weak host send".
           </Text>
 
           <View style={styles.imageContainer}>
@@ -3032,7 +3083,9 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los paquetes necesarios para el tipo de integración elegido se muestran aquí. Para el tipo de integración "Postman III router for MMHS", los siguientes paquetes deben instalarse:
+            Los paquetes necesarios para el tipo de integración elegido se
+            muestran aquí. Para el tipo de integración "Postman III router for
+            MMHS", los siguientes paquetes deben instalarse:
           </Text>
 
           <View style={styles.imageContainer}>
@@ -3042,12 +3095,15 @@ export default function PostmanScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <Text variant="bodySmall" style={styles.imageCaption}>
-              Figura 6-5: Pestaña de instalación del asistente de configuración MMHS
+              Figura 6-5: Pestaña de instalación del asistente de configuración
+              MMHS
             </Text>
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>► Haga clic en "Apply" para iniciar la instalación.</Text>
+            <Text style={styles.step}>
+              ► Haga clic en "Apply" para iniciar la instalación.
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3055,22 +3111,41 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Después de que todos los paquetes de software requeridos han sido instalados, los paquetes de software deben configurarse.
+            Después de que todos los paquetes de software requeridos han sido
+            instalados, los paquetes de software deben configurarse.
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Haga clic en la pestaña "Configuration" para mostrar las tareas de configuración.</Text>
-            <Text style={styles.step}>2. Complete cada tarea hasta que muestre una marca de verificación verde.</Text>
+            <Text style={styles.step}>
+              1. Haga clic en la pestaña "Configuration" para mostrar las tareas
+              de configuración.
+            </Text>
+            <Text style={styles.step}>
+              2. Complete cada tarea hasta que muestre una marca de verificación
+              verde.
+            </Text>
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Los enlaces de comando en la parte inferior de cada tarea proporcionan asistencia para completar cada tarea. La siguiente tarea se muestra:
+            Los enlaces de comando en la parte inferior de cada tarea
+            proporcionan asistencia para completar cada tarea. La siguiente
+            tarea se muestra:
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • Chapter 5.10.4, "TMR Source Address", on page 41</Text>
-            <Text style={styles.checkItem}> • Chapter 5.10.28, "PLDA Manager Configuration", on page 49</Text>
-            <Text style={styles.checkItem}> • Chapter 5.10.30, "Disabling AutoRun for Removable Drives", on page 49</Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Chapter 5.10.4, "TMR Source Address", on page 41
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Chapter 5.10.28, "PLDA Manager Configuration", on page 49
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Chapter 5.10.30, "Disabling AutoRun for Removable Drives", on
+              page 49
+            </Text>
           </View>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3082,13 +3157,17 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Si se instaló R&S Postman III con el tipo de integración 'Postman III router for MMHS' en un servidor miembro R&S MMHS, entonces el Servicio PLDA Manager debe adaptarse manualmente para ejecutarse bajo la cuenta "MMHHSServices".
+            Si se instaló R&S Postman III con el tipo de integración 'Postman
+            III router for MMHS' en un servidor miembro R&S MMHS, entonces el
+            Servicio PLDA Manager debe adaptarse manualmente para ejecutarse
+            bajo la cuenta "MMHHSServices".
           </Text>
 
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Si el Servicio PLDA Manager se ejecuta como local\System, no tiene privilegios suficientes para acceder al directorio MMHS AD-LDS.
+              Si el Servicio PLDA Manager se ejecuta como local\System, no tiene
+              privilegios suficientes para acceder al directorio MMHS AD-LDS.
             </Text>
           </View>
 
@@ -3108,12 +3187,20 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Durante la instalación de R&S TMR, se creó un acceso directo en el escritorio.
+            Durante la instalación de R&S TMR, se creó un acceso directo en el
+            escritorio.
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>1. Inicie el Administrador de Dispositivos TAP de R&S a través de este acceso directo.</Text>
-            <Text style={styles.substep}>  Debería aparecer una ventana como la que se muestra a continuación.</Text>
+            <Text style={styles.step}>
+              1. Inicie el Administrador de Dispositivos TAP de R&S a través de
+              este acceso directo.
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              Debería aparecer una ventana como la que se muestra a
+              continuación.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3128,24 +3215,47 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Dependiendo de los dispositivos TAP ya instalados, la lista de dispositivos TAP mostrada por el Administrador de Dispositivos TAP de R&S podría estar vacía o no.
+            Dependiendo de los dispositivos TAP ya instalados, la lista de
+            dispositivos TAP mostrada por el Administrador de Dispositivos TAP
+            de R&S podría estar vacía o no.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            La lista de dispositivos TAP se muestra con un fondo gris y el servicio R&S TMR está indicado como en ejecución. En este estado, solo es posible monitorear la configuración actual, no se permiten cambios.
+            La lista de dispositivos TAP se muestra con un fondo gris y el
+            servicio R&S TMR está indicado como en ejecución. En este estado,
+            solo es posible monitorear la configuración actual, no se permiten
+            cambios.
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>2. Para poner el Administrador de Dispositivos TAP de R&S en el modo de edición, haga clic en el botón "Stop".</Text>
-            <Text style={styles.substep}>  Esto detiene el servicio TMR y le permite realizar cambios.</Text>
+            <Text style={styles.step}>
+              2. Para poner el Administrador de Dispositivos TAP de R&S en el
+              modo de edición, haga clic en el botón "Stop".
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              Esto detiene el servicio TMR y le permite realizar cambios.
+            </Text>
 
-            <Text style={styles.step}>3. Elimine todas las entradas existentes (si las hay) a través del botón "Remove".</Text>
+            <Text style={styles.step}>
+              3. Elimine todas las entradas existentes (si las hay) a través del
+              botón "Remove".
+            </Text>
 
-            <Text style={styles.step}>4. Haga clic en "Add" para crear el primer dispositivo TAP.</Text>
+            <Text style={styles.step}>
+              4. Haga clic en "Add" para crear el primer dispositivo TAP.
+            </Text>
 
-            <Text style={styles.step}>5. Ingrese el nombre "TAP-TMR", marque la casilla para "Bind TCP/IP" y asigne la dirección IP como se indica en su manual de información del sistema.</Text>
+            <Text style={styles.step}>
+              5. Ingrese el nombre "TAP-TMR", marque la casilla para "Bind
+              TCP/IP" y asigne la dirección IP como se indica en su manual de
+              información del sistema.
+            </Text>
 
-            <Text style={styles.step}>6. Asegúrese de que las otras configuraciones estén configuradas como se muestra en la figura a continuación.</Text>
+            <Text style={styles.step}>
+              6. Asegúrese de que las otras configuraciones estén configuradas
+              como se muestra en la figura a continuación.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3160,8 +3270,15 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>7. Haga clic en "OK" para confirmar.</Text>
-            <Text style={styles.substep}>  Después de presionar "OK", aparece una advertencia de seguridad de que Windows no puede verificar el editor del software del controlador.</Text>
+            <Text style={styles.step}>
+              7. Haga clic en "OK" para confirmar.
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              Después de presionar "OK", aparece una advertencia de seguridad de
+              que Windows no puede verificar el editor del software del
+              controlador.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3176,13 +3293,25 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>8. Haga clic en "Install" para instalar el controlador.</Text>
+            <Text style={styles.step}>
+              8. Haga clic en "Install" para instalar el controlador.
+            </Text>
 
-            <Text style={styles.step}>9. Después de que TAP-TMR ha sido creado, haga clic en "Add" nuevamente para agregar el primer dispositivo TAP para una instancia de protocolo. La convención de nomenclatura se explica en detalle en el paso 12.</Text>
+            <Text style={styles.step}>
+              9. Después de que TAP-TMR ha sido creado, haga clic en "Add"
+              nuevamente para agregar el primer dispositivo TAP para una
+              instancia de protocolo. La convención de nomenclatura se explica
+              en detalle en el paso 12.
+            </Text>
 
-            <Text style={styles.step}>10. Para el primer dispositivo RSIRP, asigne el nombre "TAP-RSIRP-1" sin asignar ninguna dirección IP.</Text>
+            <Text style={styles.step}>
+              10. Para el primer dispositivo RSIRP, asigne el nombre
+              "TAP-RSIRP-1" sin asignar ninguna dirección IP.
+            </Text>
 
-            <Text style={styles.step}>11. Haga clic en "OK" para confirmar.</Text>
+            <Text style={styles.step}>
+              11. Haga clic en "OK" para confirmar.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3197,7 +3326,10 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>12. Repita este paso para crear los siguientes dispositivos TAP adicionales:</Text>
+            <Text style={styles.step}>
+              12. Repita este paso para crear los siguientes dispositivos TAP
+              adicionales:
+            </Text>
           </View>
 
           <View style={styles.checkList}>
@@ -3219,7 +3351,9 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Después de la creación de todos los dispositivos TAP, el Administrador de Dispositivos TAP de R&S debería verse como se muestra a continuación:
+            Después de la creación de todos los dispositivos TAP, el
+            Administrador de Dispositivos TAP de R&S debería verse como se
+            muestra a continuación:
           </Text>
 
           <View style={styles.imageContainer}>
@@ -3236,13 +3370,29 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.infoBox}>
             <Icon name="information" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={styles.infoText}>
-              Nota: Convención de nomenclatura para crear dispositivos TAP - El servicio R&S TMR reconoce los dispositivos TAP por su nombre. Por lo tanto, el primer dispositivo TAP creado debe nombrarse "TAP-TMR" y este dispositivo es el único dispositivo TAP que tiene una dirección IP. Los otros dispositivos TAP deben nombrarse según los nombres de todas las instancias de protocolo disponibles. Estas instancias pueden encontrarse en la GUI de DEVCON o en la base de datos de R&S Device Control. La convención de nomenclatura es "TAP-" más el nombre de la instancia del protocolo. Por ejemplo, para la captura de pantalla (RSIRP-2), el nombre correcto del dispositivo TAP a crear es "TAP-RSIRP-2".
+              Nota: Convención de nomenclatura para crear dispositivos TAP - El
+              servicio R&S TMR reconoce los dispositivos TAP por su nombre. Por
+              lo tanto, el primer dispositivo TAP creado debe nombrarse
+              "TAP-TMR" y este dispositivo es el único dispositivo TAP que tiene
+              una dirección IP. Los otros dispositivos TAP deben nombrarse según
+              los nombres de todas las instancias de protocolo disponibles.
+              Estas instancias pueden encontrarse en la GUI de DEVCON o en la
+              base de datos de R&S Device Control. La convención de nomenclatura
+              es "TAP-" más el nombre de la instancia del protocolo. Por
+              ejemplo, para la captura de pantalla (RSIRP-2), el nombre correcto
+              del dispositivo TAP a crear es "TAP-RSIRP-2".
             </Text>
           </View>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>13. Haga clic en "Start" para activar el servicio TMR nuevamente.</Text>
-            <Text style={styles.substep}>  El TMR está en ejecución (indicado por el LED de estado verde) y el fondo de la lista de dispositivos TAP cambia su color a gris.</Text>
+            <Text style={styles.step}>
+              13. Haga clic en "Start" para activar el servicio TMR nuevamente.
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              El TMR está en ejecución (indicado por el LED de estado verde) y
+              el fondo de la lista de dispositivos TAP cambia su color a gris.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3257,7 +3407,8 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            El Router de Gestión Táctica R&S está ahora configurado y listo para usar.
+            El Router de Gestión Táctica R&S está ahora configurado y listo para
+            usar.
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
@@ -3269,7 +3420,11 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.stepsList}>
-            <Text style={styles.step}>► Abra el TMRGUI (C:\programfiles\Rohde-Schwarz\PostmanIII\TMR\TmrGui.exe) y asegúrese de que el botón "FAR" esté activado.</Text>
+            <Text style={styles.step}>
+              ► Abra el TMRGUI
+              (C:\programfiles\Rohde-Schwarz\PostmanIII\TMR\TmrGui.exe) y
+              asegúrese de que el botón "FAR" esté activado.
+            </Text>
           </View>
 
           <View style={styles.imageContainer}>
@@ -3284,35 +3439,295 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            Con un fondo gris como se muestra en la Figura 6-14, el botón está activado.
+            Con un fondo gris como se muestra en la Figura 6-14, el botón está
+            activado.
           </Text>
 
           <Text variant="bodyMedium" style={styles.subtitle}>
-            <Text style={styles.bold}>Relación entre el servicio TMR, el controlador TMR y los servicios R&S Device Control</Text>
-          </Text>
-
-          <Text variant="bodyMedium" style={styles.subtitle}>
-            El R&S TMR consiste de un servicio TMR que se configura como automático durante la instalación y que siempre está en ejecución. Además, el controlador TMR de R&S instala un controlador TMR, que se instala en el directorio R&S Device Control (SIMCOS II fue renombrado a Device Control). Se inicia y detiene junto con los servicios R&S Device Control.
-          </Text>
-
-          <Text variant="bodyMedium" style={styles.subtitle}>
-            Por lo tanto, reiniciar los servicios R&S Device Control solo desencadena un reinicio del controlador TMR. El servicio TMR debe reiniciarse manualmente a través de la consola de servicios de Microsoft Windows, en caso de que este paso sea necesario.
-          </Text>
-
-          <View style={styles.successBox}>
-            <Icon name="check-circle" size={20} color="#4CAF50" />
-            <Text variant="bodyMedium" style={styles.successText}>
-              ✅ Sección 6 Completada - Instalación de R&S Postman III para R&S MMHS finalizada exitosamente
+            <Text style={styles.bold}>
+              Relación entre el servicio TMR, el controlador TMR y los servicios
+              R&S Device Control
             </Text>
-          </View>
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            El R&S TMR consiste de un servicio TMR que se configura como
+            automático durante la instalación y que siempre está en ejecución.
+            Además, el controlador TMR de R&S instala un controlador TMR, que se
+            instala en el directorio R&S Device Control (SIMCOS II fue
+            renombrado a Device Control). Se inicia y detiene junto con los
+            servicios R&S Device Control.
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            Por lo tanto, reiniciar los servicios R&S Device Control solo
+            desencadena un reinicio del controlador TMR. El servicio TMR debe
+            reiniciarse manualmente a través de la consola de servicios de
+            Microsoft Windows, en caso de que este paso sea necesario.
+          </Text>
         </Accordion>
 
         {/* SECTION 7 */}
         <Accordion
           number="SECCIÓN 7"
+          title="Actualización de Instalaciones R&S Postman III"
+          icon="update"
+          delay={180}
+        >
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            Este capítulo describe el proceso de actualización de instalaciones
+            R&S Postman III desde versiones anteriores a la versión 04.06.
+          </Text>
+
+          <Text variant="titleSmall" style={styles.sectionTitle}>
+            🔄 Actualización desde Versión Anterior a 04.06
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            R&S Postman III comenzando con versiones posteriores a 04.00
+            requiere nuevos sistemas operativos Windows 10 y Microsoft Server
+            2016 en lugar de Windows 7 y Microsoft Server 2008 R2.
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            Por lo tanto, se requiere una reinstalación de los sistemas
+            operativos y R&S Postman III para actualizar.
+          </Text>
+
+          <View style={styles.warningBox}>
+            <Icon name="alert" size={18} color="#FF9800" />
+            <Text variant="bodySmall" style={styles.warningText}>
+              Importante: La actualización desde versiones anteriores a 04.06
+              requiere una reinstalación completa del sistema operativo y el
+              software R&S Postman III. No es posible realizar una actualización
+              directa.
+            </Text>
+          </View>
+
+          <Text variant="titleSmall" style={styles.sectionTitle}>
+            📋 Requisitos para la Actualización
+          </Text>
+
+          <View style={styles.optionGroup}>
+            <Text variant="bodyMedium" style={styles.bold}>
+              Sistemas Operativos Requeridos:
+            </Text>
+          </View>
+
+          <View style={styles.checkList}>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Windows 10 Professional o Enterprise 64-bit
+            </Text>
+            <Text style={styles.checkItem}> • Microsoft Server 2016</Text>
+          </View>
+
+          <View style={styles.optionGroup}>
+            <Text variant="bodyMedium" style={styles.bold}>
+              Sistemas Operativos Obsoletos:
+            </Text>
+          </View>
+
+          <View style={styles.checkList}>
+            <Text style={styles.checkItem}> ✗ Windows 7 (ya no soportado)</Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              ✗ Microsoft Server 2008 R2 (ya no soportado)
+            </Text>
+          </View>
+
+          <Text variant="titleSmall" style={styles.sectionTitle}>
+            🔧 Proceso de Actualización
+          </Text>
+
+          <View style={styles.stepsList}>
+            <Text style={styles.step}>
+              1. Realizar backup completo de la configuración actual
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Exportar configuración de red desde el Asistente de
+              Configuración
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Guardar datos de usuario y configuraciones personalizadas
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Documentar todas las configuraciones de red y parámetros
+            </Text>
+
+            <Text style={styles.step}>
+              2. Instalar el nuevo sistema operativo
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Windows 10 Professional/Enterprise 64-bit o
+            </Text>
+            <Text style={styles.substep}> • Microsoft Server 2016</Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Seguir las instrucciones del Capítulo 4
+            </Text>
+
+            <Text style={styles.step}>3. Configurar el sistema operativo</Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Crear cuenta de usuario Installer
+            </Text>
+            <Text style={styles.substep}> • Configurar adaptadores de red</Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Establecer nombre de host y dominio
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Configurar DEP (Data Execution Prevention)
+            </Text>
+
+            <Text style={styles.step}>
+              4. Instalar R&S Postman III versión 04.06 o posterior
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Seguir las instrucciones del Capítulo 5
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Usar el Asistente de Configuración R&S Postman III
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Cargar la configuración de red guardada previamente
+            </Text>
+
+            <Text style={styles.step}>
+              5. Restaurar configuraciones personalizadas
+            </Text>
+            <Text style={styles.substep}> • Importar usuarios</Text>
+            <Text style={styles.substep}> • Configurar sitios remotos</Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Verificar configuración de enrutamiento
+            </Text>
+
+            <Text style={styles.step}>
+              6. Verificar el funcionamiento del sistema
+            </Text>
+            <Text style={styles.substep}> • Comprobar conectividad de red</Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Verificar servicios R&S Postman III
+            </Text>
+            <Text style={styles.substep}>
+              {' '}
+              • Realizar pruebas de comunicación
+            </Text>
+          </View>
+
+          <View style={styles.infoBox}>
+            <Icon name="information" size={18} color="#2196F3" />
+            <Text variant="bodySmall" style={styles.infoText}>
+              Recomendación: Planifique cuidadosamente el proceso de
+              actualización y realice la migración durante una ventana de
+              mantenimiento programada para minimizar el impacto en las
+              operaciones.
+            </Text>
+          </View>
+
+          <Text variant="titleSmall" style={styles.sectionTitle}>
+            ⚠️ Consideraciones Importantes
+          </Text>
+
+          <View style={styles.optionGroup}>
+            <Text variant="bodyMedium" style={styles.bold}>
+              Antes de Actualizar:
+            </Text>
+          </View>
+
+          <View style={styles.checkList}>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Documentar toda la configuración actual del sistema
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Realizar backup de todas las bases de datos
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Guardar archivos de configuración personalizados
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Verificar compatibilidad de hardware con los nuevos sistemas
+              operativos
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Notificar a todos los usuarios sobre el tiempo de inactividad
+              planificado
+            </Text>
+          </View>
+
+          <View style={styles.optionGroup}>
+            <Text variant="bodyMedium" style={styles.bold}>
+              Durante la Actualización:
+            </Text>
+          </View>
+
+          <View style={styles.checkList}>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Seguir estrictamente el orden de los pasos de instalación
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • No omitir ninguna tarea de prerequisitos
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Verificar cada paso antes de continuar al siguiente
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Mantener registro de cualquier problema encontrado
+            </Text>
+          </View>
+
+          <View style={styles.optionGroup}>
+            <Text variant="bodyMedium" style={styles.bold}>
+              Después de la Actualización:
+            </Text>
+          </View>
+
+          <View style={styles.checkList}>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Realizar pruebas exhaustivas de todas las funcionalidades
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Verificar la conectividad con todos los sitios remotos
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Confirmar que todos los usuarios pueden acceder al sistema
+            </Text>
+            <Text style={styles.checkItem}>
+              {' '}
+              • Monitorear el sistema durante las primeras 24-48 horas
+            </Text>
+          </View>
+        </Accordion>
+
+        {/* SECTION 8 */}
+        <Accordion
+          number="SECCIÓN 8"
           title="Apéndice: Configuración Avanzada y Mantenimiento"
           icon="tools"
-          delay={180}
+          delay={200}
         >
           <Text variant="bodyMedium" style={styles.subtitle}>
             <Text style={styles.bold}>Propósito:</Text> Configuración avanzada,
@@ -3320,7 +3735,7 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="titleSmall" style={styles.sectionTitle}>
-            🔧 Temas Cubiertos:
+            📚 Contenidos del Apéndice
           </Text>
 
           <View style={styles.optionGroup}>
