@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Este componente implementa un video interactivo que se pausa automáticamente en puntos específicos, mostrando instrucciones y una animación de mano que indica dónde hacer clic para continuar.
+Este componente implementa un sistema de video interactivo para la capacitación en el armado del rack de equipos HF de Rohde & Schwarz. El video se pausa automáticamente en puntos específicos, mostrando instrucciones y una animación de mano que indica dónde hacer clic para continuar, validando la interacción del usuario antes de proceder.
 
 ## 🚀 Características Implementadas
 
@@ -71,8 +71,15 @@ const adjustedSegments = adjustCoordinatesForVideo(
 ## 🎯 Cómo Usar
 
 ### 1. Acceso desde el Menú
-- Abre el drawer de navegación
-- Ve a "Conceptos Técnicos" → "Armado del Rack"
+
+**Opción A - Desde el Drawer:**
+1. Desliza desde la izquierda o toca el menú hamburguesa
+2. Expande la sección "Conceptos Técnicos"
+3. Selecciona "Armado del Rack"
+
+**Opción B - Desde Home:**
+1. Toca "CONCEPTOS TÉCNICOS DE HARDWARE" en la pantalla principal
+2. En el menú de conceptos, selecciona "Armado del Rack"
 
 ### 2. Interacción con el Video
 1. **Reproducción Automática**: El video comienza automáticamente
@@ -132,17 +139,28 @@ Animated.timing(pulseAnimation, {
 
 ## 📱 Compatibilidad
 
-- **React Native**: 0.60+
-- **react-native-video**: Última versión
-- **react-native-paper**: Para componentes UI
-- **react-native-reanimated**: Para animaciones
+- **React Native**: 0.81.4
+- **react-native-video**: 6.16.1
+- **react-native-paper**: 5.14.5 (Material Design 3)
+- **react-native-reanimated**: 4.1.2
+- **TypeScript**: 5.8.3
 
 ## 🐛 Solución de Problemas
 
 ### Video no se reproduce
 1. Verifica que el archivo esté en `videos/partes.mp4`
-2. Asegúrate de que `react-native-video` esté instalado
-3. Para iOS, ejecuta `cd ios && pod install`
+2. Asegúrate de que `react-native-video` esté instalado:
+   ```bash
+   npm install react-native-video
+   ```
+3. Para iOS, ejecuta:
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+4. Limpia el caché de Metro:
+   ```bash
+   npx react-native start --reset-cache
+   ```
 
 ### Coordenadas incorrectas
 1. Ajusta las coordenadas en `videoSegments.ts`
@@ -150,21 +168,88 @@ Animated.timing(pulseAnimation, {
 3. Prueba en diferentes tamaños de pantalla
 
 ### Animaciones no funcionan
-1. Verifica que `react-native-reanimated` esté instalado
+1. Verifica que `react-native-reanimated` esté instalado:
+   ```bash
+   npm install react-native-reanimated
+   ```
 2. Asegúrate de que `useNativeDriver: true` esté configurado
+3. Para iOS, ejecuta `cd ios && pod install && cd ..`
+4. Reinicia Metro bundler:
+   ```bash
+   npx react-native start --reset-cache
+   ```
+
+## 🎓 Integración con el Sistema
+
+### Navegación
+El video interactivo está integrado en la navegación principal:
+- **Drawer Navigation**: Accesible desde el menú lateral
+- **Stack Navigation**: Parte del flujo de Conceptos Técnicos
+- **Appbar**: Incluye botón de retroceso para volver al menú
+
+### Estado y Gestión
+- Estado local del video con `useState`
+- Control de reproducción con refs
+- Validación de interacción antes de avanzar
+
+### Arquitectura
+```typescript
+Armado_Rack.tsx
+├── Video Component (react-native-video)
+├── Overlay de Pausas (Animated.View)
+├── Instrucciones (Card de Paper)
+├── Validación de Clics (TouchableOpacity)
+└── Animaciones (React Native Animated)
+```
 
 ## 🚀 Próximas Mejoras
 
-- [ ] Soporte para múltiples videos
+- [ ] Soporte para múltiples videos de capacitación
 - [ ] Configuración de velocidad de reproducción
-- [ ] Guardado de progreso
+- [ ] Guardado de progreso del usuario (AsyncStorage)
 - [ ] Modo de pantalla completa
 - [ ] Subtítulos opcionales
 - [ ] Análisis de interacciones del usuario
+- [ ] Repetir segmentos individuales
+- [ ] Sistema de puntuación/gamificación
+
+## 📊 Métricas y Seguimiento
+
+### Datos que se pueden capturar
+- Tiempo en cada segmento
+- Número de intentos por segmento
+- Áreas de clic (correctas e incorrectas)
+- Tiempo total de completado
+- Segmentos repetidos
+
+### Implementación Futura
+```typescript
+// Ejemplo de tracking
+const [analytics, setAnalytics] = useState({
+  startTime: Date.now(),
+  segmentAttempts: {},
+  clickAccuracy: [],
+});
+```
 
 ## 📞 Soporte
 
 Si tienes problemas o preguntas:
-1. Revisa la documentación de `react-native-video`
-2. Verifica la configuración de segmentos
-3. Comprueba los logs de la consola para errores
+
+1. **Revisa los README**:
+   - `README.md` - Estado del Arte completo
+   - `README_PAPER.md` - Guía de desarrollo
+   
+2. **Documentación de dependencias**:
+   - [React Native Video](https://github.com/react-native-video/react-native-video)
+   - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+   
+3. **Debugging**:
+   - Verifica la configuración de segmentos en `src/config/videoSegments.ts`
+   - Comprueba los logs de la consola para errores
+   - Usa React Native Debugger para inspeccionar el estado
+
+4. **Problemas comunes**:
+   - Video negro: Verifica la ruta del archivo
+   - Clicks no detectados: Ajusta las coordenadas en `videoSegments.ts`
+   - Animaciones lentas: Asegúrate de usar `useNativeDriver: true`
