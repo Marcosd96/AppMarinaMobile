@@ -1,5 +1,12 @@
 # Estado del Arte - AppMarinaMobile
-
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│        📱 AppMarinaMobile                           │
+│        Capacitación Técnica HF                      │
+│                                                     │
+│    React Native • TypeScript • Material Design 3    │
+│                                                     │
+└─────────────────────────────────────────────────────┘
 ## 📋 Resumen Ejecutivo
 
 **AppMarinaMobile** es una aplicación móvil desarrollada en React Native para la capacitación técnica de equipos HF de Rohde & Schwarz. La aplicación implementa Material Design 3 y está diseñada para proporcionar una interfaz intuitiva para el aprendizaje de conceptos técnicos de radiofrecuencia.
