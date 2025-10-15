@@ -12,12 +12,21 @@ import IntroduccionHFScreen from '../screens/IntroduccionHFScreen';
 import ConceptosTecnicosScreen from '../screens/ConceptosTecnicosScreen';
 import OperatividadScreen from '../screens/OperatividadScreen';
 import ConceptoHardwareScreen from '../screens/ConceptoHardwareScreen';
-import EncendidoScreen from '../screens/EncendidoScreen';
 import PostmanScreen from '../screens/PostmanScreen';
 import FillgunScreen from '../screens/FillgunScreen';
 import FallasScreen from '../screens/FallasScreen';
 import VistasScreen from '../screens/VistasScreen.tsx';
 import ArmadoRackScreen from '../screens/Armado_Rack';
+import EnergizacionEquipoScreen from '../screens/EnergizacionEquipoScreen';
+import UsoPostmanIIIScreen from '../screens/UsoPostmanIIIScreen';
+import ApagarEquipoScreen from '../screens/ApagarEquipoScreen';
+import AcopladorFrecuenciaScreen from '../screens/AcopladorFrecuenciaScreen';
+import ActivarGPSScreen from '../screens/ActivarGPSScreen';
+import CambioVocoderScreen from '../screens/CambioVocoderScreen';
+import LlamadaPorVozScreen from '../screens/LlamadaPorVozScreen';
+import CambioGrupoEscaneoScreen from '../screens/CambioGrupoEscaneoScreen';
+import CambioPotenciaScreen from '../screens/CambioPotenciaScreen';
+import CambioLlaveScreen from '../screens/CambioLlaveScreen';
 import { View, StyleSheet } from 'react-native';
 import { Text, Divider } from 'react-native-paper';
 import Animated, { Easing, interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -32,7 +41,16 @@ function OperatividadStackNavigator() {
         name="OperatividadHome"
         component={OperatividadScreen}
       />
-      <OperatividadStack.Screen name="Encendido" component={EncendidoScreen} />
+      <OperatividadStack.Screen name="EnergizacionEquipo" component={EnergizacionEquipoScreen} />
+      <OperatividadStack.Screen name="UsoPostmanIII" component={UsoPostmanIIIScreen} />
+      <OperatividadStack.Screen name="ApagarEquipo" component={ApagarEquipoScreen} />
+      <OperatividadStack.Screen name="AcopladorFrecuencia" component={AcopladorFrecuenciaScreen} />
+      <OperatividadStack.Screen name="ActivarGPS" component={ActivarGPSScreen} />
+      <OperatividadStack.Screen name="CambioVocoder" component={CambioVocoderScreen} />
+      <OperatividadStack.Screen name="LlamadaPorVoz" component={LlamadaPorVozScreen} />
+      <OperatividadStack.Screen name="CambioGrupoEscaneo" component={CambioGrupoEscaneoScreen} />
+      <OperatividadStack.Screen name="CambioPotencia" component={CambioPotenciaScreen} />
+      <OperatividadStack.Screen name="CambioLlave" component={CambioLlaveScreen} />
     </OperatividadStack.Navigator>
   );
 }
@@ -168,10 +186,82 @@ function CustomDrawerContent(props: any) {
         />
 
         <DrawerItem
-          label="Encendido"
+          label="Energización del Equipo"
           style={styles.childItem}
           onPress={() =>
-            navigateAndClose('Operatividad', { screen: 'Encendido' })
+            navigateAndClose('Operatividad', { screen: 'EnergizacionEquipo' })
+          }
+        />
+
+        <DrawerItem
+          label="Uso de Postman III"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'UsoPostmanIII' })
+          }
+        />
+
+        <DrawerItem
+          label="Apagar Equipo"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'ApagarEquipo' })
+          }
+        />
+
+        <DrawerItem
+          label="Acoplador de Frecuencia"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'AcopladorFrecuencia' })
+          }
+        />
+
+        <DrawerItem
+          label="Activar GPS"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'ActivarGPS' })
+          }
+        />
+
+        <DrawerItem
+          label="Cambio de Vocoder"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'CambioVocoder' })
+          }
+        />
+
+        <DrawerItem
+          label="Llamada por Voz"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'LlamadaPorVoz' })
+          }
+        />
+
+        <DrawerItem
+          label="Cambio de Grupo de Escaneo"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'CambioGrupoEscaneo' })
+          }
+        />
+
+        <DrawerItem
+          label="Cambio de Potencia"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'CambioPotencia' })
+          }
+        />
+
+        <DrawerItem
+          label="Cambio de Llave"
+          style={styles.childItem}
+          onPress={() =>
+            navigateAndClose('Operatividad', { screen: 'CambioLlave' })
           }
         />
       </DrawerSection>
