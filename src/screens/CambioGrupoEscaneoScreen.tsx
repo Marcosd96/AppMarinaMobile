@@ -1,13 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Video, { VideoRef } from 'react-native-video';
 import { Appbar, Text, useTheme } from 'react-native-paper';
+import { useIsFocused } from '@react-navigation/native';
 
 export default function CambioGrupoEscaneoScreen({ navigation }: any) {
   const videoRef = useRef<VideoRef>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
   const theme = useTheme();
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (!isFocused) {
+      setIsPaused(true);
+    }
+  }, [isFocused]);
 
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.background }]}>

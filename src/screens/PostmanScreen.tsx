@@ -609,9 +609,9 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Al instalar Windows 10 como sistema operativo, recomendamos usar el
-            nombre de usuario <Text style={styles.bold}>Installer</Text> durante
+            nombre de usuario <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> durante
             la instalación. El usuario que cree aquí se asigna automáticamente
-            al grupo <Text style={styles.bold}>Administrators</Text>.
+            al grupo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrators</Text>.
           </Text>
 
           <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
@@ -621,7 +621,7 @@ export default function PostmanScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
-              Figura 4-1: Windows 10 - cuenta installer
+              Figura 4-1: Windows 10 - cuenta installer.
             </Text>
           </View>
 
@@ -631,8 +631,8 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Al instalar Windows Server 2016 como sistema operativo, el usuario{' '}
-            <Text style={styles.bold}>Installer</Text> debe crearse manualmente
-            y asignarse al grupo <Text style={styles.bold}>Administrators</Text>{' '}
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> debe crearse manualmente
+            y asignarse al grupo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrators</Text>{' '}
             usando el administrador de usuarios de Windows.
           </Text>
 
@@ -694,7 +694,7 @@ export default function PostmanScreen({ navigation }: any) {
               1. Presione [Win+R] para abrir la ventana "Run"
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              2. Ingrese el comando <Text style={styles.bold}>ncpa.cpl</Text> y
+              2. Ingrese el comando <Text style={[styles.bold, { color: theme.colors.onSurface }]}>ncpa.cpl</Text> y
               haga clic en el botón "OK"
             </Text>
               <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
@@ -711,7 +711,7 @@ export default function PostmanScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
-              Figura 4-2: Lista de adaptadores de red
+              Figura 4-2: Lista de adaptadores de red.
             </Text>
           </View>
 
@@ -734,7 +734,7 @@ export default function PostmanScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
-              Desactivación de adaptador de red
+              Desactivación de adaptador de red. 
             </Text>
           </View>
 
@@ -777,7 +777,7 @@ export default function PostmanScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
-              Figura 4-3: Configuración de métrica de interfaz de red
+              Figura 4-3: Configuración de métrica de interfaz de red.
             </Text>
           </View>
 
@@ -811,7 +811,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
 
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              2. Ingrese el comando <Text style={styles.bold}>ncpa.cpl</Text> y
+              2. Ingrese el comando <Text style={[styles.bold, { color: theme.colors.onSurface }]}>ncpa.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
               <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
@@ -868,7 +868,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
 
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              2. Ingrese el comando <Text style={styles.bold}>sysdm.cpl</Text> y
+              2. Ingrese el comando <Text style={[styles.bold, { color: theme.colors.onSurface }]}>sysdm.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
               <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
@@ -934,7 +934,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
 
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              2. Ingrese el comando <Text style={styles.bold}>sysdm.cpl</Text> y
+              2. Ingrese el comando <Text style={[styles.bold, { color: theme.colors.onSurface }]}>sysdm.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
               <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
@@ -1042,9 +1042,9 @@ export default function PostmanScreen({ navigation }: any) {
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             La instalación y configuración del software R&S Postman III debe
             realizarse usando la cuenta{' '}
-            <Text style={styles.bold}>Installer</Text> creada durante la
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> creada durante la
             instalación del sistema operativo. Por favor, cierre sesión e inicie
-            sesión como usuario <Text style={styles.bold}>Installer</Text> si
+            sesión como usuario <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> si
             aún no lo ha hecho.
           </Text>
 
@@ -1054,7 +1054,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Lance el Asistente de Configuración R&S Postman III ejecutando el
-            archivo <Text style={styles.bold}>setup.exe</Text> en la carpeta de
+            archivo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>setup.exe</Text> en la carpeta de
             instalación.
           </Text>
 
@@ -1065,7 +1065,7 @@ export default function PostmanScreen({ navigation }: any) {
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Después de que se ha lanzado el Asistente de Configuración R&S
             Postman III, se muestra la página{' '}
-            <Text style={styles.bold}>Welcome</Text>. Seleccione:
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Welcome</Text>. Seleccione:
           </Text>
 
           <View style={styles.stepsList}>
@@ -1439,12 +1439,12 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Verifica si el usuario actual es miembro del grupo{' '}
-            <Text style={styles.bold}>Administrators</Text>.
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrators</Text>.
           </Text>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Si esta tarea falla, usted no ha iniciado sesión como un usuario que
-            es miembro del grupo <Text style={styles.bold}>Administrators</Text>
+            es miembro del grupo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrators</Text>
             , o el Control de Cuentas de Usuario de Windows (UAC) no está
             desactivado.
           </Text>
@@ -1523,7 +1523,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Verifica si el grupo local de Windows{' '}
-            <Text style={styles.bold}>PMIII-User</Text> existe.
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>PMIII-User</Text> existe.
           </Text>
 
           <View style={styles.stepsList}>
@@ -1539,7 +1539,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Verifica si existe una cuenta de usuario de Windows llamada{' '}
-            <Text style={styles.bold}>Installer</Text> y es miembro del grupo
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> y es miembro del grupo
             "Administrators".
           </Text>
 
@@ -1550,7 +1550,7 @@ export default function PostmanScreen({ navigation }: any) {
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Verifica si existe una cuenta de usuario de Windows nombrada según
             se configuró en la página "Settings" y es miembro del grupo{' '}
-            <Text style={styles.bold}>PMIII-User</Text>.
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>PMIII-User</Text>.
           </Text>
 
           <View style={styles.stepsList}>
@@ -2054,7 +2054,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Verifica que el usuario actual (
-            <Text style={styles.bold}>Installer</Text>) sea miembro del rol
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text>) sea miembro del rol
             "Administrators" de ADAM.
           </Text>
 
@@ -2082,7 +2082,7 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
-            <Text style={styles.bold}>
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>
               Nota: Entendiendo el Asistente de Configuración de Postman III
             </Text>
           </Text>
@@ -2159,7 +2159,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
               <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
-              <Text style={styles.bold}>Nota:</Text> La instalación del
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Nota:</Text> La instalación del
               subsistema R&S Postman III tarda unos minutos. Por favor, sea
               paciente mientras se instala y configura el subsistema R&S Postman
               III.
@@ -2895,7 +2895,7 @@ export default function PostmanScreen({ navigation }: any) {
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             El proceso de instalación de R&S Postman III requiere que cree una
             cuenta de usuario local de Windows, que debe ser miembro del grupo
-            local de Windows <Text style={styles.bold}>Administrators</Text>.
+            local de Windows <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrators</Text>.
           </Text>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
@@ -2912,7 +2912,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
             Lance el Asistente de Configuración R&S Postman III ejecutando el
-            archivo <Text style={styles.bold}>setup.exe</Text> en la carpeta de
+            archivo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>setup.exe</Text> en la carpeta de
             instalación.
           </Text>
 
@@ -3029,7 +3029,7 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
-            Cierre y reinicie <Text style={styles.bold}>setup.exe</Text>{' '}
+            Cierre y reinicie <Text style={[styles.bold, { color: theme.colors.onSurface }]}>setup.exe</Text>{' '}
             después.
           </Text>
 
@@ -3447,7 +3447,7 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
-            <Text style={styles.bold}>
+            <Text style={[styles.bold, { color: theme.colors.onSurface }]}>
               Relación entre el servicio TMR, el controlador TMR y los servicios
               R&S Device Control
             </Text>
@@ -3777,7 +3777,7 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Inicie sesión como usuario{' '}
-              <Text style={styles.bold}>Installer</Text> e inicie la utilidad
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text> e inicie la utilidad
               R&S Device Discovery.
             </Text>
 
@@ -3857,7 +3857,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Agregar la cuenta de usuario de Windows al grupo{' '}
-              <Text style={styles.bold}>PMIII-User</Text> en el servidor.
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>PMIII-User</Text> en el servidor.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               3. Crear una cuenta de usuario UMAN usando el nombre del usuario
@@ -3969,14 +3969,14 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Inicie sesión en Windows usando la cuenta{' '}
-              <Text style={styles.bold}>Installer</Text>.
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text>.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Haga clic en "Start" {'>'} "Windows Administrative Tools" {'>'}{' '}
               "Computer Management". En el árbol, navegue al elemento "Computer"{' '}
               {'>'} "System Tools" {'>'} "Local Users and Groups".
               Alternativamente, inicie{' '}
-              <Text style={styles.bold}>lusrmgr.msc</Text>.
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>lusrmgr.msc</Text>.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               3. Haga clic derecho en "Users" y seleccione "New User..." para
@@ -4020,7 +4020,7 @@ export default function PostmanScreen({ navigation }: any) {
               los grupos de Windows.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              5. Seleccione el grupo <Text style={styles.bold}>PMIII-User</Text>{' '}
+              5. Seleccione el grupo <Text style={[styles.bold, { color: theme.colors.onSurface }]}>PMIII-User</Text>{' '}
               y haga clic en "OK" tres veces para cerrar todos los diálogos.
             </Text>
           </View>
@@ -4037,14 +4037,14 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Inicie sesión en Windows usando la cuenta{' '}
-              <Text style={styles.bold}>Installer</Text>.
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text>.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Presione [Win+R] para abrir el diálogo "Run".
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               3. Ingrese{' '}
-              <Text style={styles.bold}>http://localhost:8080/simcos2</Text>{' '}
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>http://localhost:8080/simcos2</Text>{' '}
               para lanzar la Interfaz Web Extendida de Postman.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
@@ -4100,7 +4100,7 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Inicie sesión en Windows usando la cuenta{' '}
-              <Text style={styles.bold}>Installer</Text>.
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text>.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Lance la Consola de Administración R&S Postman III.
@@ -4146,7 +4146,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               14. Si se muestra el diálogo "Mail Server Authentication", ingrese{' '}
-              <Text style={styles.bold}>Administrator</Text> en el campo "User
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Administrator</Text> en el campo "User
               Name" e ingrese la contraseña del administrador en el campo
               "Password".
             </Text>
@@ -4217,7 +4217,7 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Haga clic en Start {'>'} Control Panel {'>'} Network and
               Sharing Center {'>'} Change adapter settings o lance{' '}
-              <Text style={styles.bold}>ncpa.cpl</Text> para abrir el applet
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>ncpa.cpl</Text> para abrir el applet
               "Network Control Panel".
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
@@ -4242,7 +4242,7 @@ export default function PostmanScreen({ navigation }: any) {
 
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
-              1. Inicie sesión como <Text style={styles.bold}>Installer</Text>.
+              1. Inicie sesión como <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Installer</Text>.
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Abra la Consola de Administración R&S Postman III.
@@ -4317,7 +4317,7 @@ export default function PostmanScreen({ navigation }: any) {
           <View style={styles.stepsList}>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Inicie el Editor de Registro (
-              <Text style={styles.bold}>regedit.exe</Text>).
+              <Text style={[styles.bold, { color: theme.colors.onSurface }]}>regedit.exe</Text>).
             </Text>
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Navegue a la clave de registro
