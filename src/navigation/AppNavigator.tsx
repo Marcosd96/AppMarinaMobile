@@ -36,7 +36,10 @@ const OperatividadStack = createStackNavigator();
 
 function OperatividadStackNavigator() {
   return (
-    <OperatividadStack.Navigator screenOptions={{ headerShown: false }}>
+    <OperatividadStack.Navigator 
+      screenOptions={{ headerShown: false }}
+      initialRouteName="OperatividadHome"
+    >
       <OperatividadStack.Screen
         name="OperatividadHome"
         component={OperatividadScreen}

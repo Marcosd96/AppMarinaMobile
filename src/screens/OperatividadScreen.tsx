@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ScrollView, StyleSheet, View, Image } from 'react-native';
 import { Appbar, Text, Surface, Card, Button, useTheme } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function OperatividadScreen({ navigation }: any) {
   const theme = useTheme();
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', (e: any) => {
+      // Prevenir el comportamiento por defecto
+      e.preventDefault();
+      // Navegar a Home
+      navigation.navigate('Home');
+    });
+
+    return unsubscribe;
+  }, [navigation]);
   
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
       <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
+        {/* <Appbar.BackAction onPress={() => navigation.navigate('Home')} /> */}
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Operatividad del Equipo" />
       </Appbar.Header>

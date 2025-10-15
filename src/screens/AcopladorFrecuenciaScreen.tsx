@@ -14,13 +14,27 @@ export default function AcopladorFrecuenciaScreen({ navigation }: any) {
   useEffect(() => {
     if (!isFocused) {
       setIsPaused(true);
+      if (videoRef.current) {
+        videoRef.current.seek(0);
+      }
+    } else {
+      setIsPaused(false);
     }
   }, [isFocused]);
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', (e: any) => {
+      e.preventDefault();
+      navigation.navigate('OperatividadHome');
+    });
+
+    return unsubscribe;
+  }, [navigation]);
 
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
       <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
-        <Appbar.BackAction onPress={() => navigation.goBack()} />
+        <Appbar.BackAction onPress={() => navigation.navigate('OperatividadHome')} />
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Acoplador de Frecuencia" />
       </Appbar.Header>

@@ -90,7 +90,7 @@ export default function AppContent({ navigation }: any) {
       id: 3,
       title: 'OPERATIVIDAD DEL EQUIPO',
       image: ICONS.operatividad,
-      onPress: () => navigation.navigate('Operatividad'),
+      onPress: () => navigation.navigate('Operatividad', { screen: 'OperatividadHome' }),
     },
     {
       id: 4,
