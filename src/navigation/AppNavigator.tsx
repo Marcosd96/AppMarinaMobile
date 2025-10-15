@@ -27,8 +27,8 @@ import LlamadaPorVozScreen from '../screens/LlamadaPorVozScreen';
 import CambioGrupoEscaneoScreen from '../screens/CambioGrupoEscaneoScreen';
 import CambioPotenciaScreen from '../screens/CambioPotenciaScreen';
 import CambioLlaveScreen from '../screens/CambioLlaveScreen';
-import { View, StyleSheet } from 'react-native';
-import { Text, Divider } from 'react-native-paper';
+import { View, StyleSheet, useColorScheme } from 'react-native';
+import { Text, Divider, useTheme } from 'react-native-paper';
 import Animated, { Easing, interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 const Drawer = createDrawerNavigator();
@@ -66,6 +66,7 @@ function DrawerSection({
   onToggle: () => void;
   children: React.ReactNode;
 }) {
+  const theme = useTheme();
   const progress = useSharedValue(open ? 1 : 0);
   React.useEffect(() => {
     progress.value = withTiming(open ? 1 : 0, { duration: 220, easing: Easing.out(Easing.cubic) });
@@ -84,12 +85,13 @@ function DrawerSection({
       <DrawerItem
         label={() => (
           <View style={styles.sectionHeaderRow}>
-            <Text variant="titleSmall" style={styles.sectionHeaderText}>{label}</Text>
-            <Animated.Text style={[styles.sectionArrow, arrowStyle]}>▸</Animated.Text>
+            <Text variant="titleSmall" style={[styles.sectionHeaderText, { color: theme.colors.onSurface }]}>{label}</Text>
+            <Animated.Text style={[styles.sectionArrow, arrowStyle, { color: theme.colors.onSurfaceVariant }]}>▸</Animated.Text>
           </View>
         )}
         onPress={onToggle}
         style={styles.sectionHeaderItem}
+        labelStyle={{ color: theme.colors.onSurface }}
       />
       {open ? (
         <Animated.View style={[styles.sectionContent, contentStyle]}>
@@ -102,6 +104,7 @@ function DrawerSection({
 
 function CustomDrawerContent(props: any) {
   const { navigation } = props;
+  const theme = useTheme();
   // Estado escalable por secciones
   const [sectionsOpen, setSectionsOpen] = React.useState<
     Record<string, boolean>
@@ -128,17 +131,22 @@ function CustomDrawerContent(props: any) {
     navigation.closeDrawer();
   };
   return (
-    <DrawerContentScrollView {...props}>
-      <Animated.View style={styles.drawerHeader}>
-        <Text variant="titleMedium" style={styles.drawerTitle}>HF ROHDE & SCHWARZ</Text>
-        <Text variant="bodySmall" style={styles.drawerSubtitle}>Navegación</Text>
+    <DrawerContentScrollView {...props} style={{ backgroundColor: theme.colors.surface }}>
+      <Animated.View style={[styles.drawerHeader, { backgroundColor: theme.colors.surface }]}>
+        <Text variant="titleMedium" style={[styles.drawerTitle, { color: theme.colors.onSurface }]}>HF ROHDE & SCHWARZ</Text>
+        <Text variant="bodySmall" style={[styles.drawerSubtitle, { color: theme.colors.onSurfaceVariant }]}>Navegación</Text>
       </Animated.View>
-      <Divider style={styles.divider} />
+      <Divider style={[styles.divider, { backgroundColor: theme.colors.outlineVariant }]} />
 
-      <DrawerItem label="Home" onPress={() => navigateAndClose('Home')} />
+      <DrawerItem 
+        label="Home" 
+        onPress={() => navigateAndClose('Home')}
+        labelStyle={{ color: theme.colors.onSurface }}
+      />
       <DrawerItem
         label="Introducción HF"
         onPress={() => navigateAndClose('IntroduccionHF')}
+        labelStyle={{ color: theme.colors.onSurface }}
       />
 
       <DrawerSection
@@ -149,6 +157,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Menú Principal"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('ConceptosTecnicos', {
               screen: 'ConceptosTecnicosHome',
@@ -158,16 +167,19 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Concepto del Hardware"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() => navigateAndClose('ConceptoHardware')}
         />
         <DrawerItem
           label="Vistas"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() => navigateAndClose('Vistas')}
         />
         <DrawerItem
           label="Armado del Rack"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() => navigateAndClose('ArmadoRack')}
         />
       </DrawerSection>
@@ -180,6 +192,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Menu Principal"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'OperatividadHome' })
           }
@@ -188,6 +201,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Energización del Equipo"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'EnergizacionEquipo' })
           }
@@ -196,6 +210,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Uso de Postman III"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'UsoPostmanIII' })
           }
@@ -204,6 +219,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Apagar Equipo"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'ApagarEquipo' })
           }
@@ -212,6 +228,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Acoplador de Frecuencia"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'AcopladorFrecuencia' })
           }
@@ -220,6 +237,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Activar GPS"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'ActivarGPS' })
           }
@@ -228,6 +246,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Cambio de Vocoder"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'CambioVocoder' })
           }
@@ -236,6 +255,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Llamada por Voz"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'LlamadaPorVoz' })
           }
@@ -244,6 +264,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Cambio de Grupo de Escaneo"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'CambioGrupoEscaneo' })
           }
@@ -252,6 +273,7 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Cambio de Potencia"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'CambioPotencia' })
           }
@@ -260,20 +282,36 @@ function CustomDrawerContent(props: any) {
         <DrawerItem
           label="Cambio de Llave"
           style={styles.childItem}
+          labelStyle={{ color: theme.colors.onSurfaceVariant }}
           onPress={() =>
             navigateAndClose('Operatividad', { screen: 'CambioLlave' })
           }
         />
       </DrawerSection>
 
-      <DrawerItem label="Postman" onPress={() => navigateAndClose('Postman')} />
-      <DrawerItem label="Fillgun" onPress={() => navigateAndClose('Fillgun')} />
-      <DrawerItem label="Fallas" onPress={() => navigateAndClose('Fallas')} />
+      <DrawerItem 
+        label="Postman" 
+        onPress={() => navigateAndClose('Postman')}
+        labelStyle={{ color: theme.colors.onSurface }}
+      />
+      <DrawerItem 
+        label="Fillgun" 
+        onPress={() => navigateAndClose('Fillgun')}
+        labelStyle={{ color: theme.colors.onSurface }}
+      />
+      <DrawerItem 
+        label="Fallas" 
+        onPress={() => navigateAndClose('Fallas')}
+        labelStyle={{ color: theme.colors.onSurface }}
+      />
     </DrawerContentScrollView>
   );
 }
 
 export default function AppNavigator() {
+  const colorScheme = useColorScheme();
+  const isDark = colorScheme === 'dark';
+  
   return (
     <NavigationContainer>
       <Drawer.Navigator
@@ -283,11 +321,11 @@ export default function AppNavigator() {
           drawerType: 'front',
           swipeEnabled: true,
           swipeEdgeWidth: 40,
-          overlayColor: 'rgba(0,0,0,0.15)',
+          overlayColor: isDark ? 'rgba(0,0,0,0.5)' : 'rgba(0,0,0,0.15)',
           drawerStyle: {
             width: 290,
-            backgroundColor: 'white',
-            borderRightColor: 'rgba(0,0,0,0.08)',
+            backgroundColor: isDark ? '#1e1e1e' : '#ffffff',
+            borderRightColor: isDark ? '#3a3a3a' : 'rgba(0,0,0,0.08)',
             borderRightWidth: StyleSheet.hairlineWidth,
           },
         }}
@@ -342,7 +380,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   drawerSubtitle: {
-    opacity: 0.6,
+    opacity: 0.7,
   },
   divider: {
     marginVertical: 8,
@@ -357,6 +395,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   sectionArrow: {
+    fontSize: 16,
     opacity: 0.6,
   },
   sectionHeaderItem: {

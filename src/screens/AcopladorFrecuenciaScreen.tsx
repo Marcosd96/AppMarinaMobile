@@ -1,16 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Video, { VideoRef } from 'react-native-video';
-import { Appbar, Text } from 'react-native-paper';
+import { Appbar, Text, useTheme } from 'react-native-paper';
 
 export default function AcopladorFrecuenciaScreen({ navigation }: any) {
   const videoRef = useRef<VideoRef>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
+  const theme = useTheme();
 
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.BackAction onPress={() => navigation.goBack()} />
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Acoplador de Frecuencia" />
@@ -41,10 +42,6 @@ export default function AcopladorFrecuenciaScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   videoContainer: {
     flex: 1,

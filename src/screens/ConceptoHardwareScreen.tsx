@@ -1,12 +1,14 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Image } from 'react-native';
-import { Appbar, Text, Surface, Card } from 'react-native-paper';
+import { Appbar, Text, Surface, Card, useTheme } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function ConceptoHardwareScreen({ navigation }: any) {
+  const theme = useTheme();
+  
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Concepto del Hardware" />
       </Appbar.Header>
@@ -16,15 +18,15 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
         contentContainerStyle={styles.content}
       >
         <ScreenEntrance>
-          <Surface style={styles.card} elevation={2}>
+          <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
             <Card.Content>
               <Text
                 variant="headlineSmall"
-                style={[styles.title, styles.centeredTitle]}
+                style={[styles.title, styles.centeredTitle, { color: theme.colors.onSurface }]}
               >
                 Partes del Sistema
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 R&S®M3SR Series4100
               </Text>
               <Image
@@ -32,7 +34,7 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 Sistema de comunicación de última generación funcionalidad de
                 banda ancha HF para establecer enlaces de datos de largo alcance
                 en un canal de 24 kHz. La probabilidad de obtener altas
@@ -40,7 +42,7 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 un concepto de banda ancha de radio HF bien sintonizado e
                 integrado preparado para canales de 48 kHz..
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 R&S®M3SR Series4100
               </Text>
               <Image
@@ -48,14 +50,14 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 El R&S IN4000A es una fuente de alimentación AC / DC compacta y
                 polivalente diseñada para su uso con sistemas de Control de
                 tráfico aéreo, defensa aérea y radiocomunicaciones navales. Por
                 ejemplo, el R&S IN4000A suministra energía a una variedad de
                 radios R&S M3SR y componentes del sistema.
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 Switch Dell PowerConnect 2816
               </Text>
               <Image
@@ -63,10 +65,10 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 Es un dispositivo de interconexión utilizado para conectar equipos de red, formando una Red de Área Local (LAN). Sus especificaciones técnicas siguen el estándar Ethernet (IEEE 802.3). Es un switch gestionado de Capa 3 (L3) con 16 puertos. Incluye características como Control de Flujo, Capacidad Duplex, Switching de Capa 3, Switching de Capa 2, Auto-detección por Dispositivo, Soporte DHCP, Soporte BootP, Soporte ARP, Soporte VLAN, Auto Uplink (MDI/MDI-X Automático), IGMP Snooping, Activatable, Soporte IPv6 y Compatibilidad con Jumbo Frames.
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 Servidor Dell PowerEdge R310
               </Text>
               <Image
@@ -74,10 +76,10 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 El Servidor Dell PowerEdge R310 es un servidor para rack de un socket y 1U de alto rendimiento que cuenta con un procesamiento flexible, capacidad de ampliación, gestión simplificada, protección de datos y opciones de seguridad. Opciones de procesador y configuraciones de memoria que se equilibran para ejecutar aplicaciones, como Windows® Small Business Server, Business Center Essentials, SQL Workgroup/Standard, Oracle® 11g Standard, VMware®, Active Directory®, SharePoint® y archivo/impresión. Opciones de múltiples RAID y hasta cuatro discos duros de 2,5" o 3,5" para ayudar a mantener protegidos los datos.
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 R&S GB4000V Unidad de Audio
               </Text>
               <Image
@@ -85,10 +87,10 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 El R&S GB4000V es una unidad de audio remota. Es ideal para pequeños sistemas ATC donde no hay un interruptor de voz dedicado. El R&S GB4000V proporciona audio, PTT y silenciamiento hacia y desde radios en una ubicación remota. La unidad es compacta y cabe en cualquier consola. El R&S GB4000V se puede conectar a las radios mediante E & M de 4 hilos (línea analógica) o voz sobre IP (VoIP). Los tonos disponibles son 2040 Hz (PTT) y 2440 Hz (SQ).
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 Computador
               </Text>
               <Image
@@ -96,20 +98,20 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.serverImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 Es instalado en el Rack para la instalación de las operaciones basadas en perfiles y las aplicaciones como:
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 R&S®Postman III
               </Text>
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 • E-mail: Admite clientes de correo electrónico estándar{''}
                 • MapTrack: Transporte y visualización de datos GPS{''}
                 • Chat: Comunicación de mensajes cortos entre estaciones{''}
                 • Transferencia de archivos: Envío de cualquier tipo de archivo entre estaciones{''}
                 • Servicio de Fax / Voz: Fax y correo de voz
               </Text>
-              <Text variant="titleMedium" style={styles.subtitle}>
+              <Text variant="titleMedium" style={[styles.subtitle, { color: theme.colors.onSurface }]}>
                 Fuente de alimentación externa R&S® M3SR IN4000A
               </Text>
               <Image
@@ -117,10 +119,10 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
                 style={[styles.deviceImage, styles.tightImage]}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 Proporciona más energía real (watts) para proteger más equipos y dejar espacio para expandir los sistemas IT con un factor de energía de 0.9. Simplifica el monitoreo y administración de UPS con una interfaz de usuario de LCD luminosa. Extiende el tiempo de ejecución de la batería para dispositivos críticos con segmentos de carga. Maximiza los tiempos de ejecución con módulos opcionales de batería prolongada.
               </Text>
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 <Text style={styles.specLabel}>RANGO DE ENERGÍA:</Text> 700-3000 VA{'\n'}
                 <Text style={styles.specLabel}>VOLTAJE:</Text> 120, 208, 220-240 Vac{'\n'}
                 <Text style={styles.specLabel}>FRECUENCIA:</Text> 50/60 Hz
@@ -136,10 +138,6 @@ export default function ConceptoHardwareScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,
@@ -151,7 +149,6 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: 16,
     borderRadius: 12,
-    backgroundColor: 'white',
   },
   title: {
     marginBottom: 8,

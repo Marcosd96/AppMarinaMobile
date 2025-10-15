@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback } from 'react';
 import { ScrollView, StyleSheet, View, useWindowDimensions, Image } from 'react-native';
-import { Appbar, Text, Surface, Card, Button } from 'react-native-paper';
+import { Appbar, Text, Surface, Card, Button, useTheme } from 'react-native-paper';
 import { useFocusEffect } from '@react-navigation/native';
 import Animated, {
   Extrapolate,
@@ -103,6 +103,7 @@ function Dot({ index, animatedIndex }: DotProps) {
 export default function FillgunScreen({ navigation }: any) {
   const { width: windowWidth } = useWindowDimensions();
   const [currentStep, setCurrentStep] = useState(0);
+  const theme = useTheme();
 
   const steps = useMemo(
     () => [
@@ -201,9 +202,9 @@ export default function FillgunScreen({ navigation }: any) {
   const nextButtonStyle = useAnimatedStyle(() => ({ transform: [{ scale: nextScale.value }] }));
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
       <Animated.View style={headerAnimatedStyle}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Uso del Fillgun" />
       </Appbar.Header>
@@ -302,10 +303,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,
@@ -317,7 +314,6 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: 16,
     borderRadius: 12,
-    backgroundColor: 'white',
     alignSelf: 'center',
     maxWidth: 960,
     overflow: 'hidden',

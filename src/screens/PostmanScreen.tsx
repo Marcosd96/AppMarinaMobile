@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Appbar, Text, Surface, Card, Chip, Divider } from 'react-native-paper';
+import { Appbar, Text, Surface, Card, Chip, Divider, useTheme } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -26,10 +26,11 @@ function Accordion({
   delay = 0,
 }: AccordionProps) {
   const [expanded, setExpanded] = useState(false);
+  const theme = useTheme();
 
   return (
     <ScreenEntrance delay={delay}>
-      <Surface style={styles.accordionContainer} elevation={2}>
+      <Surface style={[styles.accordionContainer, { backgroundColor: theme.colors.surface }]} elevation={2}>
         <TouchableOpacity
           style={styles.accordionHeader}
           onPress={() => setExpanded(!expanded)}
@@ -37,13 +38,13 @@ function Accordion({
         >
           <View style={styles.accordionTitleRow}>
             <View style={styles.iconContainer}>
-              <Icon name={icon} size={24} color="#1976D2" />
+              <Icon name={icon} size={24} color={theme.colors.primary} />
             </View>
             <View style={styles.titleContainer}>
-              <Text variant="labelSmall" style={styles.stepNumber}>
+              <Text variant="labelSmall" style={[styles.stepNumber, { color: theme.colors.primary }]}>
                 {number}
               </Text>
-              <Text variant="titleMedium" style={styles.accordionTitle}>
+              <Text variant="titleMedium" style={[styles.accordionTitle, { color: theme.colors.onSurface }]}>
                 {title}
               </Text>
             </View>
@@ -51,7 +52,7 @@ function Accordion({
           <Icon
             name={expanded ? 'chevron-up' : 'chevron-down'}
             size={24}
-            color="#666"
+            color={theme.colors.onSurfaceVariant}
           />
         </TouchableOpacity>
 
@@ -67,9 +68,11 @@ function Accordion({
 }
 
 export default function PostmanScreen({ navigation }: any) {
+  const theme = useTheme();
+  
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="R&S Postman III" />
       </Appbar.Header>
@@ -79,13 +82,13 @@ export default function PostmanScreen({ navigation }: any) {
         contentContainerStyle={styles.content}
       >
         <ScreenEntrance>
-          <Surface style={styles.heroCard} elevation={3}>
+          <Surface style={[styles.heroCard, { backgroundColor: theme.colors.surface }]} elevation={3}>
             <View style={styles.heroContent}>
-              <Icon name="book-open-variant" size={48} color="#1976D2" />
-              <Text variant="headlineMedium" style={styles.heroTitle}>
+              <Icon name="book-open-variant" size={48} color={theme.colors.primary} />
+              <Text variant="headlineMedium" style={[styles.heroTitle, { color: theme.colors.onSurface }]}>
                 Manual de Instalación
               </Text>
-              <Text variant="bodyMedium" style={styles.heroSubtitle}>
+              <Text variant="bodyMedium" style={[styles.heroSubtitle, { color: theme.colors.onSurfaceVariant }]}>
                 R&S NS5150 / Postman III
               </Text>
               <Chip icon="file-document" style={styles.chip}>
@@ -4656,10 +4659,6 @@ export default function PostmanScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.95)',
   },
   scrollView: {
     flex: 1,
@@ -4671,7 +4670,6 @@ const styles = StyleSheet.create({
   heroCard: {
     marginBottom: 20,
     borderRadius: 16,
-    backgroundColor: 'white',
     overflow: 'hidden',
   },
   heroContent: {
@@ -4696,7 +4694,6 @@ const styles = StyleSheet.create({
   accordionContainer: {
     marginBottom: 12,
     borderRadius: 12,
-    backgroundColor: 'white',
     overflow: 'hidden',
   },
   accordionHeader: {

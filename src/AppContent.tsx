@@ -9,7 +9,7 @@ import {
   Animated,
 } from 'react-native';
 import { useWindowDimensions } from 'react-native';
-import { Appbar, Text, Surface } from 'react-native-paper';
+import { Appbar, Text, Surface, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 // Replaced SVG icon components with static images from Images/iconos_landing
 
@@ -30,6 +30,7 @@ export default function AppContent({ navigation }: any) {
   const { width } = useWindowDimensions();
   const isSmallPhone = width < 400;
   const insets = useSafeAreaInsets();
+  const theme = useTheme();
 
   // Breakpoints and responsive layout config
   const BP = { xs: 360, sm: 400, md: 480, lg: 600 } as const;
@@ -112,8 +113,8 @@ export default function AppContent({ navigation }: any) {
   ];
 
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content
           title="HF ROHDE & SCHWARZ"
@@ -124,7 +125,7 @@ export default function AppContent({ navigation }: any) {
         source={backgroundImage}
         style={styles.backgroundImage}
         resizeMode="stretch"
-        imageStyle={{ opacity: 0.4 }}
+        imageStyle={{ opacity: theme.dark ? 0.15 : 0.4 }}
       >
         <ScrollView
           style={styles.scrollView}
@@ -165,11 +166,11 @@ export default function AppContent({ navigation }: any) {
                     height: '100%',
                   }}
                 >
-                  <Surface style={[styles.menuCard, styles.shadow]} elevation={3}>
+                  <Surface style={[styles.menuCard, styles.shadow, { backgroundColor: theme.colors.primaryContainer }]} elevation={3}>
                   <View
                     style={[
                       styles.cardIconContainer,
-                        { height: layout.iconHeight },
+                        { height: layout.iconHeight, backgroundColor: '#ffffff' },
                     ]}
                   >
                     <Image
@@ -181,7 +182,7 @@ export default function AppContent({ navigation }: any) {
                   <View
                     style={[
                       styles.cardContent,
-                        { height: layout.contentHeight },
+                        { height: layout.contentHeight, backgroundColor: theme.colors.primaryContainer },
                     ]}
                   >
                     <Text
@@ -191,6 +192,7 @@ export default function AppContent({ navigation }: any) {
                         {
                             fontSize: layout.titleFontSize,
                             lineHeight: layout.titleLineHeight,
+                            color: theme.colors.onPrimaryContainer,
                         },
                       ]}
                     >
@@ -216,10 +218,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0, 124, 248, 0.5)',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210)',
   },
   scrollView: {
     flex: 1,
@@ -245,10 +243,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 12,
     overflow: 'hidden',
-    backgroundColor: 'rgb(0, 124, 248)',
   },
   cardIconContainer: {
-    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
     borderTopLeftRadius: 12,
@@ -261,10 +257,8 @@ const styles = StyleSheet.create({
   },
   cardIcon: {
     fontSize: 32,
-    color: 'white',
   },
   cardContent: {
-    backgroundColor: 'rgb(0, 124, 248)',
     paddingVertical: 6,
     paddingHorizontal: 8,
     justifyContent: 'center',
@@ -282,7 +276,6 @@ const styles = StyleSheet.create({
   cardTitle: {
     textAlign: 'center',
     fontWeight: '600',
-    color: '#fff',
     fontSize: 10,
     lineHeight: 12,
     textAlignVertical: 'center',

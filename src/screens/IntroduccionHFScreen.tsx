@@ -1,13 +1,15 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Image } from 'react-native';
-import { Appbar, Text, Surface, Card } from 'react-native-paper';
+import { Appbar, Text, Surface, Card, useTheme } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function IntroduccionHFScreen({ navigation }: any) {
+  const theme = useTheme();
+  
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
 
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Introducción HF" />
       </Appbar.Header>
@@ -20,12 +22,12 @@ export default function IntroduccionHFScreen({ navigation }: any) {
       >
         
         <ScreenEntrance>
-          <Surface style={styles.card} elevation={2}>
+          <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
             <Card.Content>
-              <Text variant="headlineSmall" style={styles.title}>
+              <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
                 Introducción al HF en redes de comunicación
               </Text>
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 La banda de Alta Frecuencia (HF, High Frequency) corresponde al
                 rango del espectro radioeléctrico comprendido entre los 3 MHz y
                 los 30 MHz. Su relevancia en el ámbito de las telecomunicaciones
@@ -42,7 +44,7 @@ export default function IntroduccionHFScreen({ navigation }: any) {
                 style={styles.deviceImage}
                 resizeMode="contain"
               />
-              <Text variant="bodyMedium" style={styles.paragraph}>
+              <Text variant="bodyMedium" style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
                 Desde el punto de vista técnico, las redes de comunicación
                 basadas en HF han jugado un papel fundamental en sectores como
                 la navegación marítima y aérea, los servicios militares, la
@@ -90,10 +92,6 @@ export default function IntroduccionHFScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,
@@ -105,7 +103,6 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: 16,
     borderRadius: 12,
-    backgroundColor: 'white',
   },
   title: {
     marginBottom: 8,

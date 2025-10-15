@@ -7,13 +7,16 @@ import {
   Card,
   Button,
   DataTable,
+  useTheme,
 } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 
 export default function ConceptosTecnicosScreen({ navigation }: any) {
+  const theme = useTheme();
+  
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Conceptos Técnicos" />
       </Appbar.Header>
@@ -24,70 +27,70 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
       >
         <ScreenEntrance>
         {/* Especificaciones: tabla + lista codificadas */}
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Operación del Equipo - Especificaciones
             </Text>
             <View style={styles.specsContainer}>
               {/* Columna izquierda: Tabla */}
-              <View style={styles.table}>
-                <View style={[styles.row, styles.headerRow]}>
-                  <Text style={[styles.cellHeader, styles.cellSpan]}>
+              <View style={[styles.table, { borderColor: theme.colors.outline, backgroundColor: theme.colors.surface }]}>
+                <View style={[styles.row, styles.headerRow, { backgroundColor: theme.dark ? theme.colors.surfaceVariant : '#f5faff' }]}>
+                  <Text style={[styles.cellHeader, styles.cellSpan, { color: theme.colors.primary }]}>
                     Rango de Frecuencia
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={[styles.cellLabel]}>TX</Text>
-                  <Text style={styles.cellValue}>1.5 MHz – 30 MHz</Text>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>TX</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>1.5 MHz – 30 MHz</Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={[styles.cellLabel]}>RX</Text>
-                  <Text style={styles.cellValue}>10 kHz – 30 MHz</Text>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>RX</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>10 kHz – 30 MHz</Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>Precisión de frecuencia</Text>
-                  <Text style={styles.cellValue}>1×10⁻⁹ (OCXO)</Text>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Precisión de frecuencia</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>1×10⁻⁹ (OCXO)</Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>Potencia de Salida</Text>
-                  <Text style={styles.cellValue}>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Potencia de Salida</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>
                     3 Modelos (150 W / 500 W / 1000 W)
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>Clases de emisión</Text>
-                  <Text style={styles.cellValue}>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Clases de emisión</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>
                     A1A, +/‑J3E, +/‑J2D, H3E, A3E, F3E, F1B, B8E, B7D
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>
                     Automatic Link Establishment (ALE)
                   </Text>
-                  <Text style={styles.cellValue}>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>
                     (ALE2G) STD1045/1046/1049; (ALE3G) STANAG‑4538
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>Seguridad</Text>
-                  <Text style={styles.cellValue}>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Seguridad</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>
                     Voz y Datos cifrados (SVD para ALE3G); Voz cifrada (SECOM‑H)
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>VoIP</Text>
-                  <Text style={styles.cellValue}>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>VoIP</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>
                     A partir de versión de SW 7.0
                   </Text>
                 </View>
-                <View style={styles.row}>
-                  <Text style={styles.cellLabel}>Nº de “Preset pages”</Text>
-                  <Text style={styles.cellValue}>100</Text>
+                <View style={[styles.row, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Nº de "Preset pages"</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>100</Text>
                 </View>
-                <View style={[styles.row, styles.lastRow]}>
-                  <Text style={styles.cellLabel}>Nº de canales</Text>
-                  <Text style={styles.cellValue}>400</Text>
+                <View style={[styles.row, styles.lastRow, { borderTopColor: theme.colors.outlineVariant }]}>
+                  <Text style={[styles.cellLabel, { borderRightColor: theme.colors.outlineVariant, color: theme.colors.onSurface }]}>Nº de canales</Text>
+                  <Text style={[styles.cellValue, { color: theme.colors.onSurfaceVariant }]}>400</Text>
                 </View>
               </View>
             </View>
@@ -95,110 +98,110 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
           <Card.Content>
             {/* Columna derecha: Lista */}
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Clases de potencia de y receptor independiente.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Capacidad de datos y voz segura integrada.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Excelente colocación gracias a las especificaciones del receptor
                 y transmisor.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Control de nivel selectivo para potencia de transmisión óptima
                 (opción SW).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Sistema de radio definido por software.
               </Text>
-              <Text style={styles.bullet}>Operación local o remota.</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Operación local o remota.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Fuentes de alimentación para varias redes eléctricas estándar.
               </Text>
             </View>
           </Card.Content>
         </Surface>
 
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Características y Beneficios
             </Text>
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>IP para una fácil integración.</Text>
-              <Text style={styles.bullet}>Informes GPS.</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>IP para una fácil integración.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Informes GPS.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Patch telefónico, SIP y de voz sobre IP.
               </Text>
-              <Text style={styles.bullet}>Audio y control remoto vía IP.</Text>
-              <Text style={styles.bullet}>Conexión de dominio.</Text>
-              <Text style={styles.bullet}>Operación en ALE-2G, ALE-3G.</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Audio y control remoto vía IP.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Conexión de dominio.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Operación en ALE-2G, ALE-3G.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Comunicaciones seguras y confiables.
               </Text>
-              <Text style={styles.bullet}>Voz digital segura (SDV).</Text>
-              <Text style={styles.bullet}>SECOM-H EPM (ECCM).</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Voz digital segura (SDV).</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>SECOM-H EPM (ECCM).</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Capacidad de colocación debido a las excelentes especificaciones
                 del receptor.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Control de nivel selectivo para una potencia de transmisión
                 óptima (opción de software).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Selección de RF sintonizada digitalmente (opción de hardware).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Configuración de radio solo por personal autorizado.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Diseño resistente, adecuado incluso para condiciones ambientales
                 difíciles.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Potente prueba incorporada (BIT).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Importantes funciones del equipo, como el establecimiento
                 automático de enlaces (ALE) o varias.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Las radios admiten el salto de frecuencia y brindan
                 interoperabilidad con otros radios R&S.
               </Text>
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Modos de Operación para M3SR-Series 4100
             </Text>
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Frecuencia Fija (ej. Voz, Morse).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Tactical Data Link (Datos Tácticos) (LINK-11/-Y/-22).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Automatic Link Establishment (ALE 3G).
               </Text>
-              <Text style={styles.bullet}>Formas de onda EPM (SECOM-H).</Text>
-              <Text style={styles.bullet}>Voz/Datos Seguros (SVD).</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Formas de onda EPM (SECOM-H).</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Voz/Datos Seguros (SVD).</Text>
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               ATU FK4115M HF Unidad de sintonización de antena
             </Text>
             <View style={styles.rowBetween}>
               <View style={styles.textCol}>
-                <Text style={styles.bullet}>
+                <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                   El R&S®FK4115M ofrece una "función de sintonización
                   silenciosa" en todo el rango de frecuencia de 1,5 MHz a 30
                   MHz. La ventaja para el usuario es la baja probabilidad de
@@ -206,7 +209,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                   se realiza muy rápidamente y sin ninguna emisión de potencia
                   de RF.
                 </Text>
-                <Text style={styles.bullet}>
+                <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                   A la salida de RF del transceptor de 150 W del Serie
                   R&S®M3SR4100, la unidad de sintonización de antena (ATU) puede
                   manejar hasta 150 W PEP o 100 W CW al 100% del ciclo de
@@ -223,32 +226,32 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                 style={styles.deviceImage}
                 resizeMode="contain"
               />
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Sintonización silenciosa en todo el rango (1,5 MHz a 30 MHz).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Sintonización de antenas de varilla, látigo y alambre.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 150 W PEP, 100 W CW al 100% del ciclo de trabajo.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Capacidad de salto de frecuencia (R&S®SECOM‑H).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Ajuste silencioso típico menor a 5 ms una vez aprendidas las
                 frecuencias.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Reintento no silencioso menor a 100 ms si no se alcanza VSWR
                 (menor a 1,5:1).
               </Text>
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               ACCESORIOS
             </Text>
             <Text variant="titleMedium" style={{ marginBottom: 8 }}>
@@ -286,7 +289,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                 <Text variant="titleMedium" style={{ marginBottom: 4 }}>
                   R&S®GA013 Auricular micro teléfono
                 </Text>
-                <Text style={styles.bullet}>
+                <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                   Con PTT Estándar, incl. micrófono (versión reforzada) con
                   cable y conector NF-7
                 </Text>
@@ -295,7 +298,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                 <Text variant="titleMedium" style={{ marginBottom: 4 }}>
                   R&S®GA015 Audífonos de cabeza
                 </Text>
-                <Text style={styles.bullet}>
+                <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                   Con PTT Estándar, dinámico con cable y conector NF-7, con
                   protección activa
                 </Text>
@@ -329,9 +332,9 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             </Text>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               R&S®GB4000V unidad de audio remota
             </Text>
             <Image
@@ -340,72 +343,72 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Diseño compacto para minimizar el espacio requerido en las
                 consolas del operador.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Conexión analógica para usar con todas las radios Rohde &
                 Schwarz.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Señalización PTT y SQ en banda para su uso con radios
                 R&S®Series4200.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Conexión VoIP compatible con EUROCAE ED137-1 a radios
                 R&S®Series4200, R&S®Series4400 y R&S®Series4100.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Altavoz incorporado con control de volumen.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Ajuste de volumen mínimo configurable para garantizar la
                 seguridad.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Los LED indican el estado de las radios (PTT, silenciador,
                 VoIP).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Disponible con un conector de auriculares adicional para la
                 operación del instructor.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Conexión de altavoz externo para monitorización.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Se puede montar en un bastidor de 19" o en consolas de operador.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Dos conexiones de DC independientes para fuente de alimentación
                 redundante.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Fácilmente configurable a través de un navegador web. Panel
                 frontal a prueba de salpicaduras.
               </Text>
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               ANTENA dipolo HF R&S® HX002H1 (Para Estaciones de Radio en tierra)
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               La Antena dipolo HF R&S®HX002H1 es adecuada para establecer
               enlaces de radio a cualquier distancia. En particular, la
               cobertura omnidireccional optimizada garantiza una alta fiabilidad
               de transmisión en distancias cortas y medias.
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               El R&S®HX002H1 se puede utilizar junto con los transceptores HF de
               150 W de la familia SERIES 4100. El tiempo de fraguado
               extremadamente rápido permitiendo la operación de salto de
               frecuencia en línea con R&S®SECOM‑H.
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               La antena permite una sintonización silenciosa en todo el rango de
               frecuencia de 1,5 MHz a 30 MHz. Para ello, la unidad de
               sintonización integrada debe aprender primero los ajustes de
@@ -413,7 +416,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
               definido por el usuario. A partir de entonces, la antena alcanza
               tiempos de sintonización de &lt; 5 ms.
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Se prestó especial atención a la obtención de una protección
               contra rayos eficaz. El ATU está completamente protegido contra el
               arco contra los rayos directos. Está probado para soportar arcos
@@ -425,75 +428,75 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
               resizeMode="contain"
             />
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Cobertura omnidireccional con radiación de alto ángulo.
               </Text>
-              <Text style={styles.bullet}>Sin zona de salto.</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Sin zona de salto.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Instalación de un solo mástil, no se requiere plano de tierra.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Unidad de sintonización integrada capaz de salto de frecuencia
                 R&S®SECOM‑H.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Manejo de potencia 150 W PEP, 100 W CW al 100% del ciclo de
                 trabajo.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Sintonización silenciosa en todo el rango de frecuencia de HF de
                 1,5 MHz a 30 MHz.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Baja probabilidad de interceptación (LPI).
               </Text>
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Antena HF STA 100 PM/M (Optimizada para uso a bordo de buques)
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Las Antenas HF (receptoras / transceptoras) son una parte crucial
               de una comunicación de radio confiable de largo alcance. Las
               antenas son fabricadas por la empresa alemana ELNA con las
               siguientes características:
             </Text>
             <View style={styles.bullets}>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Cobertura omnidireccional con radiación de alto ángulo.
               </Text>
-              <Text style={styles.bullet}>Sin zona de salto.</Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>Sin zona de salto.</Text>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Instalación de un solo mástil, no se requiere plano de tierra.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Unidad de sintonización integrada capaz de salto de frecuencia
                 R&S®SECOM‑H.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Manejo de potencia 150 W PEP, 100 W CW al 100% del ciclo de
                 trabajo.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Sintonización silenciosa en todo el rango de frecuencia de HF de
                 1,5 MHz a 30 MHz.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Baja probabilidad de interceptación (LPI).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Rango de frecuencia de 0,1 a 30 MHz (frecuencia media / alta).
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Resiste velocidades de viento de hasta 200 km/h.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Fabricadas de plástico reforzado con fibra de vidrio.
               </Text>
-              <Text style={styles.bullet}>
+              <Text style={[styles.bullet, { color: theme.colors.onSurfaceVariant }]}>
                 Excelente resistencia frente a hielo, viento e incrustaciones.
               </Text>
             </View>
@@ -504,22 +507,22 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             />
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               ANTENA GPS
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               La antena GPS deberá tener una visibilidad clara del satélite para
               poder recuperar su posición GPS actual e información de
               sincronización del GPS.
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Si la recepción GPS se pierde temporalmente o la visibilidad del
               satélite es limitada, se transmite información de posicionamiento
               GPS vacía o parcial.
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Dado que se requiere la señal de hora GPS para la sincronización
               del sistema, las transmisiones programadas no son compatibles si
               nunca se ha recibido la señal de hora GPS.
@@ -531,29 +534,29 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             />
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Tipos de Modulación
             </Text>
-            <DataTable style={[styles.dataTable, styles.dtTable]}>
+            <DataTable style={[styles.dataTable, styles.dtTable, { borderColor: theme.colors.outline }]}>
               <DataTable.Row
-                style={[styles.rowWrap, styles.dtRow, styles.dtHeader]}
+                style={[styles.rowWrap, styles.dtRow, styles.dtHeader, { backgroundColor: theme.dark ? theme.colors.surfaceVariant : '#f5faff', borderTopColor: theme.colors.outlineVariant }]}
               >
                 <DataTable.Cell
-                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                  style={[styles.colWide, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.dtHeaderTitle}>Tipo de Emisión</Text>
+                  <Text style={[styles.dtHeaderTitle, { color: theme.colors.primary }]}>Tipo de Emisión</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
-                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.dtHeaderTitle}>ITU Designación</Text>
+                  <Text style={[styles.dtHeaderTitle, { color: theme.colors.primary }]}>ITU Designación</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
-                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.dtHeaderTitle}>ITU (antigua)</Text>
+                  <Text style={[styles.dtHeaderTitle, { color: theme.colors.primary }]}>ITU (antigua)</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
                   style={[
@@ -562,25 +565,25 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                     styles.dtPad,
                   ]}
                 >
-                  <Text style={styles.dtHeaderTitle}>Posterior (design)</Text>
+                  <Text style={[styles.dtHeaderTitle, { color: theme.colors.primary }]}>Posterior (design)</Text>
                 </DataTable.Cell>
               </DataTable.Row>
 
-              <DataTable.Row style={[styles.rowWrap, styles.dtRow]}>
+              <DataTable.Row style={[styles.rowWrap, styles.dtRow, { borderTopColor: theme.colors.outlineVariant }]}>
                 <DataTable.Cell
-                  style={[styles.colWide, styles.dtCell, styles.dtPad]}
+                  style={[styles.colWide, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.cellText}>Telegrafía Morse</Text>
+                  <Text style={[styles.cellText, { color: theme.colors.onSurfaceVariant }]}>Telegrafía Morse</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
-                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.cellText}>A1A</Text>
+                  <Text style={[styles.cellText, { color: theme.colors.onSurfaceVariant }]}>A1A</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
-                  style={[styles.colNarrow, styles.dtCell, styles.dtPad]}
+                  style={[styles.colNarrow, styles.dtCell, styles.dtPad, { borderRightColor: theme.colors.outlineVariant }]}
                 >
-                  <Text style={styles.cellText}>A1</Text>
+                  <Text style={[styles.cellText, { color: theme.colors.onSurfaceVariant }]}>A1</Text>
                 </DataTable.Cell>
                 <DataTable.Cell
                   style={[
@@ -589,7 +592,7 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
                     styles.dtPad,
                   ]}
                 >
-                  <Text style={styles.cellText}>CW</Text>
+                  <Text style={[styles.cellText, { color: theme.colors.onSurfaceVariant }]}>CW</Text>
                 </DataTable.Cell>
               </DataTable.Row>
 
@@ -886,9 +889,9 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             </DataTable>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Diseño de la página del menú
             </Text>
             <Image
@@ -935,12 +938,12 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
             </View>
           </Card.Content>
         </Surface>
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Íconos y símbolos
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Los íconos y símbolos se muestran en el encabezado del menú. Los
               íconos indican los dominios del menú y los modos de comunicación.
             </Text>
@@ -1024,12 +1027,12 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
           </Card.Content>
         </Surface>
 
-        <Surface style={styles.card} elevation={2}>
+        <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
           <Card.Content>
-            <Text variant="headlineSmall" style={styles.title}>
+            <Text variant="headlineSmall" style={[styles.title, { color: theme.colors.onSurface }]}>
               Símbolos en el encabezado
             </Text>
-            <Text style={styles.paragraph}>
+            <Text style={[styles.paragraph, { color: theme.colors.onSurfaceVariant }]}>
               Además, en el encabezado del menú pueden aparecer varios símbolos.
             </Text>
             <DataTable
@@ -1164,10 +1167,6 @@ export default function ConceptosTecnicosScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   scrollView: {
     flex: 1,
@@ -1179,7 +1178,6 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: 16,
     borderRadius: 12,
-    backgroundColor: 'white',
   },
   title: {
     marginBottom: 8,
@@ -1199,10 +1197,8 @@ const styles = StyleSheet.create({
   table: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#d0d5dd',
     borderRadius: 8,
     overflow: 'hidden',
-    backgroundColor: 'white',
   },
   colWide: {
     flex: 2.2,
@@ -1227,15 +1223,13 @@ const styles = StyleSheet.create({
   },
   dtTable: {
     borderWidth: 1,
-    borderColor: '#d0d5dd',
     borderRadius: 8,
   },
   dtHeader: {
-    backgroundColor: '#f5faff',
+    // backgroundColor dinámico aplicado inline
   },
   dtHeaderTitle: {
     fontWeight: '700',
-    color: '#0b4aa2',
     fontSize: 11,
     lineHeight: 14,
     flexWrap: 'wrap',
@@ -1245,11 +1239,9 @@ const styles = StyleSheet.create({
   },
   dtRow: {
     borderTopWidth: 1,
-    borderTopColor: '#eef2f6',
   },
   dtCell: {
     borderRightWidth: 1,
-    borderRightColor: '#eef2f6',
     minWidth: 0,
     flexShrink: 1,
     flexBasis: 0,
@@ -1285,10 +1277,9 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     borderTopWidth: 1,
-    borderTopColor: '#eef2f6',
   },
   headerRow: {
-    backgroundColor: '#f5faff',
+    // backgroundColor dinámico aplicado inline
   },
   lastRow: {
     borderBottomWidth: 0,
@@ -1298,22 +1289,18 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 10,
     borderRightWidth: 1,
-    borderRightColor: '#eef2f6',
     fontWeight: '600',
-    color: '#344054',
   },
   cellValue: {
     flex: 1,
     paddingVertical: 8,
     paddingHorizontal: 10,
-    color: '#475467',
   },
   cellHeader: {
     flex: 1,
     paddingVertical: 10,
     paddingHorizontal: 10,
     fontWeight: '700',
-    color: '#0b4aa2',
   },
   cellSpan: {
     textAlign: 'left',

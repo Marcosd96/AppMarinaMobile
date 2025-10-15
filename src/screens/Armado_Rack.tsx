@@ -5,10 +5,11 @@ import {
   Alert,
 } from 'react-native';
 import Video, { VideoRef } from 'react-native-video';
-import { Text, Button, Appbar } from 'react-native-paper';
+import { Text, Button, Appbar, useTheme } from 'react-native-paper';
 import { videoSegments } from '../config/videoSegments';
 
 const ArmadoRackScreen = ({ navigation }: any) => {
+  const theme = useTheme();
   const videoRef = useRef<VideoRef>(null);
   const [currentSegment, setCurrentSegment] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -48,8 +49,8 @@ const ArmadoRackScreen = ({ navigation }: any) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title="Armado del Rack" 
         />
@@ -102,10 +103,6 @@ const ArmadoRackScreen = ({ navigation }: any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   title: {
     fontWeight: 'bold',

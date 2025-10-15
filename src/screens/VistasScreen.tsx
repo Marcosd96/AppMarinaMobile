@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Pressable, ScrollView } from 'react-native';
-import { Appbar, Button, Surface, Snackbar, Text } from 'react-native-paper';
+import { Appbar, Button, Surface, Snackbar, Text, useTheme } from 'react-native-paper';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -22,6 +22,7 @@ type Hotspot = {
 };
 
 export default function VistasScreen({ navigation }: any) {
+  const theme = useTheme();
   const [isFront, setIsFront] = React.useState(true);
   const [containerSize, setContainerSize] = React.useState({
     width: 0,
@@ -426,8 +427,8 @@ export default function VistasScreen({ navigation }: any) {
   };
 
   return (
-    <View style={styles.container}>
-      <Appbar.Header mode="center-aligned" style={styles.header}>
+    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <Appbar.Header mode="center-aligned" style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
         <Appbar.Content title={isFront ? 'Vista Delantera' : 'Vista Trasera'} />
       </Appbar.Header>
@@ -570,10 +571,6 @@ export default function VistasScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-  },
-  header: {
-    backgroundColor: 'rgba(25, 118, 210, 0.9)',
   },
   content: {
     flex: 1,
