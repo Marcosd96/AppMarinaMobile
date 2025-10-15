@@ -91,7 +91,7 @@ export default function PostmanScreen({ navigation }: any) {
               <Text variant="bodyMedium" style={[styles.heroSubtitle, { color: theme.colors.onSurfaceVariant }]}>
                 R&S NS5150 / Postman III
               </Text>
-              <Chip icon="file-document" style={styles.chip}>
+              <Chip icon="file-document" style={[styles.chip, { backgroundColor: theme.colors.primaryContainer }]}>
                 Version 01 - 2020
               </Chip>
             </View>
@@ -202,10 +202,10 @@ export default function PostmanScreen({ navigation }: any) {
 
           <View style={styles.conventionTable}>
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>
                 "Graphical user interface elements"
               </Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Todos los nombres de elementos gráficos de interfaz de usuario
                 tanto en la pantalla como en los paneles frontales y traseros,
                 como cuadros de diálogo, softkeys, menús, opciones o botones
@@ -214,42 +214,42 @@ export default function PostmanScreen({ navigation }: any) {
             </View>
 
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>"KEYS"</Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>"KEYS"</Text>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Los nombres de teclas están escritos en letras mayúsculas y
                 encerrados entre comillas.
               </Text>
             </View>
 
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>Input</Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>Input</Text>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 La entrada que debe ser ingresada por el usuario se muestra en
                 cursiva.
               </Text>
             </View>
 
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>
                 File names, commands, program code
               </Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Nombres de archivo, comandos, ejemplos de código y salida de
                 pantalla se distinguen por la fuente.
               </Text>
             </View>
 
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>Links</Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>Links</Text>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Los enlaces en los que puede hacer clic se muestran en fuente
                 azul.
               </Text>
             </View>
 
             <View style={styles.conventionRow}>
-              <Text style={styles.conventionLabel}>References</Text>
-              <Text style={styles.conventionDesc}>
+              <Text style={[styles.conventionLabel, { color: theme.colors.primary }]}>References</Text>
+              <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Las referencias a otras partes de la documentación están
                 encerradas entre comillas.
               </Text>
@@ -261,7 +261,7 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Comandos Remotos:
             </Text>
             <Text style={styles.conventionDesc}>
@@ -295,10 +295,10 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.categoryList}>
-            <Text style={styles.categoryItem}>• Parámetros globales</Text>
-            <Text style={styles.categoryItem}>• Parámetros del servidor</Text>
-            <Text style={styles.categoryItem}>• Parámetros del cliente</Text>
-            <Text style={styles.categoryItem}>• Parámetros de usuario</Text>
+            <Text style={[styles.categoryItem, { color: theme.colors.onSurfaceVariant }]}>• Parámetros globales</Text>
+            <Text style={[styles.categoryItem, { color: theme.colors.onSurfaceVariant }]}>• Parámetros del servidor</Text>
+            <Text style={[styles.categoryItem, { color: theme.colors.onSurfaceVariant }]}>• Parámetros del cliente</Text>
+            <Text style={[styles.categoryItem, { color: theme.colors.onSurfaceVariant }]}>• Parámetros de usuario</Text>
           </View>
 
           <View style={styles.infoBox}>
@@ -320,40 +320,40 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.parameterTable}>
-            <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Language</Text>
-              <Text style={styles.parameterExample}>Ejemplo: en</Text>
-              <Text style={styles.parameterDesc}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Language</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: en</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Código de idioma de dos dígitos.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Los únicos idiomas soportados son en (English) y es (Spanish).
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Region</Text>
-              <Text style={styles.parameterExample}>Ejemplo: US</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Region</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: US</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Código de región de dos dígitos (= código de sub-idioma).
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Country</Text>
-              <Text style={styles.parameterExample}>Ejemplo: en</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Country</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: en</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Código de país de dos dígitos.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Organization</Text>
-              <Text style={styles.parameterExample}>Ejemplo: RuS</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Organization</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: RuS</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Nombre abreviado de su organización.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 No debe contener espacios ni caracteres especiales. Use solo
                 caracteres ASCII.
               </Text>
@@ -370,68 +370,68 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.parameterTable}>
-            <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Host Name</Text>
-              <Text style={styles.parameterExample}>Ejemplo: MU2</Text>
-              <Text style={styles.parameterDesc}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Host Name</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: MU2</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre del host o computadora.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 No debe contener guiones. Nota: No puede cambiar el nombre del
                 host después.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Domain Name</Text>
-              <Text style={styles.parameterExample}>Ejemplo: pm-mu2.com</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Domain Name</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre de dominio DNS.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 No debe estar vacío. Nota: No puede cambiar el nombre de dominio
                 después.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Email Domain</Text>
-              <Text style={styles.parameterExample}>Ejemplo: pm-mu2.com</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Email Domain</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre de dominio de correo.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Puede ser igual a la propiedad domain name.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>IP address</Text>
-              <Text style={styles.parameterExample}>Ejemplo: 172.29.80.15</Text>
-              <Text style={styles.parameterDesc}>La dirección IPv4.</Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>IP address</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 172.29.80.15</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>La dirección IPv4.</Text>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Debe ser una dirección IPv4. Las direcciones IPv6 no son
                 soportadas.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Subnet mask</Text>
-              <Text style={styles.parameterExample}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Subnet mask</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>
                 Ejemplo: 255.255.255.0
               </Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 La máscara de subred IPv4.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Site ID</Text>
-              <Text style={styles.parameterExample}>Ejemplo: 80</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Site ID</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 80</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El ID del sitio Postman III.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Cada servidor R&S Postman III debe tener un ID de sitio único.
                 El site ID es un identificador numérico. Recomendamos usar una
                 parte de su número de red IP como site ID.
@@ -468,46 +468,46 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.parameterTable}>
-            <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Host Name</Text>
-              <Text style={styles.parameterExample}>Ejemplo: MU2WS</Text>
-              <Text style={styles.parameterDesc}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Host Name</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: MU2WS</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre del host o computadora.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Puede contener un número si tiene múltiples clientes, ej.
                 MU2WS1, MU2WS2 etc.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Domain Name</Text>
-              <Text style={styles.parameterExample}>Ejemplo: pm-mu2.com</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Domain Name</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre de dominio DNS.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Usualmente los clientes residen en el mismo dominio DNS que el
                 servidor en su red de trabajo.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>IP address</Text>
-              <Text style={styles.parameterExample}>Ejemplo: 172.29.80.16</Text>
-              <Text style={styles.parameterDesc}>La dirección IPv4.</Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>IP address</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 172.29.80.16</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>La dirección IPv4.</Text>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Debe ser una dirección IPv4. Las direcciones IPv6 no son
                 soportadas.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Subnet mask</Text>
-              <Text style={styles.parameterExample}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Subnet mask</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>
                 Ejemplo: 255.255.255.0
               </Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 La máscara de subred IPv4.
               </Text>
             </View>
@@ -527,11 +527,11 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Microsoft Windows 10 Professional, Enterprise 64-bit
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Microsoft Windows Server 2016
             </Text>
@@ -554,27 +554,27 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Requisitos de hardware según lo definido por el sistema
               operativo seleccionado
             </Text>
-            <Text style={styles.checkItem}> • Al menos 4 GB de RAM</Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Al menos 4 GB de RAM</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Tarjeta gráfica o terminal con al menos 1024 x 768 x 24 bpp de
               resolución, 1280 x 1024 bpp recomendado
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Al menos un adaptador LAN de 100 Mbit
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Teclado, mouse, adaptador USB, unidad DVD-ROM que soporte "Boot
               from DVD"
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Disco duro con al menos 80 Gbyte de espacio libre
             </Text>
@@ -614,13 +614,13 @@ export default function PostmanScreen({ navigation }: any) {
             al grupo <Text style={styles.bold}>Administrators</Text>.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura4-1.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 4-1: Windows 10 - cuenta installer
             </Text>
           </View>
@@ -647,10 +647,10 @@ export default function PostmanScreen({ navigation }: any) {
               • Use al menos tres clases de caracteres. Las clases de caracteres
               son:
             </Text>
-            <Text style={styles.substep}> – letra minúscula</Text>
-            <Text style={styles.substep}> – letra mayúscula</Text>
-            <Text style={styles.substep}> – número</Text>
-            <Text style={styles.substep}> – carácter especial</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> – letra minúscula</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> – letra mayúscula</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> – número</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> – carácter especial</Text>
           </View>
 
           <Text variant="bodyMedium" style={[styles.subtitle, { color: theme.colors.onSurfaceVariant }]}>
@@ -697,20 +697,20 @@ export default function PostmanScreen({ navigation }: any) {
               2. Ingrese el comando <Text style={styles.bold}>ncpa.cpl</Text> y
               haga clic en el botón "OK"
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               La ventana "Network Connections" muestra los adaptadores de red
               detectados.
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura4-2.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 4-2: Lista de adaptadores de red
             </Text>
           </View>
@@ -727,13 +727,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/4-5-1-1.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Desactivación de adaptador de red
             </Text>
           </View>
@@ -763,20 +763,20 @@ export default function PostmanScreen({ navigation }: any) {
               4. En la ventana "Advanced TCP/IP Settings", desmarque la casilla
               "Automatic metric" e ingrese un valor entero positivo.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               El adaptador de red con el valor más bajo tiene la prioridad más
               alta.
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura4-3.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 4-3: Configuración de métrica de interfaz de red
             </Text>
           </View>
@@ -814,7 +814,7 @@ export default function PostmanScreen({ navigation }: any) {
               2. Ingrese el comando <Text style={styles.bold}>ncpa.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               La ventana "Network Connections" muestra los adaptadores de red
               detectados.
@@ -871,19 +871,19 @@ export default function PostmanScreen({ navigation }: any) {
               2. Ingrese el comando <Text style={styles.bold}>sysdm.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Se abre la ventana "System Properties":
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura4-4.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 4-4: Cambio de nombre de computadora y descripción, grupo
               de trabajo y sufijo DNS primario
             </Text>
@@ -901,7 +901,7 @@ export default function PostmanScreen({ navigation }: any) {
               of this computer", ej. "pm-mu2.com". Haga clic en "OK" para
               guardar los cambios.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               De vuelta en la ventana "Computer Name Changes", el "Full computer
               name (FCN)" ya está mostrado correctamente. En el ejemplo
@@ -937,7 +937,7 @@ export default function PostmanScreen({ navigation }: any) {
               2. Ingrese el comando <Text style={styles.bold}>sysdm.cpl</Text> y
               haga clic en el botón "OK".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Se muestra la ventana "System Properties".
             </Text>
@@ -958,13 +958,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura4-5.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 4-5: Configuración de Data Execution Prevention (DEP)
             </Text>
           </View>
@@ -1079,13 +1079,13 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>• Opciones adicionales</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-1.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-1: Página Welcome
             </Text>
           </View>
@@ -1108,13 +1108,13 @@ export default function PostmanScreen({ navigation }: any) {
             clave de producto.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-2.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-2: Ingreso de claves de producto
             </Text>
           </View>
@@ -1138,13 +1138,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-3.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-3: Planning
             </Text>
           </View>
@@ -1168,30 +1168,30 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • Site ID</Text>
-            <Text style={styles.checkItem}> • Site Name</Text>
-            <Text style={styles.checkItem}> • Mail Domain</Text>
-            <Text style={styles.checkItem}> • Server Name (FCN)</Text>
-            <Text style={styles.checkItem}> • IP Address</Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Site ID</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Site Name</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Mail Domain</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Server Name (FCN)</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • IP Address</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Check RSIRP and enter network and station ID.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Este paso solo es necesario si la opción "R&S VHF/UHF Radio
               Protocol" ha sido seleccionada en la página Welcome.
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Check S5066 and enter node id and ALE address.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Este paso solo es necesario si la opción "R&S HF Radio Protocol"
               ha sido seleccionada en la página Welcome.
             </Text>
-            <Text style={styles.checkItem}> • User (opcional)</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • User (opcional)</Text>
           </View>
 
           <View style={styles.stepsList}>
@@ -1279,13 +1279,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-4.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-4: Plan de red completo
             </Text>
           </View>
@@ -1349,13 +1349,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-5.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-5: Página Settings
             </Text>
           </View>
@@ -1396,13 +1396,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-6.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-6: Página Prerequisites
             </Text>
           </View>
@@ -1629,25 +1629,25 @@ export default function PostmanScreen({ navigation }: any) {
               2. Seleccione el archivo
               microsoft-windows-netfx3-ondemand-package.cab.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               El archivo está en el medio de instalación de Windows Server 2016
               o Windows 10 en la subcarpeta "sources\sxs".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               El medio de instalación debe ser compatible con la versión de
               Windows instalada.
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-7.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-7: Instalación desde medio de instalación de Windows
             </Text>
           </View>
@@ -1685,13 +1685,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-8.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-8: Página Installation
             </Text>
           </View>
@@ -1757,13 +1757,13 @@ export default function PostmanScreen({ navigation }: any) {
             software han sido instalados.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-9.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-9: Diálogo Reboot
             </Text>
           </View>
@@ -2069,13 +2069,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-10.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-10: Pantalla de bienvenida del asistente de configuración
               de Postman III
             </Text>
@@ -2100,13 +2100,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-11.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-11: Pantalla de licencia
             </Text>
           </View>
@@ -2123,13 +2123,13 @@ export default function PostmanScreen({ navigation }: any) {
             requeridos ya están completados.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-12.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-12: Pantalla de configuración de sitio completada
             </Text>
           </View>
@@ -2138,16 +2138,16 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               4. Haga clic en "Next" para continuar.
             </Text>
-            <Text style={styles.substep}> Se abre la página "Install".</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> Se abre la página "Install".</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-13.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-13: Página Install
             </Text>
           </View>
@@ -2157,7 +2157,7 @@ export default function PostmanScreen({ navigation }: any) {
               5. Haga clic en "Install" para iniciar la instalación del
               subsistema R&S Postman III.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               <Text style={styles.bold}>Nota:</Text> La instalación del
               subsistema R&S Postman III tarda unos minutos. Por favor, sea
@@ -2173,13 +2173,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-14.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-14: Instalación completa
             </Text>
           </View>
@@ -2223,13 +2223,13 @@ export default function PostmanScreen({ navigation }: any) {
             comandos para ajustar la configuración.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-15.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-15: Tarea de configuración de R&S Postman III
             </Text>
           </View>
@@ -2245,7 +2245,7 @@ export default function PostmanScreen({ navigation }: any) {
               eliminar todos los sitios que son parte de la configuración actual
               de MU1, MU2, MU3, pero ya no son (más) parte del plan de red.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Este paso puede ser necesario si R&S Postman III es actualizado o
               la configuración de red ha cambiado.
@@ -2256,7 +2256,7 @@ export default function PostmanScreen({ navigation }: any) {
               actualizar todos los sitios existentes de la configuración actual
               con los parámetros definidos en el plan de red.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Este paso puede ser necesario si R&S Postman III es actualizado o
               la configuración de red ha cambiado.
@@ -2305,15 +2305,15 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • R&S Postman III Management Console
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • R&S Postman III Tactical Console
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • R&S Postman III Chat Console
             </Text>
@@ -2370,7 +2370,7 @@ export default function PostmanScreen({ navigation }: any) {
               ► Haga clic en "Create 'SendTo' shortcuts" para agregar accesos
               directos SendTo para cada sitio remoto.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Este paso debe hacerse una vez por usuario.
             </Text>
@@ -2471,13 +2471,13 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>5. Finalmente haga clic en "OK".</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-16.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-16: Consola de administración - configuración de
               enrutamiento
             </Text>
@@ -2490,13 +2490,13 @@ export default function PostmanScreen({ navigation }: any) {
             circuito.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-17.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-17: Consola de administración - mapa de enrutamiento
               global
             </Text>
@@ -2508,7 +2508,7 @@ export default function PostmanScreen({ navigation }: any) {
               haga clic en el botón parpadeante en la barra de herramientas de
               la consola de administración:
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               📡🔄 (Update Gateway Configuration)
             </Text>
@@ -2535,13 +2535,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-18.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-18: UMAN - agregando un usuario
             </Text>
           </View>
@@ -2551,7 +2551,7 @@ export default function PostmanScreen({ navigation }: any) {
               4. Ingrese los valores para "User Name" y "Login". Confirme con
               "Ok".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               En este ejemplo, ambos son iguales para mantenerlo simple.
             </Text>
@@ -2585,13 +2585,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-19.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-19: UMAN - add/edit group: members
             </Text>
           </View>
@@ -2618,16 +2618,16 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Un firmware de radio ya está programado que soporta IPoA.
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Los nombres de radio correctos y las direcciones IP están
               configurados según la hoja de entorno del sistema.
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Los radios deben cargarse con misiones válidas usando R&S
               RNMS3000 y/o una fillgun.
@@ -2654,13 +2654,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-20.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-20: Botón de configuración de detección de dispositivos
             </Text>
           </View>
@@ -2680,20 +2680,20 @@ export default function PostmanScreen({ navigation }: any) {
               {'<'}last IP address{'>'} (separado por un guion) de los radios
               R&S 4400 en PortSweepAddresses y haga clic en "Save".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               También puede ingresar distintos rangos R&S 4/P (separados por una
               coma).
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-21.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-21: Device discovery - ventana de configuración
             </Text>
           </View>
@@ -2709,24 +2709,24 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-22.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-22: Device discovery - actualizando DEVCON
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-23.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-23: Device discovery - proceso de actualización de base
               de datos
             </Text>
@@ -2739,13 +2739,13 @@ export default function PostmanScreen({ navigation }: any) {
             actualización de base de datos DEVCON".
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-24.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-24: Device discovery - vista general de dispositivos
             </Text>
           </View>
@@ -2778,24 +2778,24 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-25.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-25: Configuración de Thunderbird (1)
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-26.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-26: Configuración de Thunderbird (2)
             </Text>
           </View>
@@ -2807,13 +2807,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-27.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-27: Configuración de Thunderbird (3)
             </Text>
           </View>
@@ -2829,13 +2829,13 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>2. Haga clic en ☰ {'>'} "Options".</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-28.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-28: Configuración de idioma (1)
             </Text>
           </View>
@@ -2846,13 +2846,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura5-29.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 5-29: Configuración de idioma (2)
             </Text>
           </View>
@@ -2941,28 +2941,28 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Integration type: Postman III for MMHS
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Installation type: Server only
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Additional options: RS-IRP (if this option is valid in the
               target environment)
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-1.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-1: Opciones de bienvenida
             </Text>
           </View>
@@ -2991,13 +2991,13 @@ export default function PostmanScreen({ navigation }: any) {
             son un ejemplo.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-2.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-2: Configuración para MMHS
             </Text>
           </View>
@@ -3017,12 +3017,12 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • No se abre ninguna aplicación Wireshark (verifique también las
               sesiones de escritorio remoto abiertas)
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • WinPcap no está instalado – asegúrese de desinstalarlo si aplica
             </Text>
@@ -3055,13 +3055,13 @@ export default function PostmanScreen({ navigation }: any) {
             clic en "Enable weak host send".
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-3.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-3: Prerequisitos para MMHS (1)
             </Text>
           </View>
@@ -3070,13 +3070,13 @@ export default function PostmanScreen({ navigation }: any) {
             El resultado debería verse así:
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-4.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-4: Prerequisitos para MMHS (2)
             </Text>
           </View>
@@ -3091,13 +3091,13 @@ export default function PostmanScreen({ navigation }: any) {
             MMHS", los siguientes paquetes deben instalarse:
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-5.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-5: Pestaña de instalación del asistente de configuración
               MMHS
             </Text>
@@ -3136,15 +3136,15 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Chapter 5.10.4, "TMR Source Address", on page 41
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Chapter 5.10.28, "PLDA Manager Configuration", on page 49
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Chapter 5.10.30, "Disabling AutoRun for Removable Drives", on
               page 49
@@ -3174,13 +3174,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-6.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-6: Adaptación del servicio PLDA manager
             </Text>
           </View>
@@ -3199,20 +3199,20 @@ export default function PostmanScreen({ navigation }: any) {
               1. Inicie el Administrador de Dispositivos TAP de R&S a través de
               este acceso directo.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Debería aparecer una ventana como la que se muestra a
               continuación.
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-7.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-7: Dispositivo TAP
             </Text>
           </View>
@@ -3235,7 +3235,7 @@ export default function PostmanScreen({ navigation }: any) {
               2. Para poner el Administrador de Dispositivos TAP de R&S en el
               modo de edición, haga clic en el botón "Stop".
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Esto detiene el servicio TMR y le permite realizar cambios.
             </Text>
@@ -3261,13 +3261,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-8.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-8: Crear dispositivo TAP
             </Text>
           </View>
@@ -3276,7 +3276,7 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               7. Haga clic en "OK" para confirmar.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Después de presionar "OK", aparece una advertencia de seguridad de
               que Windows no puede verificar el editor del software del
@@ -3284,13 +3284,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-9.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-9: Instalar dispositivo TAP
             </Text>
           </View>
@@ -3317,13 +3317,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-10.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-10: Dispositivo TAP para una instancia de protocolo
             </Text>
           </View>
@@ -3336,19 +3336,19 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • TAP-RSIRP-2</Text>
-            <Text style={styles.checkItem}> • TAP-S5066Device1</Text>
-            <Text style={styles.checkItem}> • TAP-S5066Device2</Text>
-            <Text style={styles.checkItem}> • TAP-S5066Device3</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • TAP-RSIRP-2</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • TAP-S5066Device1</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • TAP-S5066Device2</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • TAP-S5066Device3</Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-11.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-11: Nombre de instancia de protocolo en DEVCON GUI
             </Text>
           </View>
@@ -3359,13 +3359,13 @@ export default function PostmanScreen({ navigation }: any) {
             muestra a continuación:
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-12.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-12: Lista completa de todos los dispositivos TAP
             </Text>
           </View>
@@ -3391,20 +3391,20 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               13. Haga clic en "Start" para activar el servicio TMR nuevamente.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               El TMR está en ejecución (indicado por el LED de estado verde) y
               el fondo de la lista de dispositivos TAP cambia su color a gris.
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-13.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-13: Configuración completa y activa
             </Text>
           </View>
@@ -3430,13 +3430,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura6-14.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 6-14: TMR management GUI
             </Text>
           </View>
@@ -3512,28 +3512,28 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Sistemas Operativos Requeridos:
             </Text>
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Windows 10 Professional o Enterprise 64-bit
             </Text>
-            <Text style={styles.checkItem}> • Microsoft Server 2016</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • Microsoft Server 2016</Text>
           </View>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Sistemas Operativos Obsoletos:
             </Text>
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> ✗ Windows 7 (ya no soportado)</Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> ✗ Windows 7 (ya no soportado)</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               ✗ Microsoft Server 2008 R2 (ya no soportado)
             </Text>
@@ -3547,16 +3547,16 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               1. Realizar backup completo de la configuración actual
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Exportar configuración de red desde el Asistente de
               Configuración
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Guardar datos de usuario y configuraciones personalizadas
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Documentar todas las configuraciones de red y parámetros
             </Text>
@@ -3564,27 +3564,27 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               2. Instalar el nuevo sistema operativo
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Windows 10 Professional/Enterprise 64-bit o
             </Text>
-            <Text style={styles.substep}> • Microsoft Server 2016</Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> • Microsoft Server 2016</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Seguir las instrucciones del Capítulo 4
             </Text>
 
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>3. Configurar el sistema operativo</Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Crear cuenta de usuario Installer
             </Text>
-            <Text style={styles.substep}> • Configurar adaptadores de red</Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> • Configurar adaptadores de red</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Establecer nombre de host y dominio
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Configurar DEP (Data Execution Prevention)
             </Text>
@@ -3592,15 +3592,15 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               4. Instalar R&S Postman III versión 04.06 o posterior
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Seguir las instrucciones del Capítulo 5
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Usar el Asistente de Configuración R&S Postman III
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Cargar la configuración de red guardada previamente
             </Text>
@@ -3608,9 +3608,9 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               5. Restaurar configuraciones personalizadas
             </Text>
-            <Text style={styles.substep}> • Importar usuarios</Text>
-            <Text style={styles.substep}> • Configurar sitios remotos</Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> • Importar usuarios</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> • Configurar sitios remotos</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Verificar configuración de enrutamiento
             </Text>
@@ -3618,12 +3618,12 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               6. Verificar el funcionamiento del sistema
             </Text>
-            <Text style={styles.substep}> • Comprobar conectividad de red</Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}> • Comprobar conectividad de red</Text>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Verificar servicios R&S Postman III
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Realizar pruebas de comunicación
             </Text>
@@ -3644,30 +3644,30 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Antes de Actualizar:
             </Text>
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Documentar toda la configuración actual del sistema
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Realizar backup de todas las bases de datos
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Guardar archivos de configuración personalizados
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Verificar compatibilidad de hardware con los nuevos sistemas
               operativos
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Notificar a todos los usuarios sobre el tiempo de inactividad
               planificado
@@ -3675,50 +3675,50 @@ export default function PostmanScreen({ navigation }: any) {
           </View>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Durante la Actualización:
             </Text>
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Seguir estrictamente el orden de los pasos de instalación
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • No omitir ninguna tarea de prerequisitos
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Verificar cada paso antes de continuar al siguiente
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Mantener registro de cualquier problema encontrado
             </Text>
           </View>
 
           <View style={styles.optionGroup}>
-            <Text variant="bodyMedium" style={styles.bold}>
+            <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Después de la Actualización:
             </Text>
           </View>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Realizar pruebas exhaustivas de todas las funcionalidades
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Verificar la conectividad con todos los sitios remotos
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Confirmar que todos los usuarios pueden acceder al sistema
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Monitorear el sistema durante las primeras 24-48 horas
             </Text>
@@ -3749,8 +3749,8 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}> • S5066</Text>
-            <Text style={styles.checkItem}> • RSIRP</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • S5066</Text>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}> • RSIRP</Text>
           </View>
 
           <Text variant="titleSmall" style={[styles.sectionTitle, { color: theme.colors.primary }]}>
@@ -3788,13 +3788,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-1.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-1: Agregar un dispositivo virtual RSIRP o S5066
             </Text>
           </View>
@@ -3804,13 +3804,13 @@ export default function PostmanScreen({ navigation }: any) {
             del dispositivo.
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-2.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-2: Editar el nombre del dispositivo
             </Text>
           </View>
@@ -3822,13 +3822,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-3.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-3: Ajustar opciones del dispositivo virtual
             </Text>
           </View>
@@ -3892,43 +3892,43 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.parameterTable}>
-            <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>User name</Text>
-              <Text style={styles.parameterExample}>Ejemplo: OpMU2</Text>
-              <Text style={styles.parameterDesc}>El nombre del usuario.</Text>
-              <Text style={styles.parameterRemarks}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>User name</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: OpMU2</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>El nombre del usuario.</Text>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 Usado para: cuenta de usuario de Windows, cuenta de usuario R&S
                 Postman III, grupo de trabajo, cuenta UMAN
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Password</Text>
-              <Text style={styles.parameterExample}>Ejemplo: 123456</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Password</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 123456</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 La contraseña del usuario.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 No use el valor predeterminado.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Mail account</Text>
-              <Text style={styles.parameterExample}>Ejemplo: OpMU2</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Mail account</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: OpMU2</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre de la cuenta de correo del usuario.
               </Text>
-              <Text style={styles.parameterRemarks}>
+              <Text style={[styles.parameterRemarks, { color: theme.colors.onSurfaceVariant }]}>
                 El nombre de la cuenta de correo debe ser idéntico al nombre de
                 usuario.
               </Text>
             </View>
 
             <View style={styles.parameterRow}>
-              <Text style={styles.parameterName}>Management privileges</Text>
-              <Text style={styles.parameterExample}>Ejemplo: All</Text>
-              <Text style={styles.parameterDesc}>
+              <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Management privileges</Text>
+              <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: All</Text>
+              <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
                 Los privilegios de gestión R&S Postman III.
               </Text>
             </View>
@@ -4136,7 +4136,7 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.step, { color: theme.colors.onSurfaceVariant }]}>
               12. Haga clic en "Ok" para agregar el nuevo usuario.
             </Text>
-            <Text style={styles.substep}>
+              <Text style={[styles.substep, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               Se muestra el diálogo "Create New User".
             </Text>
@@ -4365,13 +4365,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-4.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-4: Thunderbird home
             </Text>
           </View>
@@ -4383,13 +4383,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-5.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-5: Thunderbird address book
             </Text>
           </View>
@@ -4402,13 +4402,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-6.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-6: Thunderbird address book type
             </Text>
           </View>
@@ -4424,13 +4424,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-7.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-7: Thunderbird home
             </Text>
           </View>
@@ -4442,13 +4442,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-8.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-8: Thunderbird address book empty
             </Text>
           </View>
@@ -4464,13 +4464,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-9.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-9: Thunderbird address book import (1)
             </Text>
           </View>
@@ -4482,13 +4482,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-10.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-10: Thunderbird address book import (2)
             </Text>
           </View>
@@ -4499,13 +4499,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-11.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-11: Thunderbird address book import (3)
             </Text>
           </View>
@@ -4516,13 +4516,13 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-12.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-12: Thunderbird address book import (4)
             </Text>
           </View>
@@ -4591,13 +4591,13 @@ export default function PostmanScreen({ navigation }: any) {
             Administración R&S Postman III).
           </Text>
 
-          <View style={styles.imageContainer}>
+          <View style={[styles.imageContainer, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Image
               source={require('../../Images/postman/figura8-13.png')}
               style={styles.documentImage}
               resizeMode="contain"
             />
-            <Text variant="bodySmall" style={styles.imageCaption}>
+            <Text variant="bodySmall" style={[styles.imageCaption, { color: theme.colors.onSurfaceVariant }]}>
               Figura 8-13: Java update needed
             </Text>
           </View>
@@ -4614,11 +4614,11 @@ export default function PostmanScreen({ navigation }: any) {
           </Text>
 
           <View style={styles.checkList}>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Eliminar todo el perfil de usuario.
             </Text>
-            <Text style={styles.checkItem}>
+            <Text style={[styles.checkItem, { color: theme.colors.onSurfaceVariant }]}>
               {' '}
               • Eliminar esta clave de registro:
               HKEY_CURRENT_USER\Software\AppDataLow\Software\JavaSoft\DeploymentProperties.
@@ -4628,9 +4628,9 @@ export default function PostmanScreen({ navigation }: any) {
 
         {/* Footer */}
         <ScreenEntrance delay={200}>
-          <Surface style={styles.footerCard} elevation={1}>
-            <Icon name="information-outline" size={24} color="#1976D2" />
-            <Text variant="bodySmall" style={styles.footerText}>
+          <Surface style={[styles.footerCard, { backgroundColor: theme.colors.surfaceVariant }]} elevation={1}>
+            <Icon name="information-outline" size={24} color={theme.colors.primary} />
+            <Text variant="bodySmall" style={[styles.footerText, { color: theme.colors.onSurfaceVariant }]}>
               Manual de instalación basado en: R&S NS5150 / Postman III
               Installation Manual (Version 01, 2020) - Documento oficial: 08
               PIII_Installation Manual_en_2020-02-18.pdf
@@ -4639,14 +4639,14 @@ export default function PostmanScreen({ navigation }: any) {
         </ScreenEntrance>
 
         <ScreenEntrance delay={220}>
-          <Surface style={styles.publisherCard} elevation={1}>
+          <Surface style={[styles.publisherCard, { backgroundColor: theme.colors.surfaceVariant }]} elevation={1}>
             <View style={styles.publisherContent}>
-              <Text variant="bodySmall" style={styles.publisherText}>
-                <Text style={styles.bold}>Publicado por:</Text> Rohde & Schwarz
+              <Text variant="bodySmall" style={[styles.publisherText, { color: theme.colors.onSurfaceVariant }]}>
+                <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Publicado por:</Text> Rohde & Schwarz
                 GmbH & Co. KG
               </Text>
-              <Text variant="bodySmall" style={styles.publisherText}>
-                <Text style={styles.bold}>Año:</Text> 2020
+              <Text variant="bodySmall" style={[styles.publisherText, { color: theme.colors.onSurfaceVariant }]}>
+                <Text style={[styles.bold, { color: theme.colors.onSurface }]}>Año:</Text> 2020
               </Text>
             </View>
           </Surface>
