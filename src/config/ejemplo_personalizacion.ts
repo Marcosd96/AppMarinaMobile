@@ -1,6 +1,3 @@
-// EJEMPLO DE PERSONALIZACIÓN DE SEGMENTOS DE VIDEO
-// Copia este archivo y modifica los valores según tu video
-
 import { Dimensions } from 'react-native';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
@@ -13,7 +10,7 @@ export interface VideoSegment {
   description: string;
 }
 
-// EJEMPLO 1: Video de 30 segundos con 3 pausas
+//Video de 30 segundos con 3 pausas
 export const ejemploVideoCorto: VideoSegment[] = [
   {
     startTime: 0,
@@ -156,29 +153,3 @@ export const ejemploCoordenadasPorcentuales: VideoSegment[] = [
     description: "Esquina superior derecha"
   }
 ];
-
-// INSTRUCCIONES DE USO:
-
-/*
-1. COPIA este archivo y renómbralo como 'videoSegments.ts'
-2. MODIFICA los valores según tu video:
-   - startTime/endTime: tiempos en segundos
-   - instruction: texto que aparece al usuario
-   - clickTarget: área donde debe hacer clic
-   - description: descripción detallada del paso
-
-3. AJUSTA las coordenadas:
-   - Usa porcentajes para responsividad
-   - Usa coordenadas fijas para control preciso
-   - Prueba en diferentes dispositivos
-
-4. PERSONALIZA los textos:
-   - Haz las instrucciones claras y concisas
-   - Usa descripciones útiles
-   - Considera el idioma de tu audiencia
-
-5. PRUEBA el video:
-   - Verifica que las pausas coincidan con el contenido
-   - Ajusta las coordenadas si es necesario
-   - Prueba en diferentes tamaños de pantalla
-*/
