@@ -1,8 +1,83 @@
-# Estado del Arte - AppMarinaMobile
+<div align="center">
+
+```
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║                      📱  AppMarinaMobile  📱                         ║
+║                                                                       ║
+║              Capacitación Técnica en Equipos HF                       ║
+║                  Rohde & Schwarz Mobile Training                      ║
+║                                                                       ║
+║     React Native  •  TypeScript  •  Material Design 3                ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+```
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React%20Native-0.81.4-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React Native">
+  <img src="https://img.shields.io/badge/TypeScript-5.8.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Material%20Design%203-6200EE?style=for-the-badge&logo=material-design&logoColor=white" alt="Material Design 3">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
+  <img src="https://img.shields.io/badge/Platform-iOS%20Ready-000000?style=flat-square&logo=ios&logoColor=white" alt="iOS">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Version-0.0.1-blue?style=flat-square" alt="Version">
+</p>
+
+<p align="center">
+  <strong>Aplicación móvil multiplataforma para capacitación técnica interactiva</strong><br>
+  <em>Video interactivo • Navegación jerárquica • 19 módulos educativos</em>
+</p>
+
+<p align="center">
+  <a href="#-características-principales">Características</a> •
+  <a href="#-stack-tecnológico-principal">Stack</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-documentación">Documentación</a>
+</p>
+
+---
+
+</div>
 
 ## 📋 Resumen Ejecutivo
 
 **AppMarinaMobile** es una aplicación móvil desarrollada en React Native para la capacitación técnica de equipos HF de Rohde & Schwarz. La aplicación implementa Material Design 3 y está diseñada para proporcionar una interfaz intuitiva para el aprendizaje de conceptos técnicos de radiofrecuencia.
+
+---
+
+## ✨ Características Principales
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎬 Video Interactivo
+Sistema innovador de aprendizaje activo con pausas automáticas y validación de interacción del usuario.
+
+### 🎨 Material Design 3
+Interfaz moderna con soporte automático de tema claro/oscuro según preferencias del sistema.
+
+### 📱 Responsive Design
+Adaptación perfecta desde smartphones pequeños (360dp) hasta tablets grandes (1080dp+).
+
+</td>
+<td width="50%">
+
+### 🧭 Navegación Jerárquica
+Drawer + Stack Navigation con 19 pantallas organizadas en 6 secciones educativas.
+
+### ⚡ Alto Rendimiento
+Animaciones nativas a 60fps con React Native Reanimated y optimizaciones de bundle.
+
+### 📚 19 Módulos
+Contenido completo desde conceptos básicos hasta troubleshooting avanzado.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -186,6 +261,44 @@ La aplicación implementa un **Drawer Navigation** con menú lateral desplegable
 
 ---
 
+## 🚀 Instalación
+
+### Pre-requisitos
+
+- Node.js 20.x o superior
+- Java Development Kit (JDK) 17
+- Android Studio con Android SDK
+- Git
+
+### Pasos de Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/AppMarinaMobile.git
+cd AppMarinaMobile
+
+# Instalar dependencias
+npm install
+
+# Para Android
+npm run android
+
+# Para iOS
+cd ios && pod install && cd ..
+npm run ios
+```
+
+### Build de Producción
+
+```bash
+# Android APK
+cd android
+./gradlew assembleRelease
+# APK generado en: android/app/build/outputs/apk/release/app-release.apk
+```
+
+---
+
 ## 🔧 Herramientas de Desarrollo
 
 ### Entorno de Desarrollo
@@ -251,9 +364,20 @@ npm test           # Ejecutar tests
 
 ---
 
-## 📚 Referencias y Documentación
+## 📚 Documentación
 
-### Documentación Técnica
+### Documentos del Proyecto
+
+Este repositorio incluye documentación completa para sustentación de tesis y desarrollo:
+
+- 📄 **[SUSTENTACION_CREACION_PROYECTO.md](SUSTENTACION_CREACION_PROYECTO.md)** - Documento académico completo con el proceso de creación
+- 📋 **[PASO_A_PASO_CREACION.md](PASO_A_PASO_CREACION.md)** - Tutorial técnico detallado paso a paso
+- ❓ **[PREGUNTAS_SUSTENTACION.md](PREGUNTAS_SUSTENTACION.md)** - 30 preguntas frecuentes con respuestas técnicas
+- 📝 **[CHEAT_SHEET_SUSTENTACION.md](CHEAT_SHEET_SUSTENTACION.md)** - Resumen rápido para sustentación
+- 📖 **[README_PAPER.md](README_PAPER.md)** - Estado del arte de React Native Paper
+- 🎬 **[VIDEO_INTERACTIVO_README.md](VIDEO_INTERACTIVO_README.md)** - Documentación del sistema de video interactivo
+
+### Referencias Técnicas
 
 - [React Native Documentation](https://reactnative.dev/docs/getting-started)
 - [React Native Paper Documentation](https://callstack.github.io/react-native-paper/)
