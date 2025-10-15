@@ -175,8 +175,8 @@ export default function PostmanScreen({ navigation }: any) {
             capítulo separado (Capítulo 6).
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Este manual cubre todos los escenarios de instalación del sistema
               R&S Postman III según el tipo de integración seleccionado
@@ -264,7 +264,7 @@ export default function PostmanScreen({ navigation }: any) {
             <Text variant="bodyMedium" style={[styles.bold, { color: theme.colors.onSurface }]}>
               Comandos Remotos:
             </Text>
-            <Text style={styles.conventionDesc}>
+            <Text style={[styles.conventionDesc, { color: theme.colors.onSurfaceVariant }]}>
               Los comandos remotos pueden incluir abreviaciones para simplificar
               la entrada. En la descripción de dichos comandos, todas las partes
               que deben ingresarse están escritas en letras mayúsculas. El texto
@@ -272,8 +272,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Seguir estas convenciones facilita la comprensión de las
               instrucciones durante la instalación
@@ -301,8 +301,8 @@ export default function PostmanScreen({ navigation }: any) {
             <Text style={[styles.categoryItem, { color: theme.colors.onSurfaceVariant }]}>• Parámetros de usuario</Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="lightbulb" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="lightbulb" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Recomendamos crear un plan de instalación completo que abarque
               todos los servidores y clientes antes de comenzar con la
@@ -331,7 +331,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Region</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: US</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -339,7 +339,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Country</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: en</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -347,7 +347,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Organization</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: RuS</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -382,7 +382,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Domain Name</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -394,7 +394,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Email Domain</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -405,7 +405,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>IP address</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 172.29.80.15</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>La dirección IPv4.</Text>
@@ -415,7 +415,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Subnet mask</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>
                 Ejemplo: 255.255.255.0
@@ -425,7 +425,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Site ID</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 80</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -439,8 +439,8 @@ export default function PostmanScreen({ navigation }: any) {
             </View>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Los nombres de host y dominio no se pueden cambiar después. El
               host y el nombre de dominio no se pueden cambiar después de que el
@@ -451,8 +451,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Cada servidor R&S Postman III debe tener un ID de sitio único.
             </Text>
@@ -480,7 +480,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Domain Name</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: pm-mu2.com</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -492,7 +492,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>IP address</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 172.29.80.16</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>La dirección IPv4.</Text>
@@ -502,7 +502,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Subnet mask</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>
                 Ejemplo: 255.255.255.0
@@ -537,8 +537,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               El software del sistema R&S NS5150 incluye componentes de código
               abierto no modificados. Las licencias y documentación asociadas
@@ -589,15 +589,15 @@ export default function PostmanScreen({ navigation }: any) {
             Consulte la documentación adjunta para obtener más instrucciones.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="key" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="key" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Use la misma contraseña en todas las computadoras.
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="account-circle" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="account-circle" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Debe haber una cuenta de administrador llamada Installer.
             </Text>
@@ -662,8 +662,8 @@ export default function PostmanScreen({ navigation }: any) {
             🔄 4.4 Actualización del Sistema Operativo
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="update" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="update" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Recomendamos instalar las últimas actualizaciones y parches de
               Windows. Pueden instalarse desde los servidores de actualización
@@ -790,8 +790,8 @@ export default function PostmanScreen({ navigation }: any) {
             Configuración del Sistema.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Usando SysPrep para deployment: Si tiene la intención de usar
               SysPrep para múltiples despliegues, tenga en cuenta que cada
@@ -843,8 +843,8 @@ export default function PostmanScreen({ navigation }: any) {
             🖥️ 4.6 Cambio del Nombre de Host
           </Text>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               El nombre de host o dominio no se puede cambiar después de que R&S
               Postman III ha sido instalado y configurado.
@@ -969,8 +969,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert-circle" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert-circle" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Importante: Configure correctamente DEP y la prioridad de
               adaptadores de red antes de continuar con la instalación
@@ -1003,8 +1003,8 @@ export default function PostmanScreen({ navigation }: any) {
             💿 5.1 Creación del Portador de Datos para la Instalación
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               El PM3 y DEVICE CONTROL se suministran en discos separados. Para
               la instalación, se debe crear un nuevo portador de datos a partir
@@ -1128,8 +1128,8 @@ export default function PostmanScreen({ navigation }: any) {
             planificación de red.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Pestaña Planning no disponible para R&S Postman III router for
               MMHS: La pestaña "Planning" solo está disponible para los tipos de
@@ -1267,8 +1267,8 @@ export default function PostmanScreen({ navigation }: any) {
             El sitio seleccionado se marca con una marca de verificación verde.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Uno de los sitios planificados debe ser seleccionado como sitio
               local. Para cada instalación de servidor R&S Postman III,
@@ -1339,8 +1339,8 @@ export default function PostmanScreen({ navigation }: any) {
             parámetros de instalación.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Pestaña "Settings" deshabilitada si la clave de producto es
               inválida: Todas las pestañas excepto la pestaña "Welcome" están
@@ -1360,8 +1360,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="refresh" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="refresh" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Los prerequisitos se actualizan cuando se cambian las
               configuraciones: Cuando se edita un parámetro del instalador, la
@@ -1422,8 +1422,8 @@ export default function PostmanScreen({ navigation }: any) {
             tarea de configuración del sistema.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               La lista de tareas de prerequisitos varía ligeramente dependiendo
               del tipo de instalación seleccionado (servidor y/o cliente) y la
@@ -1573,8 +1573,8 @@ export default function PostmanScreen({ navigation }: any) {
             habilitadas.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               La característica ".NET Framework 3.5" debe instalarse desde
               Windows Server 2016 o medio de instalación de Windows 10 u online.
@@ -1659,8 +1659,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="clock-alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="clock-alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               La instalación de características de Windows faltantes puede
               tardar hasta varios minutos. Durante este tiempo, la GUI del
@@ -1707,8 +1707,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Complete todas las tareas de prerequisitos antes de iniciar la
               instalación. Iniciar la instalación de los paquetes de software
@@ -1729,8 +1729,8 @@ export default function PostmanScreen({ navigation }: any) {
             una explicación de los diferentes íconos de estado.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               La colección de paquetes de software que se instalan varía según
               el tipo de instalación seleccionado (servidor y/o cliente) y la
@@ -1738,8 +1738,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="clock-alert" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="clock-alert" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               La instalación de los paquetes de software tarda aprox. 20
               minutos. Sea paciente y no cierre el Asistente de Configuración
@@ -1801,8 +1801,8 @@ export default function PostmanScreen({ navigation }: any) {
             proporcionan asistencia para completar cada tarea.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               La lista de tareas de configuración varía dependiendo del tipo de
               instalación seleccionado (servidor y/o cliente). Para
@@ -2330,8 +2330,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Nota: El inicio del servicio GwTact falla si el sitio local no
               está configurado. El servicio GwTact no puede iniciarse si la
@@ -2557,7 +2557,7 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
             <Icon name="account-multiple" size={18} color="#2196F3" />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Consejo: Usuarios Adicionales - Repita este paso para todos los
@@ -2610,8 +2610,8 @@ export default function PostmanScreen({ navigation }: any) {
             DEVCON.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Precondiciones para la detección de radios:
             </Text>
@@ -2665,8 +2665,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Nota: TMR, R&S M3TR y R&S XK4100 radios deben detectarse con la
               configuración predeterminada de la herramienta.
@@ -2916,8 +2916,8 @@ export default function PostmanScreen({ navigation }: any) {
             instalación.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Instalación implícita del framework .NET: El Asistente de
               Configuración R&S Postman III depende del Microsoft .NET Framework
@@ -3002,8 +3002,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Prerequisitos de instalación: R&S TMR se basa en la versión
               correcta de la biblioteca WinPcap instalada. A menudo esta
@@ -3166,8 +3166,8 @@ export default function PostmanScreen({ navigation }: any) {
             bajo la cuenta "MMHHSServices".
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Si el Servicio PLDA Manager se ejecuta como local\System, no tiene
               privilegios suficientes para acceder al directorio MMHS AD-LDS.
@@ -3370,8 +3370,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Nota: Convención de nomenclatura para crear dispositivos TAP - El
               servicio R&S TMR reconoce los dispositivos TAP por su nombre. Por
@@ -3497,8 +3497,8 @@ export default function PostmanScreen({ navigation }: any) {
             operativos y R&S Postman III para actualizar.
           </Text>
 
-          <View style={styles.warningBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.warningBox, { backgroundColor: theme.colors.errorContainer }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.warningText, { color: theme.colors.onErrorContainer }]}>
               Importante: La actualización desde versiones anteriores a 04.06
               requiere una reinstalación completa del sistema operativo y el
@@ -3629,8 +3629,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Recomendación: Planifique cuidadosamente el proceso de
               actualización y realice la migración durante una ventana de
@@ -3902,7 +3902,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Password</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: 123456</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -3913,7 +3913,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Mail account</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: OpMU2</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -3925,7 +3925,7 @@ export default function PostmanScreen({ navigation }: any) {
               </Text>
             </View>
 
-            <View style={styles.parameterRow}>
+            <View style={[styles.parameterRow, { backgroundColor: theme.colors.surfaceVariant, borderLeftColor: theme.colors.primary }]}>
               <Text style={[styles.parameterName, { color: theme.colors.primary }]}>Management privileges</Text>
               <Text style={[styles.parameterExample, { color: theme.colors.onSurfaceVariant }]}>Ejemplo: All</Text>
               <Text style={[styles.parameterDesc, { color: theme.colors.onSurfaceVariant }]}>
@@ -3934,8 +3934,8 @@ export default function PostmanScreen({ navigation }: any) {
             </View>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="alert" size={18} color="#FF9800" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="alert" size={18} color={theme.colors.error} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Limitación de nombre de usuario: Solo el guion bajo "_" está
               permitido como carácter especial en el nombre de usuario más
@@ -3959,8 +3959,8 @@ export default function PostmanScreen({ navigation }: any) {
             Válido para sistemas sin Windows Domain-Controller.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Use la misma contraseña en todas las computadoras.
             </Text>
@@ -4549,8 +4549,8 @@ export default function PostmanScreen({ navigation }: any) {
             por los firewalls.
           </Text>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Tabla 8-3: Conexiones entrantes del servidor Postman III - Puertos
               TCP 80, 8080 (comunicación con servidor HTTP), puertos TCP 5098,
@@ -4567,8 +4567,8 @@ export default function PostmanScreen({ navigation }: any) {
             </Text>
           </View>
 
-          <View style={styles.infoBox}>
-            <Icon name="information" size={18} color="#2196F3" />
+          <View style={[styles.infoBox, { backgroundColor: theme.colors.surfaceVariant }]}>
+            <Icon name="information" size={18} color={theme.colors.primary} />
             <Text variant="bodySmall" style={[styles.infoText, { color: theme.colors.onSurfaceVariant }]}>
               Tabla 8-4: Conexiones entrantes del cliente Postman III - Puertos
               TCP 5400-5500 (clientes Device Control), puertos TCP dinámicos
