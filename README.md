@@ -28,14 +28,15 @@
 
 <p align="center">
   <strong>Aplicación móvil multiplataforma para capacitación técnica interactiva</strong><br>
-  <em>Video interactivo • Navegación jerárquica • 19 módulos educativos</em>
+  <em>Video interactivo • Navegación jerárquica • 20 módulos educativos</em>
 </p>
 
 <p align="center">
   <a href="#-características-principales">Características</a> •
   <a href="#-stack-tecnológico-principal">Stack</a> •
   <a href="#-instalación">Instalación</a> •
-  <a href="#-documentación">Documentación</a>
+  <a href="#-documentación">Documentación</a> •
+  <a href="#-créditos">Créditos</a>
 </p>
 
 ---
@@ -67,12 +68,12 @@ Adaptación perfecta desde smartphones pequeños (360dp) hasta tablets grandes (
 <td width="50%">
 
 ### 🧭 Navegación Jerárquica
-Drawer + Stack Navigation con 19 pantallas organizadas en 6 secciones educativas.
+Drawer + Stack Navigation con 20 pantallas organizadas en 7 secciones educativas.
 
 ### ⚡ Alto Rendimiento
 Animaciones nativas a 60fps con React Native Reanimated y optimizaciones de bundle.
 
-### 📚 19 Módulos
+### 📚 20 Módulos
 Contenido completo desde conceptos básicos hasta troubleshooting avanzado.
 
 </td>
@@ -105,11 +106,12 @@ AppMarinaMobile/
 │   ├── AppContent.tsx         # Pantalla principal (Home)
 │   ├── navigation/
 │   │   └── AppNavigator.tsx   # Configuración de navegación (Drawer + Stack)
-│   ├── screens/               # 19 pantallas de capacitación
+│   ├── screens/               # 20 pantallas de capacitación
 │   │   ├── IntroduccionHFScreen.tsx
 │   │   ├── ConceptosTecnicosScreen.tsx
 │   │   ├── OperatividadScreen.tsx
 │   │   ├── Armado_Rack.tsx    # Video interactivo
+│   │   ├── CreditsScreen.tsx  # Créditos del proyecto
 │   │   └── ... (15+ más)
 │   ├── components/            # Componentes reutilizables
 │   │   └── ScreenEntrance.tsx
@@ -203,6 +205,11 @@ La aplicación implementa un **Drawer Navigation** con menú lateral desplegable
    - Diagnóstico de problemas
    - Solución de fallas comunes
    - Guías visuales de troubleshooting
+
+#### 7. **CRÉDITOS**
+   - Equipo de desarrollo
+   - Referencias técnicas
+   - Información del proyecto
 
 ### Características Avanzadas
 
@@ -343,8 +350,9 @@ npm test           # Ejecutar tests
 - [x] **Navegación**: React Navigation con Drawer + Stack implementado
 - [x] **Animaciones**: React Native Reanimated integrado
 - [x] **Video Interactivo**: Sistema de videos con pausas e interacción
-- [x] **19 Pantallas**: Módulos completos de capacitación
+- [x] **20 Pantallas**: Módulos completos de capacitación
 - [x] **Drawer Animado**: Menú lateral con secciones expandibles
+- [x] **Pantalla de Créditos**: Reconocimiento del equipo y referencias
 
 ### Próximas Implementaciones
 
@@ -421,7 +429,7 @@ AppMarinaMobile representa una implementación moderna y robusta de una aplicaci
 ### Logros Principales
 
 1. **Arquitectura Completa**: Sistema de navegación jerárquico con Drawer + Stack
-2. **19 Módulos de Capacitación**: Contenido extenso y bien organizado
+2. **20 Módulos de Capacitación**: Contenido extenso y bien organizado
 3. **Video Interactivo**: Innovador sistema de aprendizaje con validación de interacción
 4. **Material Design 3**: Implementación completa del sistema de diseño moderno
 5. **Animaciones Nativas**: Alto rendimiento con React Native Reanimated
@@ -445,7 +453,28 @@ La aplicación utiliza tecnologías de última generación y mejores prácticas 
 
 ---
 
+## 👥 Créditos
+
+### Equipo de Desarrollo
+
+- **Cristian Camilo Moya Arévalo** - Desarrollador
+- **Jhan Paul Londoño Castillo** - Desarrollador
+
+### Diagnóstico de Fallas
+
+- **Deiby Giovanny Torres Agudelo** - Especialista en Diagnóstico
+
+### Fuentes Técnicas y Referencias
+
+Basado en información y lineamientos técnicos tomados de los **manuales de Radio HF de Rohde & Schwarz**, empleados como referencia para la correcta implementación y configuración de los sistemas de comunicación.
+
+### Lema
+
+> *"Las operaciones navales llegan hasta donde las comunicaciones lo permitan"*
+
+---
+
 **Versión del Proyecto**: 0.0.1  
 **Plataformas**: Android / iOS  
 **Última Actualización**: Octubre 2025  
-**Autor**: Equipo de Desarrollo AppMarinaMobile
+**Equipo de Desarrollo**: Cristian Camilo Moya Arévalo • Jhan Paul Londoño Castillo

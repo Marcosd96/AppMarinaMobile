@@ -27,6 +27,7 @@ import LlamadaPorVozScreen from '../screens/LlamadaPorVozScreen';
 import CambioGrupoEscaneoScreen from '../screens/CambioGrupoEscaneoScreen';
 import CambioPotenciaScreen from '../screens/CambioPotenciaScreen';
 import CambioLlaveScreen from '../screens/CambioLlaveScreen';
+import CreditsScreen from '../screens/CreditsScreen';
 import { View, StyleSheet, useColorScheme } from 'react-native';
 import { Text, Divider, useTheme } from 'react-native-paper';
 import Animated, { Easing, interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -307,6 +308,12 @@ function CustomDrawerContent(props: any) {
         onPress={() => navigateAndClose('Fallas')}
         labelStyle={{ color: theme.colors.onSurface }}
       />
+      <Divider style={[styles.divider, { backgroundColor: theme.colors.outlineVariant }]} />
+      <DrawerItem 
+        label="Créditos" 
+        onPress={() => navigateAndClose('Credits')}
+        labelStyle={{ color: theme.colors.onSurface }}
+      />
     </DrawerContentScrollView>
   );
 }
@@ -367,6 +374,11 @@ export default function AppNavigator() {
           name="ArmadoRack" 
           component={ArmadoRackScreen}
           options={{ title: 'Armado del Rack' }}
+        />
+        <Drawer.Screen
+          name="Credits"
+          component={CreditsScreen}
+          options={{ title: 'Créditos' }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
