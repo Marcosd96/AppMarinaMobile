@@ -513,7 +513,7 @@ Drawer (Global)
 > android {
 >   defaultConfig {
 >     minSdkVersion 24    // Android 7.0 (95% cobertura)
->     targetSdkVersion 36 // Android 15 (optimal)
+>     targetSdkVersion 36 // Android 16 (optimal)
 >     compileSdkVersion 36
 >   }
 > }
@@ -524,14 +524,14 @@ Drawer (Global)
 > - API 23+: 92% (Android 6.0+)
 > 
 > **Testing:**
-> - Emulador API 21 (mínimo soportado)
-> - Emulador API 33 (target)
-> - Dispositivo físico Android 12 (real)
+> - Emulador API 24 (mínimo soportado)
+> - Emulador API 36 (target)
+> - Dispositivo físico Android 16 (real)
 > 
 > **Características condicionales:**
 > ```typescript
-> if (Platform.Version >= 23) {
->   // Usar features de Android 6.0+
+> if (Platform.Version >= 24) {
+>   // Usar features de Android 7.0+
 > }
 > ```
 
