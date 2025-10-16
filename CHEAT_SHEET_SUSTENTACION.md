@@ -347,8 +347,8 @@ npm install react-native-video@^6.16.1
 **Tamaño:** 15MB
 
 **Configuración:**
-- minSdkVersion: 21 (Android 5.0)
-- targetSdkVersion: 33 (Android 13)
+- minSdkVersion: 24 (Android 7.0)
+- targetSdkVersion: 36 (Android 15)
 - Firmado con keystore personal
 - ProGuard enabled
 - Shrink resources enabled

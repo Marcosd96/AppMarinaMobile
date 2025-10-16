@@ -512,9 +512,9 @@ Drawer (Global)
 > ```gradle
 > android {
 >   defaultConfig {
->     minSdkVersion 21    // Android 5.0 (95% cobertura)
->     targetSdkVersion 33 // Android 13 (optimal)
->     compileSdkVersion 33
+>     minSdkVersion 24    // Android 7.0 (95% cobertura)
+>     targetSdkVersion 36 // Android 15 (optimal)
+>     compileSdkVersion 36
 >   }
 > }
 > ```
