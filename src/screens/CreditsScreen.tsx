@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View, Image } from 'react-native';
 import { Appbar, Text, Surface, Card, useTheme, Divider, Icon } from 'react-native-paper';
 import ScreenEntrance from '../components/ScreenEntrance';
 
@@ -24,7 +24,10 @@ export default function CreditsScreen({ navigation }: any) {
           <Surface style={[styles.heroCard, { backgroundColor: theme.colors.primaryContainer }]} elevation={4}>
             <Card.Content style={styles.heroContent}>
               <View style={styles.heroIconContainer}>
-                <Icon source="radio-tower" size={56} color={theme.colors.primary} />
+                <Image
+                  source={require('../../icon512x512.jpeg')}
+                  style={styles.heroLogo}
+                />
               </View>
               <Text variant="headlineMedium" style={[styles.heroTitle, { color: theme.colors.onPrimaryContainer }]}>
                 AppMarinaMobile
@@ -53,11 +56,10 @@ export default function CreditsScreen({ navigation }: any) {
               
               <View style={[styles.personCard, { backgroundColor: theme.colors.surfaceVariant }]}>
                 <View style={styles.personHeader}>
-                  <View style={[styles.avatarCircle, { backgroundColor: theme.colors.primary }]}>
-                    <Text variant="titleMedium" style={[styles.avatarText, { color: theme.colors.onPrimary }]}>
-                      CM
-                    </Text>
-                  </View>
+                  <Image 
+                    source={require('../../Images/autores/moya.jpg')} 
+                    style={styles.avatarImage}
+                  />
                   <View style={styles.personInfo}>
                     <Text variant="bodyLarge" style={[styles.personName, { color: theme.colors.onSurface }]}>
                       Cristian Camilo Moya Arévalo
@@ -65,7 +67,7 @@ export default function CreditsScreen({ navigation }: any) {
                     <View style={styles.roleContainer}>
                       <Icon source="code-braces" size={16} color={theme.colors.secondary} />
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
-                        Desarrollador
+                        Desarrollador.
                       </Text>
                     </View>
                   </View>
@@ -74,11 +76,10 @@ export default function CreditsScreen({ navigation }: any) {
 
               <View style={[styles.personCard, { backgroundColor: theme.colors.surfaceVariant }]}>
                 <View style={styles.personHeader}>
-                  <View style={[styles.avatarCircle, { backgroundColor: theme.colors.tertiary }]}>
-                    <Text variant="titleMedium" style={[styles.avatarText, { color: theme.colors.onTertiary }]}>
-                      JL
-                    </Text>
-                  </View>
+                  <Image 
+                    source={require('../../Images/autores/londonho.jpg')} 
+                    style={styles.avatarImage}
+                  />
                   <View style={styles.personInfo}>
                     <Text variant="bodyLarge" style={[styles.personName, { color: theme.colors.onSurface }]}>
                       Jhan Paul Londoño Castillo
@@ -86,7 +87,7 @@ export default function CreditsScreen({ navigation }: any) {
                     <View style={styles.roleContainer}>
                       <Icon source="code-braces" size={16} color={theme.colors.secondary} />
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
-                        Desarrollador
+                        Desarrollador.
                       </Text>
                     </View>
                   </View>
@@ -200,6 +201,11 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
   },
+  heroLogo: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+  },
   heroTitle: {
     fontWeight: 'bold',
     textAlign: 'center',
@@ -264,6 +270,16 @@ const styles = StyleSheet.create({
   },
   avatarText: {
     fontWeight: 'bold',
+  },
+  avatarImage: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   personInfo: {
     flex: 1,
