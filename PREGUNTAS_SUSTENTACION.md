@@ -1,4 +1,4 @@
-# Guía de Respuestas - Sustentación AppMarinaMobile
+# Guía de Respuestas - Sustentación HF R&S Instructor
 ## Preguntas Frecuentes y Respuestas Técnicas
 
 ---
@@ -9,7 +9,7 @@
 **RESPUESTA:**
 > Inicialicé el proyecto utilizando React Native CLI con el template de TypeScript mediante el comando:
 > ```bash
-> npx react-native@latest init AppMarinaMobile --template react-native-template-typescript
+> npx react-native@latest init HFRSInstructor --template react-native-template-typescript
 > ```
 > Este comando genera automáticamente la estructura base del proyecto incluyendo configuraciones de Babel, Metro Bundler, TypeScript, y las carpetas nativas para Android e iOS. Posteriormente instalé las dependencias necesarias para Material Design 3 (React Native Paper), navegación (React Navigation con Drawer y Stack), animaciones (Reanimated), y reproducción de video.
 

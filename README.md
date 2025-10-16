@@ -3,7 +3,7 @@
 ```
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                                                                       ║
-║                       📱  AppMarinaMobile  📱                        ║
+║                      📱  HF R&S Instructor  📱                       ║
 ║                                                                       ║
 ║                 Capacitación Técnica en Equipos HF                    ║
 ║                  Rohde & Schwarz Mobile Training                      ║
@@ -45,7 +45,7 @@
 
 ## 📋 Resumen Ejecutivo
 
-**AppMarinaMobile** es una aplicación móvil desarrollada en React Native para la capacitación técnica de equipos HF de Rohde & Schwarz. La aplicación implementa Material Design 3 y está diseñada para proporcionar una interfaz intuitiva para el aprendizaje de conceptos técnicos de radiofrecuencia.
+**HF R&S Instructor** es una aplicación móvil desarrollada en React Native para la capacitación técnica de equipos HF de Rohde & Schwarz. La aplicación implementa Material Design 3 y está diseñada para proporcionar una interfaz intuitiva para el aprendizaje de conceptos técnicos de radiofrecuencia.
 
 ---
 
@@ -100,7 +100,7 @@ Contenido completo desde conceptos básicos hasta troubleshooting avanzado.
 ### Arquitectura de Componentes
 
 ```
-AppMarinaMobile/
+HFRSInstructor/
 ├── App.tsx                    # Punto de entrada y configuración de temas
 ├── src/
 │   ├── AppContent.tsx         # Pantalla principal (Home)
@@ -281,8 +281,8 @@ La aplicación implementa un **Drawer Navigation** con menú lateral desplegable
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/AppMarinaMobile.git
-cd AppMarinaMobile
+git clone https://github.com/tu-usuario/HFRSInstructor.git
+cd HFRSInstructor
 
 # Instalar dependencias
 npm install
@@ -424,7 +424,7 @@ Este repositorio incluye documentación completa para sustentación de tesis y d
 
 ## 📈 Conclusiones
 
-AppMarinaMobile representa una implementación moderna y robusta de una aplicación de capacitación técnica para equipos HF de Rohde & Schwarz. La aplicación destaca por:
+HF R&S Instructor representa una implementación moderna y robusta de una aplicación de capacitación técnica para equipos HF de Rohde & Schwarz. La aplicación destaca por:
 
 ### Logros Principales
 
@@ -448,7 +448,7 @@ La aplicación utiliza tecnologías de última generación y mejores prácticas 
 ### Estado Actual
 
 ✅ **Producción**: La aplicación está completamente funcional con todos los módulos implementados
-✅ **APK Generado**: Build de release disponible (AppMarinaMobile-release.apk)
+✅ **APK Generado**: Build de release disponible (HFRSInstructor-release.apk)
 ✅ **Documentación**: Completa y actualizada
 
 ---

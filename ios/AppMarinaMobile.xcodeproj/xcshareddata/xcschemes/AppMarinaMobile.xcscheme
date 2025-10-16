@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "AppMarinaMobile.app"
-               BlueprintName = "AppMarinaMobile"
-               ReferencedContainer = "container:AppMarinaMobile.xcodeproj">
+               BuildableName = "HFRSInstructor.app"
+               BlueprintName = "HFRSInstructor"
+               ReferencedContainer = "container:HFRSInstructor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "AppMarinaMobileTests.xctest"
-               BlueprintName = "AppMarinaMobileTests"
-               ReferencedContainer = "container:AppMarinaMobile.xcodeproj">
+               BuildableName = "HFRSInstructorTests.xctest"
+               BlueprintName = "HFRSInstructorTests"
+               ReferencedContainer = "container:HFRSInstructor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "AppMarinaMobile.app"
-            BlueprintName = "AppMarinaMobile"
-            ReferencedContainer = "container:AppMarinaMobile.xcodeproj">
+            BuildableName = "HFRSInstructor.app"
+            BlueprintName = "HFRSInstructor"
+            ReferencedContainer = "container:HFRSInstructor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "AppMarinaMobile.app"
-            BlueprintName = "AppMarinaMobile"
-            ReferencedContainer = "container:AppMarinaMobile.xcodeproj">
+            BuildableName = "HFRSInstructor.app"
+            BlueprintName = "HFRSInstructor"
+            ReferencedContainer = "container:HFRSInstructor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -45,7 +45,7 @@ npx react-native run-ios
 ## Estructura del proyecto
 
 ```
-AppMarinaMobile/
+HFRSInstructor/
 ├── App.tsx                           # Punto de entrada, PaperProvider y temas
 ├── index.js                          # Registro de la aplicación
 ├── src/
@@ -275,7 +275,7 @@ Los cambios en el código se reflejan automáticamente en el emulador/dispositiv
 ### Archivos README Adicionales
 - `VIDEO_INTERACTIVO_README.md` - Guía detallada del sistema de video interactivo
 - `README.md` - Estado del Arte completo del proyecto
-- `ESTADO_DEL_ARTE_AppMarinaMobile.md` - Documentación técnica extendida
+- `ESTADO_DEL_ARTE_HFRSInstructor.md` - Documentación técnica extendida
 
 ## Troubleshooting
 

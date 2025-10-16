@@ -30,7 +30,7 @@ export default function CreditsScreen({ navigation }: any) {
                 />
               </View>
               <Text variant="headlineMedium" style={[styles.heroTitle, { color: theme.colors.onPrimaryContainer }]}>
-                AppMarinaMobile
+                HF R&S Instructor
               </Text>
               <Text variant="bodyMedium" style={[styles.heroSubtitle, { color: theme.colors.onPrimaryContainer }]}>
                 Sistema de Gestión HF
@@ -109,11 +109,10 @@ export default function CreditsScreen({ navigation }: any) {
               
               <View style={[styles.personCard, { backgroundColor: theme.colors.secondaryContainer }]}>
                 <View style={styles.personHeader}>
-                  <View style={[styles.avatarCircle, { backgroundColor: theme.colors.secondary }]}>
-                    <Text variant="titleMedium" style={[styles.avatarText, { color: theme.colors.onSecondary }]}>
-                      DT
-                    </Text>
-                  </View>
+                  <Image 
+                    source={require('../../Images/autores/torres.jpg')} 
+                    style={styles.avatarImage}
+                  />
                   <View style={styles.personInfo}>
                     <Text variant="bodyLarge" style={[styles.personName, { color: theme.colors.onSurface }]}>
                       Deiby Giovanny Torres Agudelo
@@ -121,7 +120,7 @@ export default function CreditsScreen({ navigation }: any) {
                     <View style={styles.roleContainer}>
                       <Icon source="toolbox" size={16} color={theme.colors.secondary} />
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
-                        Especialista en Diagnóstico
+                        Operario del Equipo
                       </Text>
                     </View>
                   </View>
@@ -233,14 +232,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-    marginBottom: 8,
+    marginBottom: 0,
+    marginTop: 12,
+    justifyContent: 'center',
   },
   sectionTitle: {
     fontWeight: 'bold',
-    flex: 1,
+    textAlign: 'center',
   },
   divider: {
-    marginVertical: 12,
+    marginVertical: 8,
     height: 2,
     borderRadius: 1,
   },
@@ -301,6 +302,7 @@ const styles = StyleSheet.create({
   // Reference Card
   referenceCard: {
     marginTop: 12,
+    marginBottom: 12,
     padding: 16,
     borderRadius: 12,
     flexDirection: 'row',

@@ -1,6 +1,6 @@
 # Créditos
 
-## AppMarinaMobile
+## HF R&S Instructor
 ### Aplicación de Gestión de Equipos de Radio HF
 
 ---
@@ -107,7 +107,7 @@ Para consultas relacionadas con el proyecto:
 
 <div align="center">
 
-**AppMarinaMobile** © 2025
+**HF R&S Instructor** © 2025
 
 *Desarrollado con ❤️ para la optimización de sistemas de comunicación HF*
 

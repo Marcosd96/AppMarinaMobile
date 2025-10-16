@@ -1,4 +1,4 @@
-# Cheat Sheet - Sustentación AppMarinaMobile
+# Cheat Sheet - Sustentación HF R&S Instructor
 ## Respuestas Rápidas y Datos Clave
 
 ---
@@ -7,7 +7,7 @@
 
 **RESPUESTA CORTA:**
 ```bash
-npx react-native@latest init AppMarinaMobile --template react-native-template-typescript
+npx react-native@latest init HFRSInstructor --template react-native-template-typescript
 ```
 
 **PUNTOS CLAVE:**
@@ -209,7 +209,7 @@ cd android
 
 **Instalación desde cero:**
 ```bash
-npx react-native@latest init AppMarinaMobile --template react-native-template-typescript
+npx react-native@latest init HFRSInstructor --template react-native-template-typescript
 npm install react-native-paper@^5.14.5
 npm install @react-navigation/native@^7.1.17
 npm install @react-navigation/drawer@^7.5.8
@@ -355,7 +355,7 @@ npm install react-native-video@^6.16.1
 
 **Instalación:**
 ```bash
-adb install AppMarinaMobile-release.apk
+adb install HFRSInstructor-release.apk
 ```
 
 ---
@@ -402,7 +402,7 @@ adb install AppMarinaMobile-release.apk
 - **Crítica negativa** → "Excelente feedback, lo consideraré para v2.0"
 
 ### Cierre Fuerte:
-> "AppMarinaMobile representa una implementación completa y profesional de desarrollo móvil moderno. Demuestra dominio de React Native, TypeScript, Material Design 3, y arquitectura de software. Más importante, resuelve un problema real: democratizar la capacitación técnica de equipos HF mediante tecnología móvil accesible y efectiva. El código está listo para producción y preparado para escalar."
+> "HFRSInstructor representa una implementación completa y profesional de desarrollo móvil moderno. Demuestra dominio de React Native, TypeScript, Material Design 3, y arquitectura de software. Más importante, resuelve un problema real: democratizar la capacitación técnica de equipos HF mediante tecnología móvil accesible y efectiva. El código está listo para producción y preparado para escalar."
 
 ---
 

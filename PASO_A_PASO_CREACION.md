@@ -1,4 +1,4 @@
-# Paso a Paso Detallado - Creación de AppMarinaMobile
+# Paso a Paso Detallado - Creación de HF R&S Instructor
 ## Tutorial Completo de Implementación
 
 ---
@@ -57,7 +57,7 @@ adb --version
 #### 2.1. Inicializar Proyecto con TypeScript
 ```bash
 # Crear el proyecto
-npx react-native@latest init AppMarinaMobile --template react-native-template-typescript
+npx react-native@latest init HFRSInstructor --template react-native-template-typescript
 
 # Output esperado:
 # ✔ Downloading template
@@ -65,12 +65,12 @@ npx react-native@latest init AppMarinaMobile --template react-native-template-ty
 # ✔ Processing template
 # ✔ Installing dependencies
 # Run instructions for Android:
-#   • cd AppMarinaMobile && npx react-native run-android
+#   • cd HFRSInstructor && npx react-native run-android
 ```
 
 #### 2.2. Navegar al Proyecto
 ```bash
-cd AppMarinaMobile
+cd HFRSInstructor
 
 # Verificar estructura generada
 ls -la
@@ -203,7 +203,7 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 import android.os.Bundle  // Agregar
 
 class MainActivity : ReactActivity() {
-  override fun getMainComponentName(): String = "AppMarinaMobile"
+  override fun getMainComponentName(): String = "HFRSInstructor"
 
   // Agregar este método
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -948,7 +948,7 @@ cd android
 
 #### 14.4. Copiar APK a Raíz
 ```bash
-cp android/app/build/outputs/apk/release/app-release.apk ./AppMarinaMobile-release.apk
+cp android/app/build/outputs/apk/release/app-release.apk ./HFRSInstructor-release.apk
 ```
 
 ---
@@ -978,7 +978,7 @@ npm test
 ```bash
 # Crear archivos de documentación
 touch README.md
-touch ESTADO_DEL_ARTE_AppMarinaMobile.md
+touch ESTADO_DEL_ARTE_HFRSInstructor.md
 touch VIDEO_INTERACTIVO_README.md
 ```
 
@@ -990,7 +990,7 @@ touch VIDEO_INTERACTIVO_README.md
 ```bash
 git init
 git add .
-git commit -m "Initial commit: AppMarinaMobile v0.0.1"
+git commit -m "Initial commit: HFRSInstructor v0.0.1"
 ```
 
 #### 16.2. Crear .gitignore
@@ -1092,5 +1092,5 @@ Este proyecto demuestra dominio completo de desarrollo móvil moderno con React 
 
 **Versión**: 1.0  
 **Última Actualización**: Octubre 2025  
-**Autor**: AppMarinaMobile Team
+**Autor**: HFRSInstructor Team
 

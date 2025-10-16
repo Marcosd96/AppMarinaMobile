@@ -1,4 +1,4 @@
-# Sustentación de Tesis - AppMarinaMobile
+# Sustentación de Tesis - HF R&S Instructor
 ## Creación e Inicialización del Proyecto
 
 ---
@@ -7,7 +7,7 @@
 
 **Si te preguntan: "¿Cómo inicializó el proyecto?"**
 
-> *"El proyecto se inicializó utilizando React Native CLI con TypeScript. Ejecuté el comando `npx react-native@latest init AppMarinaMobile --template react-native-template-typescript`, lo que generó la estructura base del proyecto con configuración de TypeScript, Babel, Metro Bundler y las carpetas nativas para Android e iOS. Posteriormente, instalé las dependencias necesarias para implementar Material Design 3 con React Native Paper, un sistema de navegación mediante React Navigation (Drawer + Stack), animaciones nativas con Reanimated, y reproducción de video interactivo. La arquitectura se diseñó con una separación clara entre componentes, pantallas, navegación y configuraciones, siguiendo los principios de Clean Architecture y las mejores prácticas de React Native."*
+> *"El proyecto se inicializó utilizando React Native CLI con TypeScript. Ejecuté el comando `npx react-native@latest init HFRSInstructor --template react-native-template-typescript`, lo que generó la estructura base del proyecto con configuración de TypeScript, Babel, Metro Bundler y las carpetas nativas para Android e iOS. Posteriormente, instalé las dependencias necesarias para implementar Material Design 3 con React Native Paper, un sistema de navegación mediante React Navigation (Drawer + Stack), animaciones nativas con Reanimated, y reproducción de video interactivo. La arquitectura se diseñó con una separación clara entre componentes, pantallas, navegación y configuraciones, siguiendo los principios de Clean Architecture y las mejores prácticas de React Native."*
 
 ---
 
@@ -34,10 +34,10 @@ npm --version   # v10.x o superior
 #### 1.2. Comando de Inicialización
 ```bash
 # Crear el proyecto con template TypeScript
-npx react-native@latest init AppMarinaMobile --template react-native-template-typescript
+npx react-native@latest init HFRSInstructor --template react-native-template-typescript
 
 # Navegar al directorio del proyecto
-cd AppMarinaMobile
+cd HFRSInstructor
 
 # Verificar estructura generada
 ls -la
@@ -170,7 +170,7 @@ mkdir -p videos/videos_operatividad
 
 #### 4.2. Organización de Archivos
 ```
-AppMarinaMobile/
+HFRSInstructor/
 ├── App.tsx                          # Root component con Provider
 ├── index.js                         # Entry point
 ├── src/
@@ -630,6 +630,6 @@ El proyecto no solo cumple con los requisitos funcionales de una app de capacita
 
 **Versión**: 1.0  
 **Fecha**: Octubre 2025  
-**Autor**: Marco - AppMarinaMobile  
+**Autor**: Marco - HFRSInstructor  
 **Propósito**: Sustentación de Tesis de Grado
 
