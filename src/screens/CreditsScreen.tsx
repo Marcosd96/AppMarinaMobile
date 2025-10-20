@@ -161,6 +161,9 @@ export default function CreditsScreen({ navigation }: any) {
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
                         Operario del Equipo
                       </Text>
+                      <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
+                        MA1MEC.
+                      </Text>
                     </View>
                   </View>
                 </View>
