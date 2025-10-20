@@ -11,7 +11,6 @@ import {
 import { useWindowDimensions } from 'react-native';
 import { Appbar, Text, Surface, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-// Replaced SVG icon components with static images from Images/iconos_landing
 
 // Background image
 const backgroundImage = require('../fondo.jpg');
