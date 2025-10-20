@@ -43,6 +43,39 @@ export default function CreditsScreen({ navigation }: any) {
             </Card.Content>
           </Surface>
 
+          {/* Instructor Técnico */}
+          <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
+            <Card.Content>
+              <View style={styles.sectionHeader}>
+                <Icon source="account-star" size={28} color={theme.colors.primary} />
+                <Text variant="titleLarge" style={[styles.sectionTitle, { color: theme.colors.onSurface }]}>
+                  Director del Proyecto
+                </Text>
+              </View>
+              <Divider style={[styles.divider, { backgroundColor: theme.colors.primary }]} />
+              
+              <View style={[styles.personCard, { backgroundColor: theme.colors.surfaceVariant }]}>
+                <View style={styles.personHeader}>
+                  <Image 
+                    source={require('../../Images/autores/duarte.jpg')} 
+                    style={styles.avatarImage}
+                  />
+                  <View style={styles.personInfo}>
+                    <Text variant="bodyLarge" style={[styles.personName, { color: theme.colors.onSurface }]}>
+                      JT (R) Jaime Alberto Duarte Luquerna
+                    </Text>
+                    <View style={styles.roleContainer}>
+                      <Icon source="account-tie" size={16} color={theme.colors.secondary} />
+                      <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
+                        Instructor Técnico
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </Card.Content>
+          </Surface>
+
           {/* Equipo de Desarrollo */}
           <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
             <Card.Content>
@@ -69,6 +102,9 @@ export default function CreditsScreen({ navigation }: any) {
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
                         Desarrollador.
                       </Text>
+                      <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
+                      MA1MEC.
+                      </Text>
                     </View>
                   </View>
                 </View>
@@ -88,6 +124,9 @@ export default function CreditsScreen({ navigation }: any) {
                       <Icon source="code-braces" size={16} color={theme.colors.secondary} />
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
                         Desarrollador.
+                      </Text>
+                      <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
+                         MA1MEC.
                       </Text>
                     </View>
                   </View>
@@ -144,6 +183,26 @@ export default function CreditsScreen({ navigation }: any) {
                 <Icon source="file-document" size={24} color={theme.colors.tertiary} />
                 <Text variant="bodyMedium" style={[styles.referenceText, { color: theme.colors.onTertiaryContainer }]}>
                   Basado en información y lineamientos técnicos tomados de los <Text style={styles.boldText}>manuales de Radio HF de Rohde & Schwarz</Text>, empleados como referencia para la correcta implementación y configuración de los sistemas de comunicación.
+                </Text>
+              </View>
+            </Card.Content>
+          </Surface>
+
+          {/* Agradecimiento Institucional */}
+          <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
+            <Card.Content>
+              <View style={styles.sectionHeader}>
+                <Icon source="school" size={28} color={theme.colors.primary} />
+                <Text variant="titleLarge" style={[styles.sectionTitle, { color: theme.colors.onSurface }]}>
+                  Agradecimiento Institucional
+                </Text>
+              </View>
+              <Divider style={[styles.divider, { backgroundColor: theme.colors.primary }]} />
+              
+              <View style={[styles.referenceCard, { backgroundColor: theme.colors.primaryContainer }]}>
+                <Icon source="domain" size={24} color={theme.colors.primary} />
+                <Text variant="bodyMedium" style={[styles.referenceText, { color: theme.colors.onPrimaryContainer }]}>
+                  Los equipos utilizados en el desarrollo de esta aplicación de instrucción fueron proporcionados por el <Text style={styles.boldText}>Laboratorio de Comunicaciones de la Escuela Naval de Suboficiales ARC "Barranquilla"</Text>, en el marco de su apoyo al proceso de formación y desarrollo tecnológico.
                 </Text>
               </View>
             </Card.Content>
