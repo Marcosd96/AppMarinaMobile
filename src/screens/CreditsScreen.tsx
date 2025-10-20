@@ -43,7 +43,7 @@ export default function CreditsScreen({ navigation }: any) {
             </Card.Content>
           </Surface>
 
-          {/* Instructor Técnico */}
+          {/* Director Propuesto */}
           <Surface style={[styles.card, { backgroundColor: theme.colors.surface }]} elevation={2}>
             <Card.Content>
               <View style={styles.sectionHeader}>
@@ -67,7 +67,7 @@ export default function CreditsScreen({ navigation }: any) {
                     <View style={styles.roleContainer}>
                       <Icon source="account-tie" size={16} color={theme.colors.secondary} />
                       <Text variant="bodyMedium" style={[styles.personRole, { color: theme.colors.onSurfaceVariant }]}>
-                        Instructor Técnico
+                        Director Propuesto
                       </Text>
                     </View>
                   </View>
